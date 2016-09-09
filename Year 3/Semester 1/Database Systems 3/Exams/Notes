@@ -1,0 +1,1 @@
+Dont use inexs in all the tables cause it will slow down the searches . Cuase index will only get bigger as the search goes on.
