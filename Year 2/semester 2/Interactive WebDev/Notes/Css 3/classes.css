@@ -1,0 +1,17 @@
+/* Reset browser defaults. */
+@import "reset.css";
+
+/* Border style. */
+p.bdr { border : 5px outset red }
+
+/* Margin size. */
+p.mgn { margin : 1em }
+
+/* Text style. */
+p.txt { font : 2em fantasy }
+
+/* Padding. */
+p.pad { padding : 0.5em }
+
+/* Background. */
+p.bg { background : yellow }

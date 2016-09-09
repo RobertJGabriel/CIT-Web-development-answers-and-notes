@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+
+
+// We call this function and pass it in the name of a file containing student details
+function getData(filename)
+{
+
+	// Show the loader gif until the data is returned from the file
+	document.getElementById("output").innerHTML = "<div id = 'loader'><img src = 'load.gif'></div>";
+	
+	// Create an XMLHttpRequest object to read a file
+	env = new XMLHttpRequest();
+	
+	// Specify the filename we will be reading
+	env.open("GET", filename);
+	
+	// Specify the function to be called when the data comes back
+	env.onreadystatechange = function() {
+								
+								
+								// Make sure the process is completed before 
+								// trying to read any data (Note: for testing purposes
+								// we don't also check env.status = 200 as we are not using 
+								// a server for this lab	
+								if (env.readyState == 4 )
+								{
+									// Create a variable to store the HTML we will be generating.		
+									var html = "";
+
+									// Get the parsed XML object	
+									var x =  env.responseXML;
+									
+									// Find the (CDATA) text of the first (and only)
+									// <name> element 
+									var name = x.getElementsByTagName("name")[0].firstChild.data;
+												
+									
+									// ... and add to our generated HTML			
+									html+= "<b>Name:</b> " + name + "</p>";
+			
+			
+									// Find the (CDATA) text of the first (and only)
+									// <address> element 						
+									var address = x.getElementsByTagName("address")[0].firstChild.data;
+									
+									// ... and add to our generated HTML			
+									html+= "<b>Address:</b> " + address + "</p>";
+
+
+									// Find the text of the first (and only)
+									// <id> element 
+									var id = x.getElementsByTagName("id")[0].firstChild.nodeValue;
+																		
+									// ... and add to our generated HTML			
+									html+= "<b>id:</b> " + id + "</p>";
+
+									// Find the (CDATA) text of the first (and only)
+									// <email> element 
+									var email = x.getElementsByTagName("email")[0].firstChild.data;
+									
+									// ... and add to our generated HTML			
+									html+= "<b>Email:</b> " + email + "</p>";
+
+
+									// Get an Array/NodeList of all the objects 
+									// representing <result> tags in the XML
+									var results = x.getElementsByTagName("result");
+										
+									// We will format their contents in a table			
+									html += "<table>";
+									
+									
+									// Loop through all the <result> tags in the XML			
+									for (var i = 0; i < results.length; i++)
+									{
+									
+										// Find the contents of the <module> element 
+										// for this particular <result> tag. 										
+										html += "<tr><th>";
+										var module = results[i].getElementsByTagName("module")[0].firstChild.data;
+										
+										// ... and place in a table header
+										html+= module;
+										html += "</th><td>";
+
+										// Find the contents of the <mark> element 
+										// for this particular <result> tag.		
+										var grade = results[i].getElementsByTagName("mark")[0].firstChild.nodeValue;
+										
+									    // ... and place in a table cell
+										html+= grade;
+
+										html += "</tr></td>";
+										
+
+									}
+
+									html += "</table>";
+										
+									// replace the html in the <div> (currently showing the loader gif)
+									// with the HTML we just generated
+									document.getElementById("output").innerHTML = html;
+
+									// Delete the XMLHttpRequest object to save memory
+									delete x;
+									x = null;
+								}
+											
+							
+	// Read the file/Send request to server						}
+	env.send(null);
+}
+
+function init()
+{
+	// Add event handlers to the buttons so that they each call thew getData function
+	// With a different filename
+ document.getElementById('one').onclick = function(){ getData('file1.xml'); }
+ document.getElementById('two').onclick = function(){ getData('file2.xml'); }
+}
+
+window.onload = init;
+
+</script>
+
+<style>
+
+#output {border: 1px solid black;
+	padding: 20px;
+	height: 350px; width: 250px;
+	overflow: auto;
+	font-family: helvetica, sans-serif;
+}
+
+
+#output table {
+	border-collapse: collapse;
+	border: 1px solid black;
+}
+
+#output table td, #output table th{
+
+	border: 1px solid black;
+	padding: 5px;
+	text-align: left;
+}
+
+#loader {
+	text-align: center; 
+	height: 100%;	
+}
+
+#loader img {
+	position: relative;
+	top: 50%; 
+	margin-top: -16px;
+}
+
+</style>
+
+</head>
+<body>
+
+<input type = "button" value = "Student 1" id = "one">
+
+<input type = "button" value = "Student 2"  id = "two">
+
+<div  id = "output"></div>
+
+</body>
+</html>

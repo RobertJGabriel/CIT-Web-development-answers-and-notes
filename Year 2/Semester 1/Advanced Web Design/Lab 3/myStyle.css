@@ -1,0 +1,47 @@
+ul{
+position: relative;
+padding: 0 px;
+width:300px;
+height:150px;
+list-style: none;
+background:url(rollover_sprite.jpg) no-repeat 190px -50px;
+}
+ul li{
+text-align:center;
+width:150px;
+height:50px;
+background:url(rollover_sprite.jpg) no-repeat 0px 0px;
+line-height:50px;
+}
+div{
+position:absolute;
+right:0px;
+top:0px;
+width:150px;
+height: 150px;
+
+}
+ul li:hover{
+    background:url(rollover_sprite.jpg) no-repeat -300px 0px;
+}
+#one{
+    display:none;
+    }
+#two{
+    display:none;
+    }
+#three{
+    display:none;
+    }
+ul li:hover #one{
+    display:block;
+    background:url(rollover_sprite.jpg) no-repeat -150px -50px;
+    }
+ul li:hover #two{
+    display:block;
+    background:url(rollover_sprite.jpg) no-repeat -300px -50px;
+    }
+ul li:hover #three{
+    display:block;
+    background:url(rollover_sprite.jpg) no-repeat -450px -50px;
+    }

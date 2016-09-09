@@ -1,0 +1,7 @@
+p, span { font : medium monospace ; background : yellow ; border : 1px solid red }
+
+p#equalize { text-align : justify }
+
+span.up { vertical-align : super }
+span.down { vertical-align : sub }
+span.top { vertical-align : top }

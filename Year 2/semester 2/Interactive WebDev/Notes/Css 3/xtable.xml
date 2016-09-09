@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="xtable.css" type="text/css"?>
+
+<liga>
+
+<cap>La Liga Top 3</cap>
+	
+<hdrs>
+<lbl>Position</lbl> <lbl>Team</lbl> <lbl>Points</lbl>
+</hdrs>
+	
+<rows>
+<team> <pos>1</pos> <name>Barcelona</name>   <pts>84</pts> </team>
+<team> <pos>2</pos> <name>Real Madrid</name> <pts>80</pts> </team>
+<team> <pos>3</pos> <name>Villareal</name>   <pts>65</pts> </team>
+</rows>
+	
+</liga>

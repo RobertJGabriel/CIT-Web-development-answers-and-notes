@@ -1,0 +1,18 @@
+/* Validated by W3C CSS Validation Service */
+
+/* High contrast version for low vision users */
+
+@import "reset.css";
+
+html { font : bold large sans-serif ; background : black ; color : yellow }
+
+h1, h2, h3 { background : yellow ; color : black }
+
+div#foot:before { content: "(" }
+div#foot:after  { content: ")" }
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+
+<studentrecord>
+
+	<name><![CDATA[S Brown]]></name>
+	
+	<address><![CDATA[Dublin]]></address>
+	
+	<id>2948592736</id>
+
+	<email><![CDATA[brown@email.com]]></email>
+	
+	<grades>
+
+		<result> 
+				<module><![CDATA[Introduction to HTML]]></module>
+				<mark>78</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced HTML]]></module>
+				<mark>42</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Introduction to CSS]]></module>
+				<mark>90</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced CSS]]></module>
+				<mark>75</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Introduction to JavaScript]]></module>
+				<mark>70</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced JavaScript]]></module>
+				<mark>76</mark>
+		</result>
+
+	</grades>
+
+</studentrecord>

@@ -1,0 +1,25 @@
+/* Validated by W3C CSS Validation Service */
+
+@import "reset.css";
+@import "structure.css";
+
+body { background : blue; color : white }
+
+h1 { font : 2em sans-serif ; color : aqua  }
+h2 { color : aqua ; font : 1.2em "Script", cursive }
+h3 { background : aqua ; color : black }
+
+ul { list-style : square ; margin-left: 10px }
+
+div#content { font : 1em sans-serif }
+div#foot { text-align : center; background : aqua ; color : black }
+
+
+
+
+
+
+
+
+
+

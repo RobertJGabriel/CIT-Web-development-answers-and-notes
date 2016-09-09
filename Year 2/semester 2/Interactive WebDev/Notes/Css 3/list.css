@@ -1,0 +1,10 @@
+/* show boundaries */
+li	{ background: yellow 	}
+
+ol,ul { border : 2px solid red }
+
+ol.outside-markers	{ list-style-position: outside	}
+
+ol.inside-markers	{ list-style-position: inside	}
+
+ul { list-style : url(lilguy.png) outside square }

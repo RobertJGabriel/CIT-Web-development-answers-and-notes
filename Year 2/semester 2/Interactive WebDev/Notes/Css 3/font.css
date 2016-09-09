@@ -1,0 +1,8 @@
+p.general { font: normal small/1.3em "Courier", monospace }
+
+span.header { font: 350% "Pristina", cursive }
+span.giant { font: small-caps large "Castellar", fantasy  }
+span.bears { font: large "Arial", sans-serif  }
+span.score { font: bold small "Verdana", sans-serif }
+span.stadium { font: italic medium "Arial", sans-serif }
+span.coach { font: medium "Comic Sans MS", cursive }

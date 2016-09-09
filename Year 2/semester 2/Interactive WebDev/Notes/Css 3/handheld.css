@@ -1,0 +1,10 @@
+/* Validated by W3C CSS Validation Service */
+
+/* MOBILE Layout, for Hand-Held devices */
+
+@import "reset.css";
+
+h2 { background : red ; color : white }
+
+div#list, div#foot, div#tips, h1, h3 { display : none }
+

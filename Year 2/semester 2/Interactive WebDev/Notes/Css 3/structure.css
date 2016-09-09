@@ -1,0 +1,22 @@
+/* Validated by W3C CSS Validation Service */
+
+html, body { height: 100% }
+
+div#wrapper 
+{ 
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto -30px; 
+/* the bottom margin is the negative value of the footer's height ie 30px height */
+
+}
+
+div#head { height: 60px }
+
+div#foot { height: 30px }
+
+div#list { float : left ; width : 100px ; margin-left : 1.5em }
+
+div#tips { float : right ; width : 100px  }
+
+div#content { margin : 0 120px  }

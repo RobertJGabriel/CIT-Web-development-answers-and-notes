@@ -1,0 +1,9 @@
+/* HTML5 in easy steps:example 82.2 supplemental */
+
+p#api	{ position:absolute; 	top:10px; 	left:10px; width:85px; height:92px; background:url(session.png);	}
+ul		{ position:absolute; 	top:0px; 	left:120px; }
+li		{ margin:8px 0 0 0 ;}
+button	{ width:150px;	}
+button#restore	{ position:absolute; 	top:20px; 	left:300px; }
+button#show	{ position:absolute; 	top:50px; 	left:300px; }
+button#wipe	{ position:absolute; 	top:80px; 	left:300px; }

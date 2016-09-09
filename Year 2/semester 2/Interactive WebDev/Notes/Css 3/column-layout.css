@@ -1,0 +1,53 @@
+/* CSS3 COLUMN LAYOUT
+
+Supported by all the latest browsers.
+Rules currently require vendor prefixing.
+
+column-count:[n]
+column-width:[size]
+column-gap:[size]
+column-rule:[size],[style]?,[color]?
+
+column-rule is shorthand for:
+column-rule-width:2px;
+column-rule-style: dashed ;
+column-rule-color: red;
+
+columns is shorthand for:
+column-width:100px ;
+column-count:4;
+
+Some support for 
+break-before : column|avoid-column
+break-after : column|avoid-column
+break-inside : column
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 420px ; border : 5px solid black  }
+
+div#box {
+-ms-columns : 4 ; 
+-moz-columns : 4 ; 
+-webkit-columns : 4 ; 
+-o-columns : 4 ;
+columns : 4
+}
+
+div#box {
+-ms-column-gap : 10px ;
+-moz-column-gap : 10px ;
+-webkit-column-gap : 10px ;
+-o-column-gap : 10px ; 
+column-gap : 10px
+}
+
+div#box {
+-ms-column-rule : 3px dashed red ;
+-moz-column-rule : 3px dashed red ;
+-webkit-column-rule : 3px dashed red ;
+ -o-column-rule : 3px dashed red ;
+column-rule : 3px dashed red
+}
+
+div#box { overflow : hidden }

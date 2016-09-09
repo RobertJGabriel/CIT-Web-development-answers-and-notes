@@ -1,0 +1,9 @@
+p { background : aqua }
+
+span { background : yellow ; border : 0.3em red dashed }
+
+span#pad-h { padding : 0 3em 0 3em }
+
+span#pad-v { padding : 1em 0 1em 0 }
+
+span#pad-hv { padding : 1em }

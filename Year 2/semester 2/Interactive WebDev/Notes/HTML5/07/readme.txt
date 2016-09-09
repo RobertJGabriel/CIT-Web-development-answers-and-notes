@@ -1,0 +1,1 @@
+Mikes Note: The video example MP4 and OGV resource files in this archive replace those illustrated in "HTML5 in easy steps" to reduce the archive file size.

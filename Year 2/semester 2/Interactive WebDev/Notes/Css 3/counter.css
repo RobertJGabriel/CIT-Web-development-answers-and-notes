@@ -1,0 +1,10 @@
+/* create "num" and "sub" counters, both to increment by 1 */
+h2	{ counter-increment: num 1 }
+h3	{ counter-increment: sub 1; text-indent: 10% }
+
+/* insert the counter values */
+h2:before	{ content: counter(num) " "; background: aqua }
+h3:before	{ content: counter(num) "." counter(sub) " "; background: lime }
+
+/* reset the "sub" counter to zero */
+h3.restart	{ counter-reset: sub 0  }

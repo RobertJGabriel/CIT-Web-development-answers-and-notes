@@ -1,0 +1,28 @@
+/* CSS FLEX BOX
+
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+Not implemented in Opera.
+
+display : -ms-flexbox creates a flexible box container
+display : -ms-inline-flexbox creates a flexible inline box container
+
+-ms-flex-direction : row|column|row-reverse|column-reverse
+row is the default
+
+-ms-flex : [number]? [number]? [size]?
+first number is an optional integer setting the element's positive flex proportion, default 1
+second number is an optional integer setting the element's negative flex proportion, default 0
+size is px|auto
+
+ */
+
+div#wrapper { height : 120px ; width : 95% ; border : 5px solid black ; text-align : center }
+
+div#wrapper { display : -ms-flexbox ; display : -moz-box ; display : -webkit-box ; display : -o-flexbox ; display : box ; display : flexbox }
+ 
+div#box-1 { background : yellow ; -ms-flex : 1 ; -moz-box-flex : 1 ;  -webkit-box-flex : 1 ; -o-flex : 1 ; box-flex : 1 ; flex: 1 }
+
+div#box-2 {	background : lime ; -ms-flex : 2 ; -moz-box-flex : 2 ;  -webkit-box-flex : 2 ;  -o-flex : 2 ; box-flex : 2 ;  flex: 2 }
+
+div#box-3 { background : aqua ; -ms-flex : 3 ; -moz-box-flex : 3 ;  -webkit-box-flex : 3 ; -o-flex : 3 ; box-flex : 3 ;  flex: 3  }

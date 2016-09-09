@@ -1,0 +1,11 @@
+/* set font size by length */
+p	{ font-size: 12pt }
+
+/* set font size with keywords */
+span.lg	{ font-size: larger  }
+span.sm	{ font-size: smaller }
+span.xxl	{ font-size: xx-large }
+span.xxs	{ font-size: xx-small }
+
+/* set font size by percentage */
+span.huge	{ font-size: 500% }

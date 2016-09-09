@@ -1,0 +1,20 @@
+h3 {clear: left; margin:0 } 
+ol {  margin:0; border: 1px solid black; background: aqua; padding: 0 0 0 10px; float: left }
+li { margin: 0 0 0 20px; background: yellow }
+
+
+ol#list-0 { list-style-type: lower-latin }
+ol#list-1 { list-style-type: upper-latin }
+ol#list-2 { list-style-type: lower-greek }
+
+ol#list-3 { list-style-type: disc}
+ol#list-4 { list-style-type: circle }
+ol#list-5 { list-style-type: square }
+ol#list-6 { list-style-image : url(tick.png) }
+
+ol#list-7 { list-style-type: lower-roman }
+ol#list-8 { list-style-type: upper-roman }
+ol#list-9 { list-style-type: decimal }
+ol#list-10 { list-style-type: decimal-leading-zero }
+
+

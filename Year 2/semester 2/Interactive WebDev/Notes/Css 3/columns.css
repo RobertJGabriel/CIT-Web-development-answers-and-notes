@@ -1,0 +1,28 @@
+/* Validated by W3C CSS Validation Service */
+
+* { margin: 0; padding : 0 ; text-align : center }
+
+
+html, body { height: 100%; }
+
+#wrapper 
+{ 
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+
+#hdr { height: 60px; background : aqua }
+
+#ftr { height: 30px; background : aqua }
+
+
+#nav { float : left ; width : 100px ; background : yellow  }
+
+#ads { float : right ; width : 100px ; background : fuchsia }
+
+#txt { margin : 0 100px ; background : lime }
+
+
+

@@ -1,0 +1,9 @@
+span { background : yellow ; margin : 0 0 0 10em }
+
+p { background: url(tile.png) fuchsia repeat ; height : 3.5em }
+
+p#x { background-repeat : repeat-x }
+
+p#y { background-repeat: repeat-y }
+
+p#no { background-repeat : no-repeat }

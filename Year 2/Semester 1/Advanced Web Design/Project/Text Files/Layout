@@ -1,0 +1,27 @@
+Badge {
+To achieve the position of the badge . First I looked at the image file its self. It was 30 x 30. So I floated it right. Then placed it at the top right. Then I added -15 marin top and -15 margin right. Which is half the height and width. This gave me the center point and placed the badge on the top right corner.
+
+For the hover I just doubled the measurements.
+So 30 became 60.
+}
+
+Main  Content {
+The layout was achieved having a full width of 70%. Margin left and right set to auto.
+}
+Apps and Badges{
+The apps are 100 by 100. The max width for the badges are set to 380 which is 3 badges plus margin for spacing. The min width is 140 which is one badge with margin space.Then the ul tag div is centered in the div to make sure its always centered
+
+The header is set to the width of the main conect with two images float left and right.
+}
+
+Right (Main Content) {
+Then my menu is floated left and a width of it is 264px. Then the Main content area takes up the rest so that is simple. The margin left was 324px plus 20 (padding) then width is auto.I did this from a creative point of how cause it looked nice. And margin right set to 20 PX for a bit of tidying.
+
+}
+Menu {
+There are Images above and below the Menu tags to give the head and bottom of the iphone.
+
+Then in the <li> tag of the menu I placed the background as the middle part of the iphone. Then on each over it it goes transperant. to show the background image.
+
+The hover is when some overs over the li its makes the background transpernt.
+}

@@ -1,0 +1,14 @@
+/* set font styles */
+#para-1	{ font: medium "Courier", monospace; background: #CCCCFF }
+#sig	{ font: xx-large "Pristina", cursive; color: purple  }
+
+/* set text decoration and transform classes */
+span.under 	{ text-decoration: underline }
+span.thru	{ text-decoration: line-through }
+span.rails	{ text-decoration: overline underline blink }
+
+span.lower	{ text-transform: lowercase }
+span.upper	{ text-transform: uppercase }
+span.caps	{ text-transform: capitalize }
+
+a.plain	{ text-decoration: none }

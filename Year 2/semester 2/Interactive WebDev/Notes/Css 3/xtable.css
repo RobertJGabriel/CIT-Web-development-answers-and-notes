@@ -1,0 +1,18 @@
+/*  assign table characteristics to tags */
+
+cap			{ display: table-caption	}
+liga			{ display: table 		}
+hdrs			{ display: table-header-group	}
+rows			{ display: table-row-group	}
+team			{ display: table-row		}
+name, pos,pts, lbl	{ display: table-cell		}
+
+
+/* now apply styles... */
+
+/* center the table, add top margin, set width, border spacing & border */
+liga	{ margin: auto; margin-top: 20px; width: 500px; border-spacing: 3px; border: 8px ridge lime }
+
+/* set header and row backgrounds */
+hdrs	{ background: lime	}
+rows	{ background: aqua 	}

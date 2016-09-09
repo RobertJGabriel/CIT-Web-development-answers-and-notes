@@ -1,0 +1,40 @@
+/* CSS3 EXCLUSIONS
+
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+Currently only supported by Internet Explorer.
+
+-ms-wrap-flow : auto|both|start|end|maximum|clear
+sets how inline content should flow
+
+-ms-wrap-margin : [length]
+sets size of margin around excluded element
+
+*/
+
+div#box-1 { height : 130px ; width : 480px ; border : 5px solid black ; overflow : hidden ; text-align : justify }
+ 
+div#box-2 { 
+background : yellow ; 
+position : absolute ; 
+top : 60px ; 
+left : 200px ;
+padding : 5px ; 
+border : 1px dashed black 
+}
+
+div#box-2 { 
+-ms-wrap-flow : both ;  
+-moz-wrap-flow : both ;  
+-webkit-wrap-flow : both ;  
+-o-wrap-flow : both ;  
+wrap-flow : both 
+}
+
+div#box-2 { 
+-ms-wrap-margin : 10px ;
+-moz-wrap-margin : 10px ;
+-webkit-wrap-margin : 10px ;
+-o-wrap-margin : 10px ;
+wrap-margin : 10px
+}

@@ -1,0 +1,13 @@
+div#pale-gray { width : 400px ; height : 50px ; background : #CCC ; margin : 20px }
+
+div#lite-gray { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : #999 }
+
+div#dark-gray { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : #666 }
+
+div#text-box { position : relative ; left : -4px ; top : -4px ; height : 100% ; background : lime }
+
+
+
+span { position : relative ; top : -18px ; left : 100px ; background : lime ; border : 1px solid black }
+
+p { background : aqua ; border : 1px solid black }

@@ -1,0 +1,20 @@
+/* HTML5 in easy steps:example 26.1 */
+
+/* Remove browser defaults */
+* { margin:0; padding:0; border:0; }
+
+/* Initially hide the images */
+img.pop { position: absolute; top: 20px; left: 190px; 
+		padding:15px; visibility: hidden; height:0px; }
+
+/* Size and position paragraphs */
+p { width:150px; float:left; margin:20px 0 0 20px; }
+
+/* Style the hyperlinks */
+p#models a { display: block; padding: 5px; margin:0 0 20px 0; color: white; background: blue; text-decoration: none; }
+
+/* Rollover effect for hyperlinks */		
+p#models a:hover {  background: #F00; color: #FFF;}
+
+/* Reveal the image onmouseover */
+p#models a:hover  img.pop { visibility: visible; height:auto; z-index: 10; border:5px solid red; background: #FFF; }

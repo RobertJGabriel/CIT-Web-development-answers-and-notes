@@ -1,0 +1,9 @@
+div	{ width : 50% }
+
+a	{ background : yellow }
+
+h1, ul	{ background : aqua  }
+
+* { font-style:italic }
+
+div * { border : 0.2em solid red } 

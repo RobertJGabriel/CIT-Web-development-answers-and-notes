@@ -1,0 +1,5 @@
+/* set in-focus highlights */
+
+input:focus	{ background: lime 	}
+
+a:focus		{ background: aqua 	}

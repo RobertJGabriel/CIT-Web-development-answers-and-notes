@@ -1,0 +1,19 @@
+/* Position divs side-by-side for display purposes only. */
+
+div#box-1 { position: absolute; top: 10px; left: 10px ; width: 150px; height: 50px }
+
+div#box-2 { position: absolute; top: 10px; left: 170px ; width: 150px; height: 50px }
+
+
+/* Set MouseOut background colors and image. */
+
+div#box-1 { background-color: blue }
+
+div#box-2 { background: url("rollover.png") 0px 0px aqua }
+
+
+/* Set MouseOver colors and image. */
+
+div#box-1:hover	{ background-color: red	}
+
+div#box-2:hover	{ background: url(rollover.png) 0px -50px lime }

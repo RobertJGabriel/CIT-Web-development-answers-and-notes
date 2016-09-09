@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Results</title>
+    <link href="Css/style.css" rel="stylesheet" type="text/css">
+    <script src="Javascript/javascript.js"></script>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+</head>
+
+<body>
+
+    <div id="header">
+
+        <?php include 'parts/menu.php';?>
+
+    </div>
+
+
+
+    <div id="holder">
+ 
+ <?php include 'parts/search2.php'; ?>
+            <div class="resultsearch">
+
+               
+
+
+
+
+
+
+
+
+
+
+                <?php for ($x=2; $x<=8; $x++) { if ( ! isset($pieces3 [$x])) { echo $pieces3 [$x]="" ; }else{ echo '<ul id="google">'; echo '<li>'; echo strip_tags($pieces3 [$x], '<li><a><p><ul>'); echo '</ul>'; } } ?>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="resultsearch">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <?php for ($x=1; $x<=6; $x++) { if ( ! isset($pieces4[$x])) { echo $pieces4[$x]="" ; }else{ echo '<ul id="google">'; echo '<li>'; echo strip_tags($pieces4[$x], '<em><li><a><p>'); echo '</ul>'; } } error_reporting(E_ALL); ini_set( 'display_errors', 1); ?>
+
+
+
+
+
+            </div>
+
+
+        </div>
+        <div id="rightResult">
+
+
+            <?php if(isset($_SESSION[ 'name'])){ ?>
+            <div class="login">
+
+
+            </div>
+            <?php }?>
+
+            <?php include 'parts/logout.php';?>
+     
+    </div>
+    <div id="footer">
+
+        <ul>
+
+            <li>
+                <h4>Powered By :</h4>
+            </li>
+            <li>
+                <img class="logo" width="80" height="35" src="images/bing.png">
+            </li>
+            <li>
+                <img class="logo" width="80" height="35" src="images/google.png">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

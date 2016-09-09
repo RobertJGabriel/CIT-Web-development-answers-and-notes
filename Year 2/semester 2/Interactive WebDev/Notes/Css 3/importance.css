@@ -1,0 +1,11 @@
+h2 { color : yellow !important }
+h2 { color : black }
+
+h2 { background : aqua }	/* 0,0,0,1 */
+body h2 { background : blue }	/* 0,0,0,2 */
+
+#heading-2 { background : maroon }	/* 0,1,0,0 */
+h2#heading-2 { background : red }	/* 0,1,0,1 */
+
+h2.headers { background : olive }	/* 0,0,1,1 */
+body h2.headers { background : green }	/* 0,0,1,2 */

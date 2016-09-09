@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+
+
+<studentrecord>
+
+	<name><![CDATA[J Smith]]></name>
+	
+	<address><![CDATA[Cork]]></address>
+	
+	<id>1102384920</id>
+
+	<email><![CDATA[smith@email.com]]></email>
+	
+	<grades>
+
+		<result> 
+				<module><![CDATA[Introduction to HTML]]></module>
+				<mark>67</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced HTML]]></module>
+				<mark>65</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Introduction to CSS]]></module>
+				<mark>76</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced CSS]]></module>
+				<mark>54</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Introduction to JavaScript]]></module>
+				<mark>66</mark>
+		</result>
+
+		<result> 
+				<module><![CDATA[Advanced JavaScript]]></module>
+				<mark>56</mark>
+		</result>
+
+	</grades>
+
+</studentrecord>

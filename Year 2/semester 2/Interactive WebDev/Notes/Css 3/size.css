@@ -1,0 +1,7 @@
+div#absolute { width : 3in ; height : 0.5in ; background : red ; color : yellow }
+
+div#container { width : 400px ; height : 200px ;background : blue ; color : aqua }
+
+div#percent { width : 50% ; height : 50% ; background : green ; color : yellow }
+
+div#relative { width : 20em ; height : 2em ; background : yellow ; color : blue }

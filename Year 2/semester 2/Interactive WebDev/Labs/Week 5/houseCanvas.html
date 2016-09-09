@@ -1,0 +1,71 @@
+
+<html>
+<head></head>
+<body>
+<canvas id="myCanvas" width="500" height="500">
+
+ <p>Your browser doesn't support canvas.</p>
+
+</canvas>
+
+<canvas id="newCanvas" width="1000" height="1000">
+
+</canvas>
+
+
+
+
+<script>
+var context = document.getElementById('myCanvas').getContext('2d');
+
+context.beginPath();
+context.moveTo(200,30);
+context.lineTo(50,150);
+context.lineTo(350,150);
+context.closePath();
+context.stroke();
+
+
+context.strokeRect(50,150,300,300);
+context.strokeRect(75,200,50,100)
+context.strokeRect(275,200,50,100)
+context.strokeRect(150,250,100,200);
+
+
+context.beginPath();
+context.arc(230,350,10,Math.PI/180*0,Math.PI/180*360,false);
+context.stroke();
+
+
+function time()
+{
+
+var time1 = new Date();
+var hours = time1.getHours();
+var minutes = time1.getMinutes();
+var seconds = time1.getSeconds();
+
+var con = document.getElementById('newCanvas').getContext('2d');
+
+con.fillStyle = "red";
+con.fillRect(0,0,seconds*10,50);
+con.strokeRect(0,0,600,50);
+con.fillRect(0,0,0,0);
+con.fillStyle = "blue";
+con.fillRect(0,75,minutes*10,50);
+con.strokeRect(0,75,600,50);
+
+con.fillStyle = "green";
+con.fillRect(0,150,hours*10,50);
+con.strokeRect(0,150,600,50);
+
+}
+setInterval(time, 10);
+window.onload = time;
+
+</script>
+
+</body>
+
+
+</html>

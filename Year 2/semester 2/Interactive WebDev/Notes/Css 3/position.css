@@ -1,0 +1,9 @@
+span { background : yellow ; margin : 0 0 0 10em }
+
+p { background: url(tile.png) fuchsia no-repeat ; height : 3.5em }
+
+p#p1 { background-position : bottom left }
+
+p#p2 { background-position : 20% 50% }
+
+body { background: url(tile.png) no-repeat bottom right fixed }

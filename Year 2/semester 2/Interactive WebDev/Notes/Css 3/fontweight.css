@@ -1,0 +1,12 @@
+/* Validated by W3C CSS Validation Service */
+
+/* set font weights numerically */
+p#para-1	{ font-weight: 400  }
+p#para-2 { font-weight: 700 }
+
+/* set font weights with keywords */
+span.bold	{ font-weight: bold }
+span.more	{ font-weight: bolder }
+span.norm	{ font-weight: normal }
+span.less	{ font-weight: lighter }
+

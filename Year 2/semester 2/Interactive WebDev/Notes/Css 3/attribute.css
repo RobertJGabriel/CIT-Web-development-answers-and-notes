@@ -1,0 +1,7 @@
+a[href] { color : red }
+
+a[href][title] { background : yellow }
+
+a[href="#top"] { border : 0.2em solid blue }
+
+a[id] { background : orange }

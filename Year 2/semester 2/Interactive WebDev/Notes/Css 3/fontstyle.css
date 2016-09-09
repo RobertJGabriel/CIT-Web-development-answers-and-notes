@@ -1,0 +1,11 @@
+/* set font styles */
+p#para-1 { font-style: normal }
+p#para-2 { font-style: italic }
+
+span.ital	{ font-style: italic }
+span.oblq 	{ font-style: oblique }
+span.reg	{ font-style: normal }
+
+/* apply small caps variant */
+h2	{ font-variant: small-caps }
+span.reg-caps { font-variant : normal }

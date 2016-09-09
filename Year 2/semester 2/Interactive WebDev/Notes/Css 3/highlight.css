@@ -1,0 +1,16 @@
+/* Validated by W3C CSS Validation Service */
+
+/* pseudo elements... */
+/* style the first letters */
+p:first-letter		{ font-size: 200%; color: red	}
+
+/* style the first lines */
+p:first-line		{ background-color: yellow	}
+
+
+/* pseudo classes... */
+/* style Spanish content */
+*:lang(es)		{ background-color: lime	}
+
+/* style the first child spans */
+span:first-child	{ background-color: aqua	}

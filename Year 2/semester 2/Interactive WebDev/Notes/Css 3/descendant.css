@@ -1,0 +1,11 @@
+/*
+ul li { color : red } 
+ol li { color : blue }
+*/
+
+/*
+#menu li { color : green } 
+*/
+
+#menu ul li { color : orange }
+#menu ol li { color : purple } 

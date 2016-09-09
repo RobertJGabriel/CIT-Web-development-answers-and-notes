@@ -1,0 +1,12 @@
+/* set general thumbnail styles */
+dl#pix	{ position: absolute; top: 10px; left: 10px }
+
+/* MouseOut state (default) - hide larger picture */
+dl#pix a img.hid {
+	width: 250px; height:150px;
+	position: absolute; top: 0px; left: 120px;
+	visibility: hidden;
+	}
+
+/* MouseOver state (hover)- reveal larger picture */
+dl#pix a:hover img.hid { visibility:visible }

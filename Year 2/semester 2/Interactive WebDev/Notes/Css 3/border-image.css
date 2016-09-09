@@ -1,0 +1,26 @@
+ /* CSS BORDER IMAGE
+ 
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+
+border-image: url( [url] ) size [pattern]?
+size is slice % of original, and is required
+pattern may be stretch|repeat|round.
+
+border-image-source
+border-image-slice
+border-image-width
+border-image-outset
+border-image-repeat
+
+*/
+
+div#star { width : 480px ; height : 50px ; background : aqua  ; border : 20px solid transparent  }
+
+div#star {
+-ms-border-image : url(star.png) 100% repeat ; 
+-moz-border-image:url(star.png) 100% repeat ; 
+-webkit-border-image:url(star.png) 100% repeat ;  
+ -o-border-image:url(star.png) 100% repeat ;  
+border-image : url(star.png) 100% repeat ; 
+}

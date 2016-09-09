@@ -1,0 +1,19 @@
+/* CSS3 BACKGROUND SIZE
+
+Supported by all the latest browsers with no need for vendor prefixing.
+
+background-size : [size] [size]?
+size possible values are auto|cover|contain|px|%
+auto is default and scales image against available area then tiles
+cover scales preserving aspect ratio to smallest size to cover the background area
+contain scales preserving aspect ratio to largest size to fit inside the background area
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black ; background :  url( flower.png ) ; }
+
+div#box-1 { background-size : 100%  100% }  
+
+div#box-2 {   background-size : 50% 50% } 
+
+div#box-3 {   background-size : 200% 200% }

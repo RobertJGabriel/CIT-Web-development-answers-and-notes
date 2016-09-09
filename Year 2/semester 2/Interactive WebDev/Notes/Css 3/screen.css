@@ -1,0 +1,14 @@
+/* Validated by W3C CSS Validation Service */
+
+@import "reset.css";
+@import "structure.css";
+
+body { background : url(drops.png) white ; color : black }
+h1 { font : 2em sans-serif ; color : red  }
+h2 { color : blue ; font : 1.2em "Script", cursive }
+h3 { background : red ; color : white }
+ul { list-style : url(tick.png) square ; margin-left: 10px }
+
+div#content { font : 1em sans-serif }
+
+div#foot { text-align : center; background : blue ; color : white }

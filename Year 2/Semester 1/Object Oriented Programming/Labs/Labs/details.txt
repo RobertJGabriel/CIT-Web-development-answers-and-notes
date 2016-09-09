@@ -1,0 +1,14 @@
+ -------Details-------
+Name: eeee
+Id: 1
+
+ -------Details-------
+Name: w
+Id: 2
+
+
+----Book Details----
+Title: wsdc
+ISBN: 3
+Author: eddfdcvdc
+Price: 424.33

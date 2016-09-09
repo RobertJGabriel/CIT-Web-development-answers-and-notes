@@ -1,0 +1,17 @@
+/* insert string items before and after paragraphs */
+p:before { content: "***"; background: yellow }
+p:after  { content: "!!!" ; background: aqua }
+
+/* insert red quotes before and after target */
+a[href].quo:before { content: open-quote ; color: red }
+a[href].quo:after  { content: close-quote ; color: red  }
+
+/* insert orange string before hyperlinks */
+a[href].lnk:before	{ content: "[link]: "; color: orange	}
+
+/* insert image denoting hyperlinks to PDF documents */
+a[href].pdf:after	{ content: url(pdf-ico.png) }
+
+/* insert attribute value after target */
+a[href].att:after	{ content: " [" attr(href) "] "; color: green }
+

@@ -1,0 +1,40 @@
+/* CSS3 ANIMATION
+ 
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+Not implemented in Opera.
+ 
+@keyframes [name]
+defines animation keyframe positions.
+
+animation-name:[name]
+animation-duration:[n]s (default 0s)
+animation-timing-function:ease|ease-in|ease-out|ease-in-out (default ease) | cubic-bezier
+animation-delay:[n]s (default 0s)
+animation-iteration-count:[n]|infinite (default 1)
+animation-direction:normal|alternate (default normal)
+
+shorthand is
+animation : [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction]
+ 
+*/
+
+div { position: absolute ; top: 10px ; height : 120px ; width : 120px ; border : 5px solid black }
+ 
+div#box-1 { background : yellow ; left : 50px ; z-index : 1 }
+div#box-2 {	background : lime ; left : 400px ; z-index : 1 }
+div#box-3 { background-color : aqua ; left: 50px ;  border-radius : 65px ; z-index : 2 }
+
+@-ms-keyframes slide  { from { left : 50px } to { left : 400px } }
+@-moz-keyframes slide  { from { left : 50px } to { left : 400px } }
+@-webkit-keyframes slide  { from { left : 50px } to { left : 400px } }
+@-o-keyframes slide { from { left : 50px } to { left : 400px } }
+@keyframes slide { from { left : 50px } to { left : 400px } }
+
+div#box-3 { 
+-ms-animation : slide 3s alternate infinite ;
+-moz-animation : slide 3s alternate infinite ;
+-webkit-animation : slide 3s alternate infinite ;
+-o-animation : slide 3s alternate infinite ;
+animation : slide 3s alternate infinite 
+}

@@ -1,0 +1,11 @@
+Hi Colin,
+
+All Files are there.
+I work full time as a Web developer, so I spilt up the code into functions so it can be easily edited and modified for future versions to be easily coded and changed. While I also Comment on different parts of the code.
+I made any mistake please let me know.
+
+Warm Regards
+
+Robert Gabriel
+
+Example Credit card number is 4234567890987654

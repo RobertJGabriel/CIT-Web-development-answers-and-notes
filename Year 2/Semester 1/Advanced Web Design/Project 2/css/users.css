@@ -1,0 +1,343 @@
+body {
+    margin: 0;
+    background-color: #ebebeb;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+
+/* small screen setting of iphone or smaller :)*/
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    #topmenu {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+    #topmenu li:Not(:first-child) {
+        padding: 30px 0px 30px 0px;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background-color: #AAA8AA;
+        border-bottom: 3px solid #8B8A8C;
+    }
+    #menu1 {
+        width: 30px;
+        background-image: url("../pictures/menu.png");
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        color: transparent;
+        height: 30px;
+        cursor: pointer;
+        border: 0;
+        padding: 10px;
+    }
+    #menu1a {
+        background-color: #AAA8AA;
+        width: 30px;
+        background-image: url("../pictures/menu.png");
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        color: transparent;
+        cursor: pointer;
+        height: 30px;
+        border: 0;
+        padding: 10px;
+    }
+    #menu2,
+    #menu3,
+    #menu4 {
+        display: none;
+    }
+    #menu2a,
+    #menu3a,
+    #menu4a {
+        display: block;
+    }
+    a {
+        color: #fff;
+        font-size: 1.4em;
+    }
+    #main {
+        width: 300px;
+        background-color: #fff;
+        min-height: 200px;
+        height: auto;
+        margin-top: 30px;
+        position: relative;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #users {
+        padding: 0;
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 180px;
+        height: auto;
+    }
+    #users > li {
+        list-style: none;
+        margin-bottom: 10px;
+        width: 128px;
+        background-color: #000;
+        display: block;
+        padding: 10px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #users li >.data {
+        width: 128px;
+        padding: 5;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: white;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 799px) {
+    #main {
+        width: 480px;
+        background-color: #fff;
+        min-height: 200px;
+        margin-top: 30px;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #topmenu {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 350px;
+    }
+    #topmenu > li {
+        padding: 10px;
+        text-align: right;
+        width: 300px;
+        height: auto;
+        display: block;
+        position: absolute;
+        background-color: #bdc3c7;
+        transition: linear 1s;
+        border: 5px solid #95a5a6;
+        -webkit-transform-origin: 0 bottom;
+    }
+    #menu1,
+    #menu1a {
+        z-index: 4;
+        border-bottom-right-radius: 10px;
+    }
+    #menu2,
+    #menu2a {
+        z-index: 3;
+        border-radius: 10px;
+    }
+    #menu3,
+    #menu3a {
+        z-index: 2;
+        border-radius: 10px;
+    }
+    #menu4,
+    #menu4a {
+        z-index: 1;
+        border-radius: 10px;
+    }
+    #menu2a {
+        -webkit-transform: rotate(10deg);
+    }
+    #menu3a {
+        -webkit-transform: rotate(20deg);
+    }
+    #menu4a {
+        -webkit-transform: rotate(30deg);
+    }
+
+    #topmenu > li:first-child {
+        background-color: #34495e;
+        color: #FFF;
+        border-color: #34495e;
+    }
+    #users {
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 256px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    #users > li {
+        list-style: none;
+        margin-bottom: 20px;
+        width: 250px;
+        height: 200px;
+        float: left;
+        position: relative;
+        margin-right: 10px;
+    }
+    #users img {
+        border-radius: 100px;
+    }
+    #users li:nth-child(odd) >img {
+        background: #FFF;
+        left: 0;
+        position: absolute;
+    }
+    #users li: nth-child(even)> img {
+        background: #FFF;
+        position: absolute;
+        right: 0;
+    }
+    #users li >.data {
+        width: 128px;
+        line-height: 128px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 128px;
+        margin-top: 75px;
+        color: white;
+        text-align: center;
+        bottom: 0;
+        background-color: #000;
+        border-radius: 100px;
+    }
+}
+@media only screen and (min-width: 800px) and (max-width: 1900px) {
+    #users {
+        overflow: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 600px;
+        text-align: center;
+        height: auto;
+    }
+    #users li {
+        list-style: none;
+        margin: 0;
+        margin-bottom: 20px;
+        width: 256px;
+        height: 256px;
+        float: left;
+        position: relative;
+        margin-right: 10px;
+    }
+    #users img {
+        border-radius: 100px;
+    }
+    #users li:nth-child(odd) >img {
+        background: #FFF;
+        float: left;
+        left: 0;
+        position: absolute;
+    }
+    #users li:nth-child(even)> img {
+        background: #FFF;
+        position: absolute;
+        right: 0;
+    }
+    #users li >.data {
+        width: 128px;
+        line-height: 128px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 128px;
+        margin-top: 75px;
+        color: white;
+        bottom: 0;
+        background-color: #000;
+        border-radius: 100px;
+    }
+    #main {
+        background-color: #fff;
+        min-height: 200px;
+        margin-top: 30px;
+        border-radius: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    #topmenu {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 350px;
+    }
+    #topmenu > li {
+        padding: 10px;
+        text-align: right;
+        width: 300px;
+        height: auto;
+        display: block;
+        position: absolute;
+        background-color: #bdc3c7;
+        transition: linear 1s;
+        border: 5px solid #95a5a6;
+        -ms-transform-origin: 0 bottom;
+      -webkit-transform-origin: 0 bottom;
+        transform-origin: 0 bottom;
+    }
+    #menu1,
+    #menu1a {
+        z-index: 4;
+        border-bottom-right-radius: 10px;
+    }
+    #menu2,
+    #menu2a {
+        z-index: 3;
+        border-radius: 10px;
+    }
+    #menu3,
+    #menu3a {
+        z-index: 2;
+        border-radius: 10px;
+    }
+    #menu4,
+    #menu4a {
+        z-index: 1;
+        border-radius: 10px;
+    }
+    #menu2a {
+        -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    #menu3a {
+        -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+    #menu4a {
+        -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    #topmenu > li:first-child {
+        background-color: #34495e;
+        color: #FFF;
+        border-color: #34495e;
+    }
+}

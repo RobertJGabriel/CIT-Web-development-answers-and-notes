@@ -1,0 +1,31 @@
+/* CSS3 TRANSFORM
+
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+
+transform:[function]
+
+2D Transformation Functions...
+rotate([n]deg)
+scale([x],]y])
+skew([x],[y])
+translate([x],[y]) 
+matrix([a],[c],[b],[d],[x],[y])
+
+3D Transformation Functions...
+rotateX([n]deg), rotateY([n]deg)?
+scaleX([x]), scaleY([y])?
+skewX([x]), skewY([y])?
+translateX([x]), translateY([y])?
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black }
+ 
+div#box-1 { background : yellow }
+div#box-2 {	background : lime  }
+div#box-3 { background :  url( patch.png ) ; background-size : 100%   }
+
+div#box-1:active { -ms-transform : rotate(45deg) ; -moz-transform : rotate( 45deg ) ; -webkit-transform : rotate( 45deg ) ; -o-transform : rotate( 45deg ) ; transform : rotate( 45deg )  }
+div#box-2:active {  -ms-transform : scale(0.5) ; -moz-transform : scale( 0.5 ) ; -webkit-transform : scale( 0.5 ) ; -o-transform : scale( 0.5 ) ; transform : scale( 0.5 ) }
+div#box-3:active {  -ms-transform : rotateX(180deg) ; -moz-transform : rotateX( 180deg ) ; -webkit-transform : rotateX( 180deg ) ; -o-transform : rotateX( 180deg ) ; transform : rotateX( 180deg ) }

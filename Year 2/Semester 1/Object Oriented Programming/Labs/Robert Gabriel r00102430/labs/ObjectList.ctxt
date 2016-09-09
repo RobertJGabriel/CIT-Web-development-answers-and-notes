@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=total
+comment0.target=ObjectList(int)
+comment1.params=newObject
+comment1.target=boolean\ add(java.lang.Object)
+comment2.params=index
+comment2.target=boolean\ remove(int)
+comment3.params=
+comment3.target=boolean\ isFull()
+comment4.params=
+comment4.target=boolean\ isEmpty()
+comment5.params=index
+comment5.target=java.lang.Object\ getObject(int)
+comment6.params=
+comment6.target=int\ getTotal()
+numComments=7

@@ -1,0 +1,19 @@
+/* CSS3 REGIONS
+
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+Currently only implemented in Internet Explorer
+
+-ms-flow-into : [name]
+name is the name of a data stream into which data should flow in
+
+-ms-flow-from : [name]
+name is the name of a data stream from which data should flow out
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 130px ; border : 5px solid black ; overflow : hidden }
+ 
+ iframe#data { -ms-flow-into : f1 ; -moz-flow-into : f1 ; -webkit-flow-into : f1 ; -o-flow-into : f1 ; flow-into : f1 }
+ 
+div.region { -ms-flow-from : f1 ;  -moz-flow-from : f1 ; -webkit-flow-from : f1 ; -o-flow-from : f1 ; flow-from : f1  }

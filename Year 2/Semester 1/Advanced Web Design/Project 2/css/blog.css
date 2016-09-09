@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main {
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
+    height: auto;
+    min-height: 400px;
+    margin-top: 20px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+a: hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.enter {
+    width: 700px;
+    border: 2px solid #E1E1E1;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: auto;
+    position: relative;
+    background-color: #EEEEEE;
+    min-height: 200px;
+    height: auto;
+    padding-left: 5px;
+    margin-bottom: 20px;
+}
+.hidden label {
+    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+.enter: hover .hidden {
+    display: block;
+}
+.hidden img:first-of-type {
+    margin-right: 5px;
+    padding-right: 5PX;
+    border-right: 1px solid #000;
+}
+.hidden p {
+    margin-right: 5px;
+    float: left;
+    padding: 0;
+}
+.hidden img {
+    float: left;
+    height: 25px;
+}
+.enter> p {
+    margin-right: 157px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hidden {
+    width: 130px;
+    height: auto;
+    padding: 10px;
+    margin-left: 10px;
+    display: none;
+    background: linear-gradient(#FBFBFB, #BDBDBD);
+    /* Standard syntax */
+    cursor: pointer;
+    background-color: green;
+    float: right;
+}
+.date {
+    padding: 5px;
+    width: 80px;
+    height: 70px;
+    float: left;
+    border-right: 2px solid #000;
+    margin-right: 8px;
+}
+.date > h2 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    line-height: 50px;
+}
+.date > p {
+    text-align: right;
+    margin: 0;
+    letter-spacing: 0.1em;
+    font-size: 1.5em;
+}
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    #topmenu {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+    #topmenu li: Not(: first-child) {
+        padding: 30px 0px 30px 0px;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background-color: #AAA8AA;
+        border-bottom: 3px solid #8B8A8C;
+    }
+    #menu1 {
+        width: 30px;
+        background-image: url(../pictures/menu.png);
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        color: transparent;
+        height: 30px;
+        cursor: pointer;
+        border: 0;
+        padding: 10px;
+    }
+    #menu1a {
+        background-color: #AAA8AA;
+        width: 30px;
+        background-image: url(../pictures/menu.png);
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        color: transparent;
+        cursor: pointer;
+        height: 30px;
+        border: 0;
+        padding: 10px;
+    }
+    #menu2,
+    #menu3,
+    #menu4 {
+        display: none;
+    }
+    #menu2a,
+    #menu3a,
+    #menu4a {
+        display: block;
+    }
+    a {
+        color: #fff;
+        font-size: 1.4em;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 10009px) {
+    #topmenu {
+        text-decoration: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 350px;
+    }
+    #topmenu > li {
+        padding: 10px;
+        text-align: right;
+        width: 300px;
+        height: auto;
+        display: block;
+        position: absolute;
+        background-color: #bdc3c7;
+        transition: linear 1s;
+        border: 5px solid #95a5a6;
+        -webkit-transform-origin: 0 bottom;
+        -ms-transform-origin: 0 bottom;
+        transform-origin: 0 bottom;
+    }
+    #menu1,
+    #menu1a {
+        z-index: 4;
+        border-bottom-right-radius: 10px;
+    }
+    #menu2,
+    #menu2a {
+        z-index: 3;
+        border-radius: 10px;
+    }
+    #menu3,
+    #menu3a {
+        z-index: 2;
+        border-radius: 10px;
+    }
+    #menu4,
+    #menu4a {
+        z-index: 1;
+        border-radius: 10px;
+    }
+    #menu2a {
+        -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    #menu3a {
+        -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        transform: rotate(20deg);
+    }
+    #menu4a {
+        -webkit-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        transform: rotate(30deg);
+    }
+    #topmenu > li:first-child {
+        background-color: #34495e;
+        color: #FFF;
+        border-color: #34495e;
+    }
+}

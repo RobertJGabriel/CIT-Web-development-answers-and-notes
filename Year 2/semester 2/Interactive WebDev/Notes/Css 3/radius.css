@@ -1,0 +1,20 @@
+/* CSS3 BORDER RADIUS
+
+Supported by all the latest browsers with no need for vendor prefixing.
+
+border-radius : length | %
+
+border-top-left-radius : length | %
+border-top-right-radius : length | %
+border-bottom-right-radius : length | %
+border-bottom-left-radius : length | %
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black ; text-align : center }
+ 
+div#box-1 { background : yellow ; border-radius : 40px }
+
+div#box-2 {	background : lime ; border-top-left-radius : 50px ; border-bottom-right-radius : 50px }
+
+div#box-3 { background-color : aqua ; border-radius: 65px }

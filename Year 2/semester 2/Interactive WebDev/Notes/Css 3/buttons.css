@@ -1,0 +1,19 @@
+/* set button menu position */
+dl#menu	{ position: absolute; top: 10px; left: 20px ; width: 150px	}
+
+/* set general button styles */
+dt.btn { margin-bottom: 5px; text-align: center }
+
+/* set general anchor styles */
+dt.btn a	{ display: block; color: white; font-weight: bold; text-decoration: none }
+
+/* specify state styles... */
+
+/* mouseout (default) */
+dt.btn a:link, a:visited	{ background: blue;  border: 5px outset blue }
+
+/* mouseover */
+dt.btn a:hover	{ background: red;   border: 5px outset red  }
+
+/* omousedown */
+dt.btn a:active 	{ background: green; border: 5px inset green }

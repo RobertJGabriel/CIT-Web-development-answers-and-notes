@@ -1,0 +1,7 @@
+p { background : yellow }
+
+img[src="viper-1.png"] { float : right ; border : 3px dashed red }
+
+img[src="viper-2.png"] { float : left ; border : 3px dashed blue  }
+
+p.clear { clear : left }

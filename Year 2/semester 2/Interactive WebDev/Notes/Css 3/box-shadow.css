@@ -1,0 +1,20 @@
+/* CSS3 BOX SHADOW
+
+Supported by all the latest browsers with no need for vendor prefixing.
+
+box-shadow : [horizontal-offset] [vertical-offset] [blur] [spread] [color] inset?
+horizontal-offset is a length value and may be positive or negative eg: 5px -5px
+horizontal-offset is a length value and may be positive or negative eg 5px -5px
+blur is an optional positive length such as 5px. Higher values produce greater blur.
+spread is an optional positive or negative length that expands or contracts the shadow area eg 5px -5px
+inset is an optional keyword that changes the default outer shadow to an inner shadow.
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black }
+ 
+div#box-1 { box-shadow : 10px 10px 10px yellow }
+
+div#box-2 { box-shadow : 10px 10px 10px lime inset }
+
+div#box-3 { box-shadow : 0 0 10px 10px aqua }

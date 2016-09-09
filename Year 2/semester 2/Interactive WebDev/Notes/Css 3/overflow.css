@@ -1,0 +1,14 @@
+div.crop	{ position: absolute; top: 20px; width: 100px; height: 100px }
+
+div.spill	{ position: absolute; top: 150px; width: 75px; height: 75px }
+
+div.auto-clip	{ left:  20px; clip: auto }
+div.blok-clip	{ left: 140px; clip: rect(25px,100px,100px,25px) }
+div.line-clip	{ left: 260px; clip: rect(25px,100px,50px,0px) 	}
+
+
+
+div.show-overflow	{ left:  20px; overflow: visible }
+div.hide-overflow	{ left: 140px; overflow: hidden  }
+div.keep-overflow	{ left: 260px; overflow: scroll	 }
+

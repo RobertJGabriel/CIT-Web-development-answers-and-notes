@@ -1,0 +1,27 @@
+/*
+Description: Tabloid newspaper format.
+Author: Mike McGrath
+Version: 1.0
+*/
+
+
+/* Reset browser defaults. */
+@import "reset.css";
+
+
+/* Text content. */
+p { font : large cursive  }
+
+
+/* Banner headings. */
+h1 { 
+background : red ;
+color : white ;
+font : 2em white;
+padding: 0.2em ; 
+width : 5em  
+}
+
+
+
+

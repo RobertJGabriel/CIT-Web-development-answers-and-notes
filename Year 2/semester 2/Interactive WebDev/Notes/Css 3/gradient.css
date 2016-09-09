@@ -1,0 +1,43 @@
+/* CSS3 COLOR GRADIENT
+
+Supported by all the latest browsers.
+Rules currently require vendor prefixing.
+
+linear-gradient( angle? side-or-corner? color-stop color-stop )
+angle - optional value of n deg
+side-or-corner - optional value of    to top|bottom left|right
+color-stop - must be at least two each with 2 components stating a color and % across.
+
+radial-gradient(  shape? size? position color-stop color-stop  ) 
+shape - optional value of circle [default] or ellipse
+size - optional value of farthest-corner [default] closest-side closest-corner or farthest-side
+position - optional value of center [default]  left right top center [default] bottom
+color-stop - must be at least two each with 1 component stating a color and optionally a % across.
+
+*/
+
+div { float : left ; margin : 10px ; height : 120px ; width : 120px ; border : 5px solid black }
+
+div#box-1	{ 
+background : -ms-linear-gradient( 45deg, red 10% , yellow 70%, blue 90% ) ;
+background : -moz-linear-gradient( 45deg, red 10% , yellow 70%, blue 90% ) ;
+background : -webkit-linear-gradient( 45deg, red 10% , yellow 70%, blue 90% ) ;
+background : -o-linear-gradient( 45deg, red 10% , yellow 70%, blue 90% ) ;
+background : linear-gradient( 45deg, red 10% , yellow 70%, blue 90% ) 
+}
+
+div#box-2 { 
+background: -ms-repeating-linear-gradient( red 10%, yellow 20%, blue 30% ) ;
+background: -moz-repeating-linear-gradient( red 10%, yellow 20%, blue 30% )  ;
+background: -webkit-repeating-linear-gradient( red 10%, yellow 20%, blue 30% )  ;
+background: -o-repeating-linear-gradient( red 10%, yellow 20%, blue 30% )  ;
+background: repeating-linear-gradient( red 10%, yellow 20%, blue 30% ) 
+}
+
+div#box-3{ 
+background : -ms-radial-gradient( red 25% , yellow 50%, blue 75%  ) ;
+background : -moz-radial-gradient( red 25% , yellow 50%, blue 75%  )  ;
+background : -webkit-radial-gradient( red 25% , yellow 50%, blue 75%  )  ;
+background : -o-radial-gradient( red 25% , yellow 50%, blue 75%  )  ;
+background : radial-gradient( red 25% , yellow 50%, blue 75%  ) 
+}

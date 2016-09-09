@@ -1,0 +1,5 @@
+ul.line li { display : inline ; background : aqua }
+
+h2.run { display : run-in ; background : yellow }
+
+p a { display : inline-block; width : 4em ; height : 4em ; background : lime }

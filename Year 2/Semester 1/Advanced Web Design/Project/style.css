@@ -1,0 +1,256 @@
+
+/*--------- Body ----------*/
+body {
+	background-color: #000;
+	margin:0;
+	padding:0;
+}
+h1,h2 {color: #000;font-size: 2em;font-family: Archistico_Simple, Georgia, serif;}
+@font-face {font-family: Archistico_Simple;src: url(FingerPaint-Regular.ttf);}
+
+
+
+/*--------- Settings ----------*/
+#setting  a ,#setting{
+	right: 1%;
+	top: 5%;
+	position: fixed;
+}
+#login {
+	display:none;
+	width: 160px;
+	padding: 10px;
+	margin-top: 40px;
+	background-color: #ebebeb;
+}
+input {margin-left: 10px;margin-right: 10px;margin-bottom: 20px;}
+
+.settingBar {
+	float: right;
+	display: block;	
+	width: 40px;
+	height: 40px;
+}
+#setting a:hover {background-color:#ebebeb;}
+#setting  a:hover + #login {background-color:#ebebeb;display: block;float:right;}
+
+/*--------- General Layout ----------*/
+#mainContent {
+	width: 70%;
+	min-width: 550px;
+	overflow: auto;
+	height: auto;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
+/*--------- Header ----------*/
+#header {
+	width: 100%;
+	height: 100px;
+	margin-top: 30px;
+	background-color: #fff;
+	margin-bottom: 50px;
+	line-height: 100px;
+}
+
+#headerleft {	float: left;}
+#headerright {	float: right;}
+
+
+/*--------- Side Menu ----------*/
+#menu {
+	width: 264px;
+	height: auto;
+	float: left;
+	margin-left: 30px;
+}
+
+#menu ul {
+	background-image:url(Images/WhitePhone_middle.png);
+	height: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#menu ul li {
+	height: 50px;
+	display:block; 
+	width: 218px;
+	border-bottom-style: dashed;
+	border-bottom-color: #F1F1F1;
+	background-color: #fff;
+	line-height: 50px;
+	padding-left:10px;
+	color: #FFF;
+	margin-left: 18px;
+}
+
+#menu ul >li >a {
+	text-decoration: none;
+	font-size: 2em;
+	display:block; 
+	color: #000;
+	font-family: Archistico_Simple, Georgia, serif;
+}
+
+#menu ul li:hover , #menu  ul li a:hover {
+	color: #fff;
+	background-color: transparent;
+	border-style: none;border-bottom-style: dashed;
+	border-bottom-color: transparent;
+	width: 218px;
+}
+
+
+/*--------- Main ----------*/
+#main {
+	margin-left: 324px;
+	background-color: #fff;
+	padding: 10px;
+	padding-top: 20px;
+}
+#main p ,#main h1 {
+margin:0 20 10 0;
+}
+/*--------- Badges ----------*/
+.caption {margin-top: 100px;text-align: center;}
+.apps {
+	list-style: none;
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+	overflow: auto;
+	min-width: 65px;
+	height: auto;
+}
+
+.apps li {margin-top: 20px;margin-left: 20px;}
+
+.app {
+	height: 100px;
+	margin-bottom: 20px;
+	cursor:pointer;
+	width: 100px;
+	background: url(Images/sprites.png) no-repeat;
+	float: left;
+}
+
+.badge {
+	background: url(Images/sprites.png) no-repeat;
+	background-position: -453px -150px;
+	position: relative;
+	height: 30px;
+	color: #FFF;
+	margin-top: -15px;
+	margin-right: -15px;
+	text-align: center;
+	line-height: 30px;
+	width: 30px;
+	float: right;
+}
+
+.app:hover  .badge {
+	background-position: -502px -151px;
+	height: 60px;
+	font-size:2em;
+	margin-top: -30px;
+	margin-right: -30px;
+	line-height: 60px;
+	width: 60px;
+}
+
+
+/*--------- Start of Badges  ----------*/
+#app {background-position: -451px 0;}
+#linkedin {background-position: -299px 0;}
+#google {	background-position: -299px -150px ;}
+#googleplus {background-position: -152px -150px ;}
+#vkontakte {	background-position: -149px 0;}
+#photoshop {background-position: 0 0;}
+#blog {background-position: 0 -148px ;}
+
+
+
+/*--------- Footer  ----------*/
+#footer {
+	background-color: #B4B4B4;
+	width: 100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	min-width: 680px;
+}
+#footer h3 {font-family: Archistico_Simple,Georgia, serif;color: #fff;line-height:40px}
+
+
+#footer > ul {
+	overflow: hidden;
+	width:680px;
+	min-width:150px;
+	margin-left: auto;
+	padding: 0;
+	list-style: none;
+	margin-right: auto;
+}
+#footer ul  ul   {
+	margin:0;
+	overflow:auto;
+	float:left;
+	width:120px;
+	list-style: none;
+	padding:0;
+}
+#footer > ul > li{ width:150px;float:left; margin-left:20px; }
+#footer h3 + ul{
+	list-style: none;
+	padding:0;
+	margin:0;
+}
+
+#footer ul a {
+	color: #fff;
+	font-size:1.2em;
+	line-height:30px;
+	text-decoration:none;
+} #footer a:hover{text-decoration:underline;}
+
+
+
+/*--------- Bottom Menu  ----------*/
+.bottom {background-color: #909090;min-width:680px;}
+.bottom ul {
+	line-height: 40px;
+	width: 480px;
+	height: 40px;margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bottom li {float: left;margin-right: 10px;}
+.bottom li > a {text-decoration: none;color: #FFF;}
+.bottom li > a:hover{text-decoration:underline;}
+
+/*--------- Copyright  ----------*/
+#copyright {
+	width: 100%;
+	height: 30px;
+	color: #FFF;
+	line-height: 30px;
+	text-align: center;
+}
+
+/*--------- Link Chain  ----------*/
+.link {
+	width: auto;
+	padding-right: 30px;
+	background-size: 29px 29px;
+	background-image: url(Images/chain.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}

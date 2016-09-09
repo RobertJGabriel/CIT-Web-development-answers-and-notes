@@ -1,0 +1,250 @@
+
+
+*{
+font-family:Arial, Helvetica, sans-serif;
+}
+    body {
+    margin: 0px;
+    padding: 0px;
+}
+@media only screen and (min-width: 640px) and (max-width: 2000px) {
+   
+    #header {
+      box-shadow: 0 0 5px #888;
+        transition: background-color 1000ms linear;
+     background-color: rgba(231, 76, 60,1.0);
+        margin: 0px;
+        height: 60px;
+        width: 100%;
+    }
+ #header:hover {
+        background-color: #3498db;
+    }
+   
+    #menuButton,
+    #menuButtona {
+        height: 45px;
+        width: 45px;
+        float: right;
+        margin-right: 20px;
+        background-image: url(menu.png);
+        background-size: cover;
+        cursor: pointer;
+    }
+    .menuItem {
+        
+        display: none;
+    }
+    .menuItema {
+    
+        display: block;
+    }
+    #menu {
+        text-decoration: none;
+        margin-top: 5px;
+        list-style: none;
+        padding: 0px;
+        float: right;
+        height: auto;
+        width: auto;
+    }
+    #menu li:Not(:first-child) {
+        margin-top: -5px;
+        margin-right: 20px;
+        text-align: center;
+        line-height: 60px;
+        float: left;
+        min-width: 60px;
+        height: 60px;
+    }
+    #menu li:Not(:first-child):hover {
+        background-color: rgba(189, 195, 199, 0.5);
+    }
+    #menu li:Not(:first-child) a {
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #alertBox{
+        width: 100%;
+        width: auto;
+        height: 35px;
+        padding:5px;
+        text-align: center;
+        line-height: 35px;
+        background-color: rgba(189, 195, 199,0.6);
+        display: none;
+    }
+    
+    #banner{
+        width: 100%;
+        background-image: url(banner.jpg);
+        background-position: center;
+        background-size: cover;   
+        height: 500px;
+        background-color: red;
+    }
+    
+     #logo{
+         width: 298px;
+         height: 76px;
+         background-image: url(logo.png);
+         position: absolute;
+         margin-top: 20px;
+         margin-left: 20px;
+      
+    }
+    
+    #search{
+        
+        background-color: transparent;
+        border: 4px solid rgba(189, 195, 199,0.8);
+        border-radius: 4px;
+        padding: 5px;
+        width: 200px;
+        height: 20px;
+    
+        
+    }
+    #content{
+        background-color: red;
+        width: 880px;
+        padding: 10px;
+        margin: 0px auto 0px auto;
+        background-color: #ebebeb;
+        height: 900px;
+        margin-top: 20px;
+        
+    }
+    .contentRight{
+        background-color: red;
+        width: 540px;
+        margin-right: 40px;
+        min-height: 900px;
+               float: left;
+    }
+    .contentLeft{
+        background-color: green;
+        width: 300px;
+        min-height: 200px;
+        float: left;
+    }
+    
+}
+@media only screen and (min-width: 0px) and (max-width: 639px) {
+    #header {
+        background-color: rgba(211, 84, 0, 1.0);
+        margin: 0px;
+        height: 60px;
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0 0 5px #888;
+        transition: background-color 1000ms linear;
+    }
+    #header:hover {
+        background-color: #3498db;
+    }
+    #menuButton,
+    #menuButtona {
+        height: 45px;
+        width: 45px;
+        float: right;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        background-image: url(menu.png);
+        background-size: cover;
+        cursor: pointer;
+    }
+    .menuItem {
+        float: right;
+        display: none;
+    }
+    .menuItema {
+        float: right;
+        display: block;
+    }
+    #menu {
+        text-decoration: none;
+        margin-top: 5px;
+        list-style: none;
+        padding: 0px;
+        float: right;
+        height: 100px;
+        width: 100%;
+    }
+    #menu li:Not(:first-child) {
+        background-color: #ebebeb;
+        border-bottom: 3px solid rgba(52, 152, 219, 1.0);
+        text-align: center;
+        line-height: 60px;
+        float: right;
+        width: 100%;
+        height: 60px;
+    }
+    
+    #menu li:Not(:first-child) a {
+        display: block;
+        color: black;
+        text-decoration: none;
+    }
+    
+    #logo{
+        width: 298px;
+        height: 76px;  
+        position: absolute;
+        background-image: url(logo.png);
+        margin-top: 20px;
+        margin-left: 148px;
+    }
+        #banner{
+            
+        width: 100%;
+        background-image: url(banner.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 500px;
+        background-color: red;
+            
+    }
+    
+        #search{
+        
+        background-color: transparent;
+        border: 4px solid rgba(189, 195, 199,0.8);
+        border-radius: 4px;
+        padding: 5px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 20px;
+            
+    }
+        #alertBox{
+        width: 100%;
+        width: auto;
+        height: 35px;
+        padding:5px;
+        text-align: center;
+        line-height: 35px;
+        background-color: rgba(189, 195, 199,0.6);
+        display: none;
+    }
+    #content{
+        min-width: 400px;
+        padding: 10px;
+        margin: 0px auto 0px auto;
+        background-color: #ebebeb;
+        height: 900px;
+        margin-top: 20px;
+        
+    }
+    .contentRight{
+        background-color: red;
+        min-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 900px;
+           
+    }
+}

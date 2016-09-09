@@ -1,0 +1,8 @@
+/* Validated by W3C CSS Validation Service */
+
+
+/* PRINT layout */
+
+body { font-family : monospace }
+
+div#foot, div#list { display : none }

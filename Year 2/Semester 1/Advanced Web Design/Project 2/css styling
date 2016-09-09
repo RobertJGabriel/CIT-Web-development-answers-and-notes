@@ -1,0 +1,30 @@
+
+********* Users
+In the users I control the every second image and make them float left and right.
+I also center the text . I have the meda catches set for large screens, ipad and iphone screens.
+For the smaller images  and media catches I use padding for the black around padding.
+The rest is strign forword and kinda hard to right about :)
+
+
+******************Gallery Effect 
+The gallery effect is used by moving the slide part up - 300px; Then using on the hover to tranform it back to 0pxs with a 1 second speed.
+ the use of over flow hidden makes it invisable to the user .
+ 
+ I used the faded in keyframe to effect the fad in soical items. the effect chnages the oprcty from 0 to 1 :) at a rate 1s :)
+ 
+ ************* user photo
+ 
+ Got them from uifaces.com
+ 
+ ************ Trnsitions
+ I imported the tags to allow the effec to happen in all major browsers.
+ Please note that of testing this that opera and chrome but share the same webkit Along with firefox and safrai. :D  and I imported for ie as awell :)
+ 
+ 
+ ************* For the menu
+ 
+ I wrote a custom javascript that changes the id of the elements to give the effect needed :) It works pretty well and im proud of it :)
+ 
+ 
+ 
+ Please note sorry if my written english isnt great as my desliexia does hold me back abit but my oral english is alot better :)

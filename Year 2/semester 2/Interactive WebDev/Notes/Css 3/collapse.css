@@ -1,0 +1,11 @@
+/* set table size and margin size */
+table	{ width: 500px; height: 60px; margin: 20px }
+
+/* set borders */
+table	{ border: 2px solid black	}
+td.twin	{ border: 5px double green	}
+td.full	{ border: 5px solid blue	}
+td.dots	{ border: 5px dotted red	}
+
+/* set borders to collapse */
+table.fold { border-collapse: collapse 	}

@@ -1,0 +1,14 @@
+/* Select adjacent sibling following h3 element. */
+h3 + p { background: yellow }
+
+/* Select span child of paragraph element */
+p > span { background : lime }
+
+/* Select ul child of body element */
+body > ul { background : fuchsia }
+
+/* Select li child of ul element */ 
+body > ul > li { background : aqua }
+
+/* Select span grandchild of ul element */ 
+body > ul > li > span { background : orange }

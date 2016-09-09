@@ -1,0 +1,68 @@
+CREATE TABLE Branch
+             (branchNo  VARCHAR(4)    NOT NULL,
+              street	VARCHAR(25),
+              city	VARCHAR(20),
+	      postcode  VARCHAR(10),
+PRIMARY KEY (branchNo));
+
+CREATE TABLE Staff
+
+             (staffNo   VARCHAR(4)	NOT NULL,
+	      fName	VARCHAR(10),
+	      lName	VARCHAR(10),
+              position	VARCHAR(12),
+              sex	CHAR(1),           
+              DOB	DATE,
+              salary	Money,
+              branchNo	VARCHAR(4),
+PRIMARY KEY (staffNo),
+FOREIGN KEY (branchNo) REFERENCES Branch(branchNo));
+
+CREATE TABLE PrivateOwner
+
+             (ownerNo   VARCHAR(4)	NOT NULL,
+	      fName	VARCHAR(10),
+	      lName	VARCHAR(10),
+              address	VARCHAR(30),
+              telNo	VARCHAR(16),           
+PRIMARY KEY (ownerNo));
+
+CREATE TABLE PropertyforRent
+             (propertyNo   VARCHAR(4)	NOT NULL,
+	      street	VARCHAR(25),
+              city	VARCHAR(20),
+	      postcode  VARCHAR(10),
+              type	VARCHAR(10),           
+              rooms	smallint,
+              rent	Money,
+	      ownerNo   VARCHAR(4),
+	      staffNo   VARCHAR(4),	
+              branchNo	VARCHAR(4),
+PRIMARY KEY (propertyNo),
+FOREIGN KEY (ownerNo) REFERENCES PrivateOwner(ownerNo),
+FOREIGN KEY (staffNo) REFERENCES Staff(staffNo),
+FOREIGN KEY (branchNo) REFERENCES Branch(branchNo));
+
+CREATE TABLE Client
+
+             (clientNo  VARCHAR(4)	NOT NULL,
+	      fName	VARCHAR(10),
+	      lName	VARCHAR(10),
+              telNo	VARCHAR(16),
+	      prefType	VARCHAR(10),
+	      maxRent	Money,
+           
+PRIMARY KEY (clientNo));
+
+CREATE TABLE Viewing
+             (clientNo  VARCHAR(4)	NOT NULL,
+	      propertyNo   VARCHAR(4)	NOT NULL,
+	      viewDate	Date,
+              comment	VARCHAR(20),
+	      
+PRIMARY KEY (clientNo,propertyNo),
+FOREIGN KEY (clientNo) REFERENCES Client(clientNo),
+FOREIGN KEY (propertyNo) REFERENCES PropertyforRent(propertyNo));
+
+
+Commit;

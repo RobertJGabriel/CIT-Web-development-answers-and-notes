@@ -1,0 +1,13 @@
+/* HTML5 in easy steps:example 24.1 */
+
+/* Set the <p> size and background. */
+p.btn { width: 192px; height: 67px; background: url(rollover-bg.png); }
+
+/* Set the <a> size. */
+p.btn a { display: block; width: 192px; height: 67px; }
+
+/* Suppress the nested <img> border. */
+p.btn a img{ border: 0px;}
+
+/* Hide the <img> onmouseover. */
+p.btn a:hover img { visibility: hidden; }

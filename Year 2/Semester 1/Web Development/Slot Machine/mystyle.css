@@ -1,0 +1,108 @@
+body{
+background-color:#ecf0f1;
+font-family:Arial, Helvetica, sans-serif;
+}
+h1{
+font-size:30px;
+font-family:Arial, Helvetica, sans-serif;
+color:#E671B8;
+}
+
+#center{
+margin-left:auto;
+margin-top:30px;
+padding:10px;
+width:550px;
+min-height:300px;
+border-radius:10px;
+margin-right:auto;
+}
+button{
+margin:0px;
+padding:0px;
+border:0px;
+width:160px;
+color:#fff;
+height:40px;
+ cursor: pointer;
+background-color:#e67e22;
+}
+button:hover{
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+background-color:#d35400;
+}
+#alert{
+margin-top:20px;
+width:150px;
+height:50px;margin-right:auto;
+
+margin-left:auto;
+}
+.slot{
+width:150px;
+margin-left:20px;
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+padding:5px;
+min-height:150px;
+float:left;
+background-color:#2980b9;
+}
+#header{
+width:100%;
+height:30px;
+background-color:#9b59b6;
+
+}
+h3{
+margin-top:-30px;
+font-size:30px;
+text-align:center;
+color:#fff;
+}
+#math{
+background-color:#27ae60;
+width:515px;
+margin-left:auto;
+margin-right:auto;
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+height:40px;
+margin-top:200px;
+}
+#money{
+text-align:center;
+line-height:40px;
+color:#fff;
+font-size:20px;
+}
+#one,#two,#three{
+color:#ecf0f1;
+font-size:50px;
+
+width:40px;
+margin-left:auto;
+margin-right:auto;
+}
+#banner{
+width:515px;
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
+background-color:#7f8c8d;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:20px;
+height:50px;
+margin-top:20px;
+}
+#winner,#total{
+font-size:30px;
+text-align:center;
+color:#ecf0f1;
+padding:2px;
+}

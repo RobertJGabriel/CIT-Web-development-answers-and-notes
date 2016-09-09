@@ -1,0 +1,17 @@
+/* Reset browser defaults. */
+@import "reset.css";
+
+
+/* Reset the font so that 1em=10px. */
+body { font-size : 62.5% }
+
+
+/* Set the text size to 18px and color. */
+p { font-size : 1.8em ; color : red }
+
+/* Override inherited color value. */
+span#mod { color:blue }
+
+/* Set borders using shorthand. */
+p { border : 3px dashed #0f0 }
+

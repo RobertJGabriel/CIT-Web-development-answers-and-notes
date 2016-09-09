@@ -1,0 +1,28 @@
+/* CSS3 HYPHENS
+
+Not supported by all the latest browsers.
+Rules currently require vendor prefixing.
+Currently only implemented in Internet Explorer and Safari.
+
+-ms-hyphens : none | manual | auto
+sets automatic hyphenation on or off
+
+ -ms-hyphenate-limit-zone : % | length
+ sets the amount of space that may appear in a line without triggering hyphenation.
+ 
+ -ms-hyphenate-limit-chars : [ total n chars] [ min n before hyphen] [ min n after hyphen]
+ or auto (equivalent to 5 2 2 )
+ 
+ -ms-hyphenate-limit-lines : n
+ sets maximum number of lines in an element that can end with a hyphen.
+
+*/
+
+div { float : left ; margin : 20px ; height : 160px ; width : 200px }
+
+div#box-1 { background : aqua }
+div#box-2 { background : yellow }
+
+div { text-align : justify ; overflow : visible }
+
+div#box-2 { -ms-hyphens : auto ; -moz-hyphens : auto ; -webkit-hyphens : auto ; -o-hyphens : auto ; hyphens : auto   }

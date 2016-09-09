@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=maxNumOfBooks
+comment0.target=BookList(int)
+comment1.params=index
+comment1.target=Book\ getBook(int)
+comment2.params=index
+comment2.target=Book\ search(int)
+comment3.params=index
+comment3.target=boolean\ removeBook(int)
+comment4.params=
+comment4.target=double\ calculateYearlyBookPayment()
+numComments=5

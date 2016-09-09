@@ -1,0 +1,44 @@
+INSERT INTO Branch VALUES('B005', '22 Deer Rd', 'London', 'SW1 4EH');
+INSERT INTO Branch VALUES('B007', '16 Argyll St', 'Aberdeen', 'AB2 3SU');
+INSERT INTO Branch VALUES('B003', '163 Main St', 'Glasgow', 'G11 9QX');
+INSERT INTO Branch VALUES('B004', '32 Manse Rd', 'Bristol', 'BS99 1NZ');
+INSERT INTO Branch VALUES('B002', '56 Clover Dr', 'London', 'NW10 6EU');
+
+
+INSERT INTO Staff VALUES('SL21', 'John', 'White', 'Manager','M', '1-Oct-1945', 30000,'B005');
+INSERT INTO Staff VALUES('SG37', 'Ann', 'Beech', 'Assistant','F', '10-Nov-1960', 12000,'B003');
+INSERT INTO Staff VALUES('SG14', 'David', 'Ford', 'Supervisor','M', '24-Mar-1958', 18000,'B003');
+INSERT INTO Staff VALUES('SA9', 'Mary', 'Howe', 'Assistant','F', '19-Feb-1970', 9000,'B007');
+INSERT INTO Staff VALUES('SG5', 'Susan', 'Brand', 'Manager','F', '3-Jun-1940', 24000,'B003');
+INSERT INTO Staff VALUES('SL41', 'Julie', 'Lee', 'Assistant','F', '13-Jun-1965', 9000,'B005');
+
+INSERT INTO PrivateOwner VALUES('CO46', 'Joe', 'Keogh', '2 Fergus Dr, Aberdeen AB2 7SX','01224-861212');
+INSERT INTO PrivateOwner VALUES('CO87', 'Carol', 'Farrel', '6 Achray St, Glasgow G32 9DX','0141-357-7419');
+INSERT INTO PrivateOwner VALUES('CO40', 'Tina', 'Murphy', '63 Well St, Glasgow G42','0141-943-1728');
+INSERT INTO PrivateOwner VALUES('CO93', 'Tony', 'Shaw', '12 Park Pl, Glasgow G4 0QR','0141-225-7025');
+
+
+INSERT INTO PropertyForRent VALUES('PA14', '16 Holhead', 'Aberdeen', 'AB7 5SU','House', 6, 650,'CO46', 'SA9','B007');
+INSERT INTO PropertyForRent VALUES('PL94', '6 Argyll St', 'London', 'NW2','Flat', 4, 400,'CO87', 'SL41','B005');
+INSERT INTO PropertyForRent VALUES('PG4', '6 Lawrence St', 'Glasgow', 'G11 9QX','Flat', 3, 350,'CO40', null,'B003');
+INSERT INTO PropertyForRent VALUES('PG36', '2 Manor Rd', 'Glasgow', 'G32 4QX','Flat', 3, 375,'CO93', 'SG37','B003');
+INSERT INTO PropertyForRent VALUES('PG21', '18 Dale Rd', 'Glasgow', 'G12','House', 5, 600,'CO87', 'SG37','B003');
+INSERT INTO PropertyForRent VALUES('PG16', '5 Novar Dr', 'Glasgow', 'G12 9AX','Flat', 4, 450,'CO93', 'SG14','B003');
+
+
+INSERT INTO Client VALUES('CR76', 'John', 'Kay', '0207-774-5632','Flat', '425');
+INSERT INTO Client VALUES('CR56', 'Aline', 'Stewart', '0141-848-1825','Flat', '350');
+INSERT INTO Client VALUES('CR74', 'Mike', 'Ritchie', '01475-392178','House', '750');
+INSERT INTO Client VALUES('CR62', 'Mary', 'Tregear', '01224-196720','Flat', '600');
+
+
+
+
+
+INSERT INTO Viewing VALUES('CR56', 'PA14', '24-May-01', 'too small');
+INSERT INTO Viewing VALUES('CR76', 'PG4', '20-Apr-01', 'too remote');
+INSERT INTO Viewing VALUES('CR56', 'PG4', '26-May-01', null);
+INSERT INTO Viewing VALUES('CR62', 'PA14', '14-May-01', 'no dining room');
+INSERT INTO Viewing VALUES('CR56', 'PG36', '28-Apr-01', Null);
+
+Commit;

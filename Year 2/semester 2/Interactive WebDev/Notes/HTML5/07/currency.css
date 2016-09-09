@@ -1,0 +1,6 @@
+/* HTML5 in easy steps:example 51.1 */
+
+table { border:3px double maroon; padding:3px;  }
+tr.names { text-align:center; color:maroon; }
+tr.inputs{ vertical-align:top; }
+td { padding-right:25px; }
