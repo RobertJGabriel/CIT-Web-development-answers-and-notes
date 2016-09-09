@@ -1,0 +1,143 @@
+*{
+font-weight:lighter;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+margin:0;
+padding:0;
+}
+#header{
+background-color:#e74c3c;
+height:200px;
+width:100%;
+}
+#main{
+height:auto;
+margin-top:50px;
+min-height:400px;
+width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+#overflow{
+background-color:red;
+margin-left:auto;
+margin-right:auto;
+width:200px;
+padding:0;position:relative;
+height:300px;
+}
+#overflow > li {
+ width:200px;overflow:auto;
+ float:left;
+margin-right:40px;
+}
+
+ul{
+overflow:auto;
+
+list-style:none;
+padding:0px;
+margin:0px;
+}
+
+
+.display{
+height:auto;
+margin-top:50px;
+min-height:100px;
+padding:5px;
+width:200px;
+margin-left:auto;background-color:white;
+margin-right:auto;
+border:3px solid grey;
+
+
+}
+
+.dir{
+text-align:center;
+border-bottom:2px  solid green;
+padding-bottom:5px;
+
+}
+.display h2{
+text-align:center;
+}
+.button{
+	padding:0;
+	background-color:#d35400;
+	padding:5px;
+	border-radius:5px;
+	border:0;
+	bottom:0;
+}
+.button:hover{
+background-color:#3498db;
+cursor:pointer;
+}
+#logo{
+width:150px;
+height:150px;
+margin-left:auto;
+background-image: url(dvd.png);
+margin-right:auto;
+background-color:white;background-position:center; 
+background-size:150px 150px;
+background-repeat:no-repeat;
+border:2px solid #ebebeb;
+border-radius:100px;margin-top:20px;
+margin-bottom:40px;
+}
+
+
+input{
+margin-bottom:10px;
+
+}
+.option{
+
+}
+h1{
+text-align:center;
+line-height:200px;
+}
+
+
+#right{
+
+float:right;
+width:auto;
+overflow:auto;
+background-color:#f7f7f7;
+
+min-height:200px;
+
+}
+
+#left{
+float:left;min-height:200px;
+width:250px;
+background-color:#2c3e50;
+
+}
+h3{
+text-align:center;
+}
+
+#catch{
+background-color:#ffffff;
+width:170px;
+padding:5px;
+border:2px solid #ebebeb;
+position:relative;
+border-radius:4px;
+
+margin-left:auto;
+margin-right:auto;
+min-height:100px;
+margin-top:10px;
+margin-bottom:30px;
+
+}

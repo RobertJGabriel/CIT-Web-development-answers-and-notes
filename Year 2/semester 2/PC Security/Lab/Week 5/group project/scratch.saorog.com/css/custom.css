@@ -1,0 +1,9 @@
+body .modal {
+    /* new custom width */
+    width: 550px;
+    height: 450px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin: -250px 0 0 -305px;
+}
+
+body .hero-unit{ background-color:#fed210 }

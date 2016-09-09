@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">  
+<title>Rich Internet Application</title>
+<script type="text/javascript" src = "ajax.js"></script>
+<link type = "text/css" rel = "stylesheet" href = "ajax.css">  
+</head>
+    
+<body>
+
+<div id = "databox">
+
+<table>
+
+<tr>
+<td></td>
+<td class="col">1</td>
+<td class="col">2</td>
+<td class="col">3</td>
+<td class="col">4</td>
+<td class="col">5</td>
+<td class="tot">Total</td>
+</tr>
+
+<tr>
+<td class="row">1</td>
+<td id="n0"></td>
+<td id="n1"></td>
+<td id="n2"></td>
+<td id="n3"></td>
+<td id="n4"></td>
+<td id="rt1" class="tot"></td>
+</tr>
+
+<tr>
+<td class="row">2</td>
+<td id="n5"></td>
+<td id="n6"></td>
+<td id="n7"></td>
+<td id="n8"></td>
+<td id="n9"></td>
+<td id="rt2" class="tot"></td></tr>  
+
+<tr>
+<td class="row">3</td>
+<td id="n10"></td>
+<td id="n11"></td>
+<td id="n12"></td>
+<td id="n13"></td>
+<td id="n14"></td>
+<td id="rt3" class="tot"></td>
+</tr>
+
+<tr>
+<td class="tot">Total</td>
+<td id="ct1" class="tot"></td>
+<td id="ct2" class="tot"></td>
+<td id="ct3" class="tot"></td>
+<td id="ct4" class="tot"></td>
+<td id="ct5" class="tot"></td>
+<td id="gt" class="gto"></td>
+</tr>
+
+</table>
+
+</div>
+
+
+<form action = "">
+
+<fieldset id="editbox">
+
+<legend id="title">Cell Editor</legend>
+
+<div>
+<select id="rownum">
+<option selected="selected">Row</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+
+<select id="colnum">
+<option selected="selected">Column</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+New Value:<input id="new_value" type="text" size="5" value="">
+
+<input id="btn" type="button" value="Update">
+</div>
+
+</fieldset>
+
+</form>
+
+</body>
+
+</html>

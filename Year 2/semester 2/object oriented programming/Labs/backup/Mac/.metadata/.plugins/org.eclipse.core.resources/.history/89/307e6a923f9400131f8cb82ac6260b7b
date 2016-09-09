@@ -1,0 +1,42 @@
+package javaProject;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+
+import javax.swing.*;
+
+
+
+public class login extends JFrame implements ActionListener {
+	private JPanel mypanel;
+	private	JButton mybutton;
+	private	JLabel mylabel;
+	private JTextField textField ;
+	private JPasswordField passField;
+	
+	
+	public static void main(String[] s) {
+		new  login();
+	}
+	public  login() {
+		//Set Color of background
+				Color c = new Color(41, 128, 185);
+				Container con = this.getContentPane();
+				con.setBackground(c);
+				
+				setLayout(new BorderLayout());
+				add(new Button("Center"), BorderLayout.CENTER);
+
+				
+				
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

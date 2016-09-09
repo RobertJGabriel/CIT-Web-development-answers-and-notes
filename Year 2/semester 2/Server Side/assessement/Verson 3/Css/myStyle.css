@@ -1,0 +1,177 @@
+* {
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    width: 100%;
+    height: 80px;
+}
+
+input{
+ width:150px;
+    margin-bottom:3px;
+}
+#Logo {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    background-image: url(../images/dj.png);
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    border-radius: 100px;
+    border: 5px solid #ffffff;
+    background-color: red;
+}
+#box {
+    width: 700px;
+    height: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+}
+#main {
+    height: auto;
+    margin-top: 50px;
+    min-height: 400px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.display {
+    height: auto;
+    margin-top: 50px;
+    min-height: 100px;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    margin-left: auto;
+    background-color: #fff;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+    margin-right: auto;
+}
+.dir {
+    text-align: center;
+    border-bottom: 2px solid green;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.display h2 {
+    text-align: center;
+}
+.button {
+    padding: 0;
+    background-color: #d35400;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    bottom: 0;
+}
+.button:hover {
+    background-color: #3498db;
+    cursor: pointer;
+}
+ul {
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+.option {} h1 {
+    text-align: center;
+}
+#right {
+    position: absolute;
+    width: 450px;
+    height: 760px;
+    overflow: auto;
+    margin-left: 250px;
+    min-height: 200px;
+}
+#left {
+    position: absolute;
+    overflow: auto;
+    width: 250px;
+    background-color: #ebebeb;
+    -moz-box-shadow: 0 0 5px #888;
+    -webkit-box-shadow: 0 0 5px#888;
+    box-shadow: 0 0 5px #888;
+}
+h3 {
+    text-align: center;
+}
+#catch {
+    background-color: #ffffff;
+    width: 190px;
+    padding: 5px;
+    border: 2px solid #ebebeb;
+    position: relative;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#title {
+    color: red;
+    font-size: 2em;
+    text-align: center;
+}
+#overflow {
+    background-color: #ffffff;
+    width: 190px;
+    padding: 5px;
+    border: 2px solid #ebebeb;
+    position: relative;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#overflow > li {
+    width: 200px;
+    overflow: auto;
+    float: left;
+    margin-right: 40px;
+}
+#test> input,
+#test> input:focus {
+    margin-bottom: 10px;
+    background-color: transparent;
+    font-size: 1em;
+    border: 0;
+    text-align: center;
+}
+#test > input:hover {
+    background-color: white;
+}
+#test > input[type=submit] {
+    margin-top: 20px;
+    color:#ebebeb;
+    width: 190px;
+}
+#test > input[type=submit]:hover {
+    margin-top: 20px;
+    width: 190px;
+    color:black;
+    cursor:pointer;
+    border-bottom:5px solid blue;
+}
+
+textarea{
+ border:1px solid white;   
+    width:190px;
+    height:100px;
+    
+}

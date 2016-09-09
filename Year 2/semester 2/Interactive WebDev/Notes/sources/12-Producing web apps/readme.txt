@@ -1,0 +1,1 @@
+﻿All examples in this chapter must be loaded via HTTP to use the XMLHttpRequest object. For example, place them in the htdocs directory of a personal web server, or upload to your ISP. They will not work if they are simply opened directly in your browser from your system drive because that uses the file:// protocol, not the http:// protocol.

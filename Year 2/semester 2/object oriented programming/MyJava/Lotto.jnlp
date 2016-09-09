@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" codebase="file:///C:/MyJava" href="Lotto.jnlp">
+
+<!-- BEWARE - The codebase attribute must accurately reflect this file's location. -->
+<!-- You must edit the path unless it really is located within the C:/MyJava directory. -->
+
+<!-- Linux users should amend the codebase attribute to suit the file directory -->
+<!-- For instance, using codebase="file:///home/mike/MyJava" -->
+
+   <information>
+      <title>Lotto Application</title>
+      <vendor>Java In Easy Steps</vendor>
+      <homepage href="http://www.ineasysteps.com" />
+      <offline-allowed/>
+   </information>
+
+   <resources>     
+   	<jar href="Lotto.jar"/>   
+	<j2se version="1.6+"  href="http://java.sun.com/products/autodl/j2se"/>
+   </resources>
+
+   <application-desc main-class="Lotto"/>
+
+</jnlp>
+

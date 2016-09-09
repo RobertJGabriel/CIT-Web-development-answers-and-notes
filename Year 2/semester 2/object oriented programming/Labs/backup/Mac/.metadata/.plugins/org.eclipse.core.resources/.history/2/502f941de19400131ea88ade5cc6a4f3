@@ -1,0 +1,224 @@
+
+package javaProject;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+public class Surgey extends JFrame implements ActionListener { 
+
+	private int surgeryId ; 
+	private String surgeryAdd; 
+	private static ArrayList<Doctor> docList = new ArrayList<Doctor>(); 
+	static Scanner keyboard = new Scanner (System.in);// Scanner for Keyboard input.
+
+	
+	public static void main(String[] args) { 
+	new Surgey();
+	}
+
+	public Surgey() { 
+		
+		
+		addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {System.exit(0);}
+		});
+		
+		JFrame frame = new JFrame();
+		frame.setTitle("Welcome");
+		Color c = new Color(41, 128, 185);
+		Container con = frame.getContentPane();
+		con.setBackground(c);
+	
+		frame.setSize(700, 500);
+		frame.setLocation(200, 200);
+
+		//Menu for stuff
+				JMenu menu = new JMenu("Doctor");
+				menu.add(makeMenuItem("Login"));
+				menu.add(makeMenuItem("Save"));
+				menu.add(makeMenuItem("Quit"));
+
+
+				JMenu menu2 = new JMenu("Patent");
+				menu2.add(makeMenuItem("Open"));
+				menu2.add(makeMenuItem("Save"));
+				menu2.add(makeMenuItem("Quit"));
+
+				//Adding menu together.
+				JMenuBar menuBar = new JMenuBar();
+				menuBar.add(menu);
+				menuBar.add(menu2);
+		
+			
+				JPanel westPanel = new JPanel(); 
+				westPanel.setSize(200, 500);
+				westPanel.setBackground(new Color(231, 76, 60));
+				
+				frame.setLayout(new BorderLayout());
+				frame.add(menuBar, BorderLayout.NORTH);
+				frame.add(new Button("South"), BorderLayout.SOUTH);
+				frame.add( westPanel, BorderLayout.WEST);
+				frame.add(new Button("Center"), BorderLayout.CENTER);
+
+				
+				
+			
+				frame.setVisible(true);
+				frame.setResizable(false);
+		
+		docList.add(new Doctor("rob", "sss"));
+		docList.add(new Doctor("robert", "tyue"));
+
+	
+		/*	for (int x = 0 ; x <= 2; x++){
+
+			addDoctor();
+		} 
+		 */
+	}
+
+
+	private static void addDoctor() { 
+		String name,password ;
+
+		do{// Start of Do while Loop 
+			keyboard.nextLine();
+			System.out.print("Please Enters Doctor's Name : ");
+			name = keyboard.nextLine();
+		}while(!name.matches("^[\\p{L} .'-]+$"));// Validates input and checks that only string is input.
+
+
+		do{// Start of Do while Loop
+			System.out.print("Please Enter "+ name + "'s Password : ");
+			password = keyboard.nextLine();
+		}while(!name.matches("^[\\p{L} .'-]+$"));// Validates input and checks that only string is input.
+		docList.add(new Doctor(name, password));// Adds doctors to class
+		saveSystemToFile() ;
+	} 
+
+	private static void updateDoctor() { 
+
+	} 
+	private static void saveSystemToFile() { 
+		BufferedWriter bWriter = null;
+		try{
+			File file = new File("Database.txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}
+			FileWriter fWriter = new FileWriter(file);
+			bWriter = new BufferedWriter(fWriter);
+			// Goes through each lecturer and writes its details
+			for(int i=0; i<docList.size(); i++){
+				bWriter.write(docList.get(i).getDoctorName().toString());
+				bWriter.write(";");
+				bWriter.write(docList.get(i).getDocPasswd().toString());
+				bWriter.write(";");
+				bWriter.write(docList.get(i).getDoctorId());
+				bWriter.newLine();
+
+			}
+			System.out.print("Saved");
+		}catch(IOException ex){
+			ex.printStackTrace();
+		}finally{
+			try{
+				// clears memory and closes writer
+				if(bWriter != null){
+					bWriter.flush();
+					bWriter.close();
+				}
+			}catch(IOException ex){
+				ex.printStackTrace();
+			}
+		}    
+	} 
+	private static void restoreSystemFromFile() { 
+
+	} 
+	
+	private static void login()
+	{
+		login frame = new login();
+		frame.setSize(300, 200);
+		frame.setTitle("Login");
+		frame.setVisible(true);
+		frame.setResizable(false);
+		frame.setDefaultCloseOperation(login.HIDE_ON_CLOSE);
+	}
+	
+	
+	
+	
+	
+	public static boolean loginCheck(String name,String password) {
+
+		
+
+System.out.print(name);
+
+		int x =  docList.size();
+
+		int i =0;
+		for (i = 0 ; i <= x-1; i++){
+			if (docList.get(i).getDoctorName().toString().equals(name) && (docList.get(i).getDocPasswd().toString().equals(password))){
+				System.out.println("true");
+				return true;
+			}
+		}
+		System.out.println("ee");
+		return false;
+	} 
+
+	private static void display(){
+
+		int x =  docList.size();
+		for (int i =0;i <= x-1;i++) // Start of For Loop
+		{
+			docList.get(i).print();// Gets Person Information
+		}
+
+
+	}
+	
+	
+	public void actionPerformed(ActionEvent e) {
+
+		// Menu item actions
+		String command = e.getActionCommand();
+
+		if (command.equals("Quit")) {
+			System.exit(0);
+		} else if (command.equals("Login")) {
+			// Open menu item action
+
+	login();
+		} else if (command.equals("Save")) {
+			// Save menu item action
+			System.out.println("Save menu item clicked");
+		}
+	}
+
+	private JMenuItem makeMenuItem(String name) {
+		JMenuItem m = new JMenuItem(name);
+		m.addActionListener(this);
+		return m;
+	}
+} 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="http://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=74fcf065d73d090c1cba2a2df45be950"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Stephen Howell's Mind, How to use your Kinect with Scratch</title>
+	
+	<!--
+		
+		******************************************
+
+		Floaty Theme v1.2
+		by Micah Sivitz
+
+		visit: http://floaty.tumblr.com/
+		contact: http://permicah.com/contact.php
+		follow: @permicah on Twitter for updates!
+
+		****************************************** 
+
+	-->
+	<meta name="text:Site Tagline" content="" />
+	<meta name="text:Disqus Shortname" content="" />
+	<meta name="if:Show RSS Link" content="1" />
+	<meta name="if:Show Tags" content="1" />
+	<meta name="text:Google Analytics ID" content="" />
+	<meta name="text:Contact Email" content="" />
+	<meta name="if:Show Description" content="1" />
+	<meta name="if:Show Portrait" content="1" />
+	<meta name="if:Show Latest Tweet" content="1" />
+	<meta name="text:Facebook Username" content="" />
+	<meta name="text:Twitter Username" content="" />
+	<meta name="text:Dribbble Username" content="" />
+	<meta name="text:Flickr Username" content="" />
+	<meta name="text:Vimeo Username" content="" />
+	<meta name="text:Delicious Username" content="" />
+	<meta name="text:Cargo Collective Username" content="" />
+	<meta name="color:Background" content="#83b8d6"/>
+	<meta name="color:Link" content="#5071ab"/>
+	<meta name="image:Background" content="http://static.tumblr.com/rk0wqd2/7xvlcxfty/bg-floaty.jpg" />
+
+	<link href="http://31.media.tumblr.com/avatar_b968d23b36ef_128.png" rel="shortcut icon" />
+	<link href="http://31.media.tumblr.com/avatar_b968d23b36ef_128.png" rel="apple-touch-icon"/>
+	<link href="../../rss.rss" rel="alternate" type="application/rss+xml" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://static.tumblr.com/rk0wqd2/Ckbld1b9s/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://static.tumblr.com/rk0wqd2/GnTlyisfw/fancybox.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="http://static.tumblr.com/rk0wqd2/a6Ulyolqu/floaty.css" />
+	<style type="text/css">
+		body {background: #83b8d6 url('http://static.tumblr.com/rk0wqd2/7xvlcxfty/bg-floaty.jpg') repeat fixed top center;}	
+		a, a:visited {color: #5071ab;}
+       	
+   </style>
+    <script src="http://static.tumblr.com/rk0wqd2/XtJlyit4b/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="http://static.tumblr.com/rk0wqd2/o0jlyisgw/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="http://static.tumblr.com/rk0wqd2/ywplyitog/floaty.js" type="text/javascript"></script>
+
+<!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="" /><meta property="og:title" content="How to use your Kinect with Scratch" /><meta property="og:url" content="http://stephen-howell.tumblr.com/post/2652659772/how-to-use-your-kinect-with-scratch" /><meta property="og:description" content="This is now out of date! Go here instead: http://scratch.saorog.com/?page_id=2
+The Kinect is a great add-on for the XBox 360. Many people had their doubts, and although core gamers will decry the..." /><meta property="og:determiner" content="a" /><meta property="og:type" content="tumblr-feed:entry" /><meta property="og:image" content="http://assets.tumblr.com/images/og/text_200.png" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS -->
+
+
+<!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="This is now out of date! Go here instead:&nbsp;http://scratch.saorog.com/?page_id=2
+ The Kinect is a great add-on for the XBox 360. Many people had their doubts, and although core gamers will decry the Kinect, it can be really good fun to play around with. Literally, you are the controller. There has been some interest in hacking the Kinect to work with computers other than the XBox, and there are drivers available now to use with Windows, MacOSX and Linux.
+ I became interested in coding Processing to work with the Kinect, but soon became disheartened when it appeared that bone data (or joint positions) were not readily available, instead only 3D depth data (cool but not enough) was readable. &nbsp;
+ Then I found the OpenNI drivers (see links below) and the OSC server from Sensebloom. They were able to send joint data encoded as OSC commands to Processing, and I wrote up my own little Processing receiver to test it. It worked so well, I delved into their C++ code to see if I could send the same data to Scratch.
+ When I couldn&amp;#8217;t see a way for Scratch to interpret the OSC code, I read about the remote sensing over the network that Scratch allows. This was perfect; I could send Scratch commands from a C program which was reading joint data from the Kinect.
+ So after making a few Scratch proof-of-concept games to test it, I decided to release it all for you guys to test out.
+ You will need:
+ A standalone Kinect (one bought without a console) OR a Kinect that came in a console bundle and the separately available USB plug to connect it to your PC
+ A Windows PC (other versions can be made by coders familiar with coding on OSX or Linux)
+ The OpenNI.org drivers installed
+ The OpenNI2Scratch program, code here: OpenNI2Scratch.cpp&nbsp;
+ Scratch
+ Some Kinect aware Scratch programs. Here are a few: Skeleton, Ball Bounce and Space Invaders
+ Once you&amp;#8217;ve set that up, you have to connect the Kinect to your PC and wait for the drivers to install. Then run the OpenNI2Scratch program. Run Scratch, execute the Scratch program you want to control. Calibrate the Kinect - this involves standing a fair bit back from it and standing in a &amp;#8216;calibration pose&amp;#8217; for a few seconds - see picture above. Once the program has detected you, it will send the joint positions to Scratch.&nbsp;
+ Enjoy." /><meta name="twitter:title" content="How to use your Kinect with Scratch" /><meta name="twitter:url" content="http://stephen-howell.tumblr.com/post/2652659772/how-to-use-your-kinect-with-scratch" /><meta name="twitter:site" content="tumblr" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=stephen-howell&amp;postID=2652659772&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=stephen-howell&amp;postID=2652659772&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=stephen-howell&amp;postID=2652659772&amp;referrer=twitter-cards" />
+
+<script src="http://assets.tumblr.com/assets/scripts/tumblelog.js?_v=4b35cdbd2e725a56246cf7797ff21d62"></script>
+<meta http-equiv="x-dns-prefetch-control" content="off"/>
+</head>
+<body>
+<div id="header">
+	<div class="inner"><h1><a href="../../index.html" title="Stephen Howell's Mind">Stephen Howell's Mind </a></h1>
+	<form action="/search" class="search" method="get">
+		<input type="text" id="search-input" name="q" value="Search" onfocus="if(this.value == 'Search')this.value = '';" onblur="if(this.value == '')this.value='Search';" />
+	</form>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="floaty_right">
+		
+		<div id="description">
+			<a href="../../index.html" title="Stephen Howell's Mind" class="portrait"><img src="http://31.media.tumblr.com/avatar_b968d23b36ef_64.png" width="64" height="64"/></a>
+			
+		</div>
+		
+		<ul id="nav">
+			<li><a href="../../about.html" class="page_link"><span></span>About Me</a></li>
+			<li><a href="../../ask.html" class="ask_link"><span></span>Ask me anything</a></li>
+			
+			<li><a href="../../archive.html" class="archive_link"><span></span>Archive</a></li>
+			<li><a href="../../rss.rss" class="rss_link"><span></span>RSS</a></li>
+			
+			
+			
+			
+			
+			
+			
+			
+		</ul>
+		<div id="footer"><a href="http://floaty.tumblr.com" title="Floaty Tumblr Theme">Floaty</a> theme designed by <a href="http://permicah.com" title="Micah Sivitz, Designer - www.permicah.com">Micah</a></div>
+	</div><!-- /floaty_right -->
+	<div id="floaty_left">
+		<div id="posts">
+			
+			
+			<ol id="post_list">
+					
+					
+					<li class="post text">
+						<a class="icon text" href="how-to-use-your-kinect-with-scratch.html" title="Article">&nbsp;</a>
+						<h3><a href="how-to-use-your-kinect-with-scratch.html">How to use your Kinect with Scratch</a></h3>
+						<p><strong>This is now out of date! Go here instead: <a href="http://scratch.saorog.com/?page_id=2" target="_blank"><a href="http://scratch.saorog.com/?page_id=2" target="_blank">http://scratch.saorog.com/?page_id=2</a></a></strong></p>
+<p>The Kinect is a great add-on for the XBox 360. Many people had their doubts, and although core gamers will decry the Kinect, it can be really good fun to play around with. Literally, you are the controller. There has been some interest in hacking the Kinect to work with computers other than the XBox, and there are drivers available now to use with Windows, MacOSX and Linux.</p>
+<p>I became interested in coding Processing to work with the Kinect, but soon became disheartened when it appeared that bone data (or joint positions) were not readily available, instead only 3D depth data (cool but not enough) was readable.  </p>
+<p>Then I found the OpenNI drivers (see links below) and the OSC server from Sensebloom. They were able to send joint data encoded as OSC commands to Processing, and I wrote up my own little Processing receiver to test it. It worked so well, I delved into their C++ code to see if I could send the same data to Scratch.</p>
+<p>When I couldn&#8217;t see a way for Scratch to interpret the OSC code, I read about the remote sensing over the network that Scratch allows. This was perfect; I could send Scratch commands from a C program which was reading joint data from the Kinect.</p>
+<p>So after making a few Scratch proof-of-concept games to test it, I decided to release it all for you guys to test out.</p>
+<p>You will need:</p>
+<ol><li>A standalone Kinect (one bought without a console) OR a Kinect that came in a console bundle and the separately available USB plug to connect it to your PC</li>
+<li>A Windows PC (other versions can be made by coders familiar with coding on OSX or Linux)</li>
+<li>The <a title="OpenNI" target="_blank" href="http://www.openni.org">OpenNI.org</a> drivers installed</li>
+<li>The <a title="OpenNI2Scratch" target="_blank" href="https://docs.google.com/leaf?id=0B18iNT0aRQwMMmJhM2IyY2EtNDVlZC00MTgyLWI3ZWItYWU0NWZlMWM0MzRk&hl=en">OpenNI2Scratch</a> program, code here: <a href="https://docs.google.com/leaf?id=0B18iNT0aRQwMMjBmOGQ1OTgtYzgyMi00ZWViLTg2MDctZmQ3NWFkYjkxZDli&hl=en" target="_blank">OpenNI2Scratch.cpp</a> </li>
+<li><a title="Scratch" target="_blank" href="http://scratch.mit.edu">Scratch</a></li>
+<li>Some Kinect aware Scratch programs. Here are a few: <a href="http://scratch.mit.edu/projects/SHowell/1523809" target="_blank">Skeleton</a>, <a href="http://scratch.mit.edu/projects/SHowell/1523827" target="_blank">Ball Bounce</a> and <a href="http://scratch.mit.edu/projects/SHowell/1523821" target="_blank">Space Invaders</a></li>
+</ol><p>Once you&#8217;ve set that up, you have to connect the Kinect to your PC and wait for the drivers to install. Then run the OpenNI2Scratch program. Run Scratch, execute the Scratch program you want to control. Calibrate the Kinect - this involves standing a fair bit back from it and standing in a &#8216;calibration pose&#8217; for a few seconds - see picture above. Once the program has detected you, it will send the joint positions to Scratch. </p>
+<p>Enjoy.</p>
+						
+						<ul class="meta">
+							<li><a href="how-to-use-your-kinect-with-scratch.html#notes" class="notes"><span class="notes_icon"></span>41</a></li>
+							<li><a href="how-to-use-your-kinect-with-scratch.html" class="permalink"><span class="link_icon"></span>Link</a></li>
+							
+						</ul>
+						
+					</li>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			
+					
+					
+					
+					<li id="notes">
+						<ol class="notes"><!-- START NOTES --><li class="note reblog tumblelog_fast-free-traffic without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://fast-free-traffic.tumblr.com/" title="Fast Free Traffic"><img src="http://24.media.tumblr.com/avatar_bd1245d1d52c_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://fast-free-traffic.tumblr.com/post/28894070802"><a rel="nofollow" href="http://fast-free-traffic.tumblr.com/" class="tumblelog" title="Fast Free Traffic">fast-free-traffic</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note reblog tumblelog_hollywood-eyelash-extensions without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://hollywood-eyelash-extensions.tumblr.com/" title="Hollywood Eyelash Extensions"><img src="http://25.media.tumblr.com/avatar_9c5d8d5dc64a_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://hollywood-eyelash-extensions.tumblr.com/post/28324741322"><a rel="nofollow" href="http://hollywood-eyelash-extensions.tumblr.com/" class="tumblelog" title="Hollywood Eyelash Extensions">hollywood-eyelash-extensions</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note reblog tumblelog_hynda-allen without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://hynda-allen.tumblr.com/" title="hynda allen"><img src="http://assets.tumblr.com/images/default_avatar_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://hynda-allen.tumblr.com/post/25992137297"><a rel="nofollow" href="http://hynda-allen.tumblr.com/" class="tumblelog" title="hynda allen">hynda-allen</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note reblog tumblelog_world-of-warcraft-map without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://world-of-warcraft-map.tumblr.com/" title="world-of-warcraft-map"><img src="http://25.media.tumblr.com/avatar_7206be30b718_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://world-of-warcraft-map.tumblr.com/post/19954185528"><a rel="nofollow" href="http://world-of-warcraft-map.tumblr.com/" class="tumblelog" title="world-of-warcraft-map">world-of-warcraft-map</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note reblog tumblelog_-power-tool-reviews- without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://-power-tool-reviews-.tumblr.com/" title="power tool reviews"><img src="http://25.media.tumblr.com/avatar_c3571aa24668_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://-power-tool-reviews-.tumblr.com/post/19619159209"><a rel="nofollow" href="http://-power-tool-reviews-.tumblr.com/" class="tumblelog" title="power tool reviews">-power-tool-reviews-</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note reblog tumblelog_inkt-patronen without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://inkt-patronen.tumblr.com/" title="tips voor goedkope inktcartridges"><img src="http://31.media.tumblr.com/avatar_d321e5f4c94d_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://inkt-patronen.tumblr.com/post/18790409844"><a rel="nofollow" href="http://inkt-patronen.tumblr.com/" class="tumblelog" title="tips voor goedkope inktcartridges">inkt-patronen</a> reblogged this from <a rel="nofollow" href="../../index.html" class="source_tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a></span><div class="clear"></div></li><li class="note like tumblelog_vallher123 without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://vallher123.tumblr.com/" title="my blog " rel="nofollow"><img src="http://24.media.tumblr.com/avatar_62a155062a19_16.png" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://vallher123.tumblr.com/" title="my blog" rel="nofollow">vallher123</a> likes this</span><div class="clear"></div></li><li class="note like tumblelog_mollydot without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="http://mollydot.tumblr.com/" title="Grand Theft Bovine " rel="nofollow"><img src="http://24.media.tumblr.com/avatar_26bbfebcd2c8_16.png" class="avatar " alt="" /></a><span class="action"><a rel="nofollow" href="http://mollydot.tumblr.com/" title="Grand Theft Bovine" rel="nofollow">mollydot</a> likes this</span><div class="clear"></div></li><li class="note reblog tumblelog_stephen-howell original_post without_commentary"><a rel="nofollow" class="avatar_frame" target="_blank" href="../../index.html" title="Stephen Howell&#039;s Mind"><img src="http://25.media.tumblr.com/avatar_b968d23b36ef_16.png" class="avatar " alt="" /></a><span class="action" data-post-url="http://stephen-howell.tumblr.com/post/2652659772"><a rel="nofollow" href="../../index.html" class="tumblelog" title="Stephen Howell&#039;s Mind">stephen-howell</a> posted this</span><div class="clear"></div></li><!-- END NOTES --></ol>
+
+					</li>
+					
+				
+				
+				
+			</ol>
+			<div id="pagination">
+				
+				
+			</div>
+		</div> <!-- /posts -->
+	</div><!-- /floaty_left -->
+</div><!-- /wrapper -->
+
+
+<!-- BEGIN TUMBLR CODE --><iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "http://assets.tumblr.com/analytics.html?dc636e9b34dfd27b194aed14513506cb#http://stephen-howell.tumblr.com"
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/post/2652659772/how-to-use-your-kinect-with-scratch?route=%2Fpost%2F%3Aid%2F%3Asummary'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+    })();
+</script><script>
+      var _qevents = _qevents || [];
+
+      (function() {
+       var s = document.createElement('script');
+       var el = document.getElementsByTagName('script')[0];
+       s.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       el.parentNode.insertBefore(s, el);
+      })();
+    </script><script type="text/javascript">
+        _qevents.push( { qacct: 'p-19UtqE8ngoZbM' } );
+    </script><noscript><div style="display: none;"><img src="http://pixel.quantserve.com/pixel/'p-19UtqE8ngoZbM'.gif" height="1" width="1" alt="Quantcast"/></div></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1395216589&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvc3RlcGhlbi1ob3dlbGwudHVtYmxyLmNvbVwvcG9zdFwvMjY1MjY1OTc3MlwvaG93LXRvLXVzZS15b3VyLWtpbmVjdC13aXRoLXNjcmF0Y2giLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSJ9&U=JDFCPAIEOF&K=9233a3a9fad8cd2280603838d7a5c05811c07d1d5b2c6cd381efbf467a2f329b&R=http%3A%2F%2Fstephen-howell.tumblr.com%2Farchive'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1395216589&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDpcL1wvc3RlcGhlbi1ob3dlbGwudHVtYmxyLmNvbVwvcG9zdFwvMjY1MjY1OTc3MlwvaG93LXRvLXVzZS15b3VyLWtpbmVjdC13aXRoLXNjcmF0Y2giLCJyZXF0eXBlIjowLCJyb3V0ZSI6IlwvcG9zdFwvOmlkXC86c3VtbWFyeSIsIm5vc2NyaXB0IjoxfQ==&U=JDFCPAIEOF&K=2d575a7609be0e11aa2d60848993e3b0776bae0ea6ff055b95b420df241851dc&R=http://stephen-howell.tumblr.com/archive"></noscript><script type="text/javascript">!function(s){s.src='http://www.tumblr.com/impixu?T=1395216589&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3N0ZXBoZW4taG93ZWxsLnR1bWJsci5jb21cL3Bvc3RcLzI2NTI2NTk3NzJcL2hvdy10by11c2UteW91ci1raW5lY3Qtd2l0aC1zY3JhdGNoIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiMjY1MjY1OTc3MiIsImJsb2dpZCI6IjExOTA1ODc2Iiwic291cmNlIjozM31dfQ==&U=FHKMEJBEIB&K=7fb54d197864bd9d7f7bfaca6ff6bcdf0af051efa954720992f57cae0dec0130&R=http%3A%2F%2Fstephen-howell.tumblr.com%2Farchive'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="http://www.tumblr.com/impixu?T=1395216589&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6XC9cL3N0ZXBoZW4taG93ZWxsLnR1bWJsci5jb21cL3Bvc3RcLzI2NTI2NTk3NzJcL2hvdy10by11c2UteW91ci1raW5lY3Qtd2l0aC1zY3JhdGNoIiwicmVxdHlwZSI6MCwicm91dGUiOiJcL3Bvc3RcLzppZFwvOnN1bW1hcnkiLCJwb3N0cyI6W3sicG9zdGlkIjoiMjY1MjY1OTc3MiIsImJsb2dpZCI6IjExOTA1ODc2Iiwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=FHKMEJBEIB&K=51cfe14e48fee34fcb14880844a60dd54bb1b3b32d3d8dbe67823ad46c0ed098&R=http://stephen-howell.tumblr.com/archive"></noscript><script>
+                (function() {
+                    var s = document.createElement('script');
+                    var el = document.getElementsByTagName('script')[0]; 
+                    s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://l') + '.yimg.com/ss/rapid-3.14.js';
+                    s.onload = function(){
+                        var YAHOO = window.YAHOO;
+                        if (YAHOO) {
+                            YAHOO.i13n.beacon_server = 'nol.yahoo.com';
+                            var keys = { pd:'/post/:id/:summary', _li:0, i_rad:0, i_strm:0 };
+                            var conf = {
+                                                                spaceid:1197719230,
+                                client_only:1,
+                                yql_enabled:false,
+                                keys:keys
+                            }
+                            YAHOO.rapid = new YAHOO.i13n.Rapid(conf);
+                        }
+                    }
+                    el.parentNode.insertBefore(s, el);
+                })();
+            </script><iframe id="tumblr_controls" class="tumblr_controls" width="1" height="1" frameborder="0" scrolling="no" src="http://assets.tumblr.com/assets/html/iframe/o.html?_v=ed65078bf4fa858b996606b3a4d7d8f2#src=http://stephen-howell.tumblr.com/post/2652659772/how-to-use-your-kinect-with-scratch&pid=2652659772&rk=CEIL3Hp2&lang=en_US&name=stephen-howell&avatar=http://31.media.tumblr.com/avatar_b968d23b36ef_64.png&title=Stephen+Howell&%23039;s+Mind&url=http://stephen-howell.tumblr.com/&page_slide=slide"></iframe><div id="teaser_iframe_container" style="display:none;"><iframe scrolling="no" frameborder="0" src="http://www.tumblr.com/assets/html/iframe/teaser.html?_v=37f56363fcbf7ea09d2de8dc5cdc441b#src=http://stephen-howell.tumblr.com/post/2652659772/how-to-use-your-kinect-with-scratch&pid=2652659772&rk=CEIL3Hp2&lang=en_US&name=stephen-howell&avatar=http://31.media.tumblr.com/avatar_b968d23b36ef_64.png&title=Stephen+Howell&%23039;s+Mind&url=http://stephen-howell.tumblr.com/&page_slide=slide" id="teaser_iframe" width="1" height="1"></iframe></div><script type="text/javascript">
+    (function(Tumblr){
+        var follow_iframe_initialized = false;
+        if (Tumblr.FollowTeaser && Tumblr.PostMessageListener) {
+            // Don't do anything until the first initialize event
+            Tumblr.PostMessageListener.initialize(function(message, origin) {
+                if (follow_iframe_initialized || message.length < 2) return;
+
+                if (message[0] === 'follow_iframe' && message[1] === 'enable') {
+                    Tumblr.FollowTeaser.current_page = 1;
+                    Tumblr.FollowTeaser.infer_infinite_scroll = true;
+                    Tumblr.FollowTeaser.create_from_tumblr_controls("http:\/\/assets.tumblr.com\/assets\/html\/iframe\/follow.html?_v=4b790819134676691e8b0ec9b8f9dd88");
+                    Tumblr.FollowTeaser.scroll_listener(true);
+                    follow_iframe_initialized = true;
+                }
+            });
+        }
+    })(this.Tumblr || (this.Tumblr = {}));
+</script><!--[if IE]><script type="text/javascript">document.getElementById('tumblr_controls').allowTransparency=true;</script><![endif]--><!-- END TUMBLR CODE -->
+
+</body>
+</html>

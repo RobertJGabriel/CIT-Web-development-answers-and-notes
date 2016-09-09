@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<moveEntry
+		id="org.eclipse.wb.swing.components.awt java.awt.Choice"
+		category="org.eclipse.wb.swing.actions"/>
+	<moveEntry
+		id="org.eclipse.wb.swing.BoxLayout javax.swing.Box createRigidArea(java.awt.Dimension)"
+		category="org.eclipse.wb.swing.actions"/>
+</commands>

@@ -1,0 +1,226 @@
+* {
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+body {
+    margin: 0;
+	background-color:#ebebeb;
+	background-color:#ebebeb;
+    padding: 0;
+}
+#header {
+    width: 100%;
+    height: 100px;
+	background-color:#1ABC9C;
+	margin-bottom:20px;
+}
+h3{
+font-size: 24.5px ;
+color: inherit;
+}
+input {
+    width: 150px;
+    margin-bottom: 3px;
+}
+.badge22 {
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: -50px;
+    margin-left: 180px;
+    background-color: #ebebeb;
+    border-radius: 100px;
+}
+
+.badge22 > img {
+    border: 3px solid #ebebeb;
+    background-color: #fff;
+    border-radius: 100px;
+}
+#Logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60px;
+    background-image: url(../images/dvd.png);
+    background-position: center;
+    background-size: cover;
+    height: 60px;
+
+    border-radius: 100px;
+    border: 5px solid #ffffff;
+    background-color: #ffffff;
+}
+h2{
+ text-align:center;
+    font-size:60px;;
+}
+#main {
+    height: auto;
+    margin-top: 50px;
+    min-height: 400px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.display {
+    height: auto;
+    margin-top: 50px;
+    min-height: 100px;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    float: left;
+margin-right:10px;
+    margin-left: 30px;
+
+
+}
+.display:nth-child(odd)
+{
+    border:4px solid  #EDEFF1;
+    background-color:white;
+}
+.display:nth-child(even)
+{
+border:4px solid  #EDEFF1;
+        background-color:white;
+}
+.display h2 {
+    text-align: center;
+}
+.button {
+    padding: 0;
+	margin-top:20px;
+    background-color: #EC7063;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    bottom: 0;
+}
+.button:hover {
+    background-color: #2980B9;
+    cursor: pointer;
+}
+ul {
+    overflow: auto;
+    list-style: none;
+    padding: 0px;
+}
+.option {} 
+#right {
+width:550px;
+
+    height: 800px;
+    overflow: auto;
+    margin-left: 250px;
+    min-height: 200px;
+}
+#left {
+    position: absolute;
+    overflow: auto;
+    width: 250px;
+      height: 800px;
+    border-right:2px solid  #EDEFF1;
+}
+
+#box {
+    width: 800px;
+    height: 800px;
+	postion:
+    overflow-x: auto;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+h3 {
+    text-align: center;
+}
+#catch {
+   
+    width: 190px;
+    padding: 5px;
+    border-bottom: 2px solid #EDEFF1;
+    position: relative;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#title {
+    color: black;
+    word-wrap: break-word;
+    font-size: 1.2em;
+    text-align: center;
+}
+#overflow {
+    background-color: #ffffff;
+    width: 190px;
+    padding: 5px;
+    border: 2px solid #ebebeb;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#overflow > li {
+    width: 200px;
+    overflow: auto;
+    float: left;
+    margin-right: 40px;
+}
+#test> input,
+#test> input:focus {
+    margin-bottom: 10px;
+     background-color: white;
+    font-size: 1em;
+	width:190px;
+	border-radius:4px;
+    border: 0;
+    word-wrap: break-word;
+    text-align: center;
+}
+#test> input:hover, textarea:hover{
+    
+ border: 3px solid #9b59b6;   
+}
+
+#test > input[type=submit],
+#test > select {
+padding:5px;
+background-color:#1ABC9C;
+    margin-top: 40px;
+	margin-bottom:-85px;
+    color: #ffffff;
+    width: 190px;
+}
+#test > input[type=submit]:hover {
+
+    width: 190px;
+    color: black;
+    cursor: pointer;
+	 background-color: #EC7063;
+    cursor: pointer;
+	    padding: 0;
+    background-color:#1ABC9C;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    bottom: 0;
+
+}
+textarea {
+    border: 1px solid white;
+	    background-color: white;
+    width: 190px;
+    font-size: 1em;
+	border-radius:4px;
+    height: auto;
+}
+
+
+input:valid {
+    word-wrap: break-word;
+    text-align: center;
+}
