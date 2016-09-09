@@ -1,0 +1,43 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class Single_Assessment2Test {
+
+	@Test
+	public void testMenu() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddingStudent() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddingModule() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddStudentModule() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemoveModule() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testFindmodule() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testFindIndex() {
+		fail("Not yet implemented");
+	}
+
+}

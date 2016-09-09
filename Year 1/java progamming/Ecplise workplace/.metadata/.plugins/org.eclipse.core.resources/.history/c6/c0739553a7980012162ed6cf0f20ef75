@@ -1,0 +1,138 @@
+import java.util.Scanner;
+import java.io.*;  
+import java.util.Vector; 
+public class FinshedTwo {
+
+
+	//Login Screen
+	public static void main(String[] args) {
+		String userName = "";
+		String password = "";
+		Scanner keyboard = new Scanner(System.in);
+		System.out.println("CIT MRS – LOGIN");
+		System.out.println("ญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญ");
+
+		System.out.println("UserID:");
+		userName = keyboard.nextLine();
+
+		System.out.println("Password:");
+		password  = keyboard.nextLine();
+
+		/*
+		 * loading textiles information
+		 */
+		Vector lineArray=new Vector();  
+		Vector lineArray2=new Vector();
+		Vector lineArray3=new Vector();
+		String lineContents=null;  
+		int counter=0;  
+		try{  
+			File f = new File("user.txt");
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+
+			String record = null;
+			while((lineContents=br.readLine())!=null){  
+				String[] fields = lineContents.split("\\~");
+				lineArray.add(fields[0]);  
+				lineArray2.add(fields[1]);  
+				lineArray3.add(fields[2]);  
+				System.out.println(lineArray.get(0));  
+				counter++;  
+			}  
+		}  
+		catch(FileNotFoundException fne){  
+			fne.printStackTrace();  
+		}  
+		catch(IOException io){  
+			io.printStackTrace();  
+		}  
+		for (int i=0;i<1;i++){  
+			System.out.println(lineArray.get(i));  
+		}  
+
+		menu(keyboard);
+	}
+
+	public static void menu(Scanner keyboard)
+	{ 
+		String[] menuChoose = {"1 -", "2 - ", "3 -", "4 -", "5 -","6 -","7 -"};
+		String[] menuText = {" Add Students", " List Students", " Add Module", " List Modules", " Add Student Module"," Remove Studnet Choose"," Exit"};
+		while (true){
+			System.out.println("CIT MRS" /* Users name */ +"– Main Menu");
+			System.out.println("ญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญญ");
+			for (int icourse = 0; icourse < menuChoose.length; icourse++)
+			{
+				System.out.println(menuChoose[icourse] + " " + menuText[icourse]);
+			}
+			System.out.println("Choose option >>");
+			int MenuPicked = keyboard.nextInt();
+
+			/*
+			 * Switch Statement for menu options
+			 */
+			if ( MenuPicked == 1)
+			{
+				addingModule();
+			}else if ( MenuPicked == 2)
+			{
+				listingStudent();
+			}else if ( MenuPicked == 3)
+			{
+				addingModule();
+			}else  if ( MenuPicked == 4)
+			{
+				listingModule();
+
+			}else  if ( MenuPicked == 5)
+			{
+				addStudentModule();
+			}else if ( MenuPicked == 6)
+			{
+				removeModule();
+			}else  if ( MenuPicked == 7)
+			{
+				exit();
+			}else  if ( MenuPicked == 8)
+			{
+				addingModule();
+			}else
+			{
+				System.out.println("Invald Module please pick again");
+			}
+
+
+		}
+	}
+
+	public static void addingStudent()
+	{ 
+		System.out.println("Adding Student");
+	}
+	public static void listingStudent()
+	{ 
+		System.out.println("listing  Student");
+	}
+
+
+	public static void addingModule()
+	{ 
+		System.out.println("Adding a module:");
+	}
+	public static void listingModule()
+	{ 
+		System.out.println("Listing Modules:");
+	}
+	public static void addStudentModule()
+	{ 
+		System.out.println("AAdding Student Modules:");
+	}
+	public static void removeModule()
+	{ 
+		System.out.println("Removing a student choice:");
+	}
+	public static void exit()
+	{ 
+		System.out.println("Exit");
+	}
+}

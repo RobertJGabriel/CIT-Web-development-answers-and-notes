@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse" version="1.7.0_21">
+<bootpath>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\resources.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\rt.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\sunrsasign.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\jsse.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\jce.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\charsets.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\jfr.jar"/>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\ext"/>
+<entry path="C:\windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Users\Robert\Downloads\eclipse-jee-juno-SR2-win32-x86_64\eclipse\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\Java\jre7" version="1.7.0_17">
+<bootpath>
+<entry path="C:\Program Files\Java\jre7\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jre7\lib\jfr.jar"/>
+<entry path="C:\Program Files\Java\jre7\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jre7\lib\ext"/>
+<entry path="C:\windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jre7\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

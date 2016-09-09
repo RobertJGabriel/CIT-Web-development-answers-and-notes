@@ -1,0 +1,362 @@
+import java.util.Scanner;
+import java.io.*;  
+import java.util.Vector; 
+public class Single_Assessment2 {
+
+
+
+	// constants that aid readability and maintainability
+	final static String FILE_PATH = "user.txt";
+	final static String FILE_PATH_STUDENTS = "STUDENTS.txt";
+	final static String FILE_PATH_MODULES = "Modules.txt";
+	final static String DELIMITER = "~";
+	final static String MAIN_MENU = "\n1. Add Students\n2. List Students\n3. Add Module\n4. List Modules\n5. Add Student Module\n6. Remove Studnet Choose\n7. Exit\n";
+	final static String MENU_PROMPT = "\nChoose option >>";
+	public static String userNameTitle ="";
+
+
+	// Storing the Log in files
+	static Vector<String> lineArray=new Vector<String>();
+	static Vector<String> lineArray2=new Vector<String>();
+
+
+	//Login Screen
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		boolean flag = false;
+		do{
+			System.out.println("CIT MRS – LOGIN");
+			System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+
+			System.out.println("UserID:");
+			String  userName = keyboard.nextLine();
+			System.out.println("Password:");
+			String 	password  = keyboard.nextLine();
+
+			loadingUsers();
+
+			// Login Details
+			int i= 0;
+			for (i=0;i <lineArray.size();i++){
+				if ( userName.equals(lineArray.get(i)) && password.equals(lineArray2.get(i))){
+					System.out.println(" Debug  : found");
+					userNameTitle = lineArray.get(i);
+					menu(keyboard);
+					flag = true;
+				}
+			}
+			if (i==lineArray.size()){
+				System.out.println("Oh nyoo :( no user was found"); 
+			}
+		}while(flag == false);
+	}
+
+
+
+
+	public static void menu(Scanner keyboard)
+	{ 
+		int MenuPicked = 0;
+		while (true){
+			System.out.println("CIT MRS " + userNameTitle +"  Main Menu\n­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+			System.out.println(MAIN_MENU );
+
+			do {
+				System.out.println(MENU_PROMPT);
+				MenuPicked = keyboard.nextInt();
+			}while(MenuPicked>= 8 && MenuPicked <0); 
+
+
+
+			/*
+			 * Switch Statement for menu options
+			 */
+			if ( MenuPicked == 1)
+			{
+				addingStudent();
+			}else if ( MenuPicked == 2)
+			{
+				listingStudents();
+			}else if ( MenuPicked == 3)
+			{
+				addingModule();
+			}else  if ( MenuPicked == 4)
+			{
+				//	listingModule();
+
+			}else  if ( MenuPicked == 5)
+			{
+				//	addStudentModule();
+			}else if ( MenuPicked == 6)
+			{
+				//	removeModule();
+			}else  if ( MenuPicked == 7)
+			{
+				//	exit();
+			}else
+			{
+				System.out.println("Invald Module please pick again");
+			}
+		}
+	}
+
+
+
+	public static void addingStudent()
+	{ 
+		System.out.println("CIT MRS " + userNameTitle +"– Add Student");
+		System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+
+		Scanner keyboard = new Scanner(System.in);		
+		String firstNameTemp;		   
+		String lastNameTemp;
+		String regTemp;
+		do{
+			System.out.print("Student ID: " );
+			regTemp = keyboard.next();
+		}
+		while (!regTemp.startsWith("R") );
+
+		do{
+			System.out.print("First Name : ");
+			firstNameTemp = keyboard.next();
+		}
+		while (firstNameTemp.isEmpty() );
+
+		do{
+			System.out.print("Last Name : " );
+			lastNameTemp = keyboard.next();
+		}
+		while (lastNameTemp.isEmpty());
+
+		addingStudents(regTemp,firstNameTemp,lastNameTemp);
+
+	}
+
+
+	public static void listingStudents(){
+
+		System.out.println("CIT MRS- " + userNameTitle +" - List all Students \n­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+		try {
+			File f = new File(FILE_PATH_STUDENTS);
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);	
+			String record = null;
+			while ((record = br.readLine()) != null) {
+				String[] fields = record.split("~");
+				System.out.println("Student ID: " + fields[0]);
+				System.out.println("Name : " + fields[1] + " " + fields[2]);
+				System.out.println("Choice 1 : " + fields[3]);
+				System.out.println("Choice 2 : " + fields[4]);
+				System.out.println("++++++++++++++++++++++++++++");
+				System.out.println();
+			}
+			br.close();
+		} catch (Exception e) {
+
+		}		
+	}
+
+	public static void addingModule(){
+		System.out.println("CIT MRS- " + userNameTitle +" - Adding Modules \n­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+
+		Scanner keyboard = new Scanner(System.in);		
+		String moduleCode;		   
+		String moduleTitle;
+		int maxNumbers;
+		do{
+			System.out.print("Module Code: " );
+			moduleCode = keyboard.next();
+		}
+		while (!moduleCode.contains("0") );
+
+		do{
+			System.out.print("Module Title : ");
+			moduleTitle = keyboard.next();
+		}
+		while (moduleTitle.isEmpty() );
+
+		do{
+			System.out.print("Max. Allocation : " );
+			maxNumbers = keyboard.nextInt();
+		}
+		while (maxNumbers != 0);
+
+		addingModule(maxNumbers,moduleCode,moduleTitle);
+
+
+	}
+
+
+
+
+
+	//------------------------------- Extras --------------------------------
+
+
+
+
+
+	public static void addingStudents(String regTemp, String firstNameTemp, String lastNameTemp)
+	{ 
+		// declare this outside the try block so that we can reference it in the finally block
+		BufferedWriter bWriter = null; 
+		try {
+			// connect the program to the physical file 
+			File file = new File(FILE_PATH_STUDENTS);
+			// we can check if the file is actually there and create it if not
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+
+			FileWriter fWriter = new FileWriter(file, true);
+			bWriter = new BufferedWriter(fWriter);
+
+			Scanner keyboard = new Scanner(System.in);
+
+			// parallel arrays to store the high scores table
+			String[] firstName = new String[lineArray.size()];
+			String[] lastName = new String[lineArray.size()];
+			String[] reg = new String[lineArray.size()];
+
+
+			// read into the parallel arrays until the exit condition is typed, up to MAX_SCORES number of times
+			int counter = 0;
+			firstName[counter] = firstNameTemp;
+			lastName[counter] =lastNameTemp;
+			reg[counter] = regTemp;
+			counter++;
+
+			// write a record to the file for each row in the parallel arrays, stopping when an empty element is found
+			counter = 0;
+
+			bWriter.write(reg[counter] +  DELIMITER +   firstName[counter] +  DELIMITER + lastName[counter] + DELIMITER  + "NULL" + DELIMITER + "NULL"  );
+			bWriter.newLine();
+			counter++;
+
+			System.out.println("Student with id " + regTemp + " added successfully.");
+
+		} catch (IOException e) {
+			System.out.println("Error : Bad name " );
+		} finally {
+			//Close the BufferedWriter
+			try {
+				if (bWriter != null) {
+					bWriter.flush();
+					bWriter.close();
+				}
+			} catch (IOException ex) {
+				System.out.println("Error : Bad namesssss" );
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+	public static void addingModule(int maxNumbers, String moduleCode, String moduleTitle)
+	{ 
+		// declare this outside the try block so that we can reference it in the finally block
+		BufferedWriter bWriter = null; 
+		try {
+			// connect the program to the physical file 
+			File file = new File(FILE_PATH_MODULES);
+			// we can check if the file is actually there and create it if not
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+
+			FileWriter fWriter = new FileWriter(file, true);
+			bWriter = new BufferedWriter(fWriter);
+
+			Scanner keyboard = new Scanner(System.in);
+
+			// parallel arrays to store the high scores table
+			String[] moduleCodeArray = new String[lineArray.size()];
+			String[] moduleTitleArray = new String[lineArray.size()];
+			int[] reg = new int[lineArray.size()];
+
+
+			// read into the parallel arrays until the exit condition is typed, up to MAX_SCORES number of times
+			int counter = 0;
+			moduleCodeArray[counter] = moduleCode;
+			moduleTitleArray[counter] =moduleTitle;
+			reg[counter] = maxNumbers;
+			counter++;
+
+			// write a record to the file for each row in the parallel arrays, stopping when an empty element is found
+			counter = 0;
+
+			bWriter.write(reg[counter] +  DELIMITER +   moduleCodeArray[counter] +  DELIMITER + moduleTitleArray[counter] );
+			bWriter.newLine();
+			counter++;
+
+			System.out.println("Module " + moduleTitle + " added successfully.");
+
+		} catch (IOException e) {
+			System.out.println("Error : Bad name " );
+		} finally {
+			//Close the BufferedWriter
+			try {
+				if (bWriter != null) {
+					bWriter.flush();
+					bWriter.close();
+				}
+			} catch (IOException ex) {
+				System.out.println("Error : Bad namesssss" );
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+	public static boolean studentsthere(){
+		File file = new File(FILE_PATH_STUDENTS);
+		// we can check if the file is actually there and create it if not
+		if (!file.exists()) {
+
+			return true;
+		}
+		return false;
+	}
+
+
+
+	public static void loadingUsers(){
+		/*
+		 * loading textiles information
+		 */
+		String lineContents=null;  
+		try{  
+			File f = new File(FILE_PATH);
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+			while((lineContents=br.readLine())!=null){  
+				String[] fields = lineContents.split(DELIMITER);
+				lineArray.add(fields[0]);  
+				lineArray2.add(fields[1]);
+			}  
+			br.close();
+		}  
+		catch(FileNotFoundException fne){  
+			fne.printStackTrace();  
+		}  
+		catch(IOException io){  
+			io.printStackTrace();  
+		}  
+	}
+
+}

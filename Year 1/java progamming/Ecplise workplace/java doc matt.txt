@@ -1,0 +1,13 @@
+/**
+*@author 	Robert Gabriel, Matthew Cooney, Sebastian Blesznowski, Dave Cahill
+*@version	1
+*@Name		Email Reminder
+*@created	18/04/2013
+*/
+
+/**
+*program sends you a reminder to yourself through email
+*
+
+del     deletes and updates
+

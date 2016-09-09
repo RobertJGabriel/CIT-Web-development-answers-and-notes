@@ -1,0 +1,373 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+/**
+ * This is a program that manages the details, including match win-loss ratios,
+ * for wrestlers
+ * 
+ * @author Larkin Cunningham
+ * @version 1.0, 17/04/13
+ */
+public class WrestlingManager {
+	
+
+	// constants that aid readability and maintainability
+	final static String FILE_PATH = "WRESTLERS.TXT";
+	final static int MAX_WRESTLERS = 20;
+	final static String DELIMITER = "~";
+	final static String MAIN_MENU = "\n1. List Wrestlers\n2. Search for Wrestler\n3. Record Match\n4. Exit\n";
+	final static String MENU_PROMPT = "\nEnter choice > ";
+	final static String MATCHUP_RULES = "\n - A heel cannot wrestle a heel\n - A face cannot wrestle a face";
+	final static String FACE_VALUE = "Y";
+	final static String HEEL_VALUE = "N";
+	final static String PERCENTAGE_FORMAT = "0.00%";
+	
+	// Declare the data structure required to store wrestler information
+	// We are using parallel arrays that we will keep in synch to mimic a table of data
+	
+	// The names of our wrestlers - this is the key / identifier and we will use
+	// this array when searching for all of the wrestler's details
+	static String[] inRingName = new String[MAX_WRESTLERS];
+	static int[] weight = 	new int[MAX_WRESTLERS];
+	static int[] totalMatches = new int[MAX_WRESTLERS];
+	static int[] matchesWon = new int[MAX_WRESTLERS];
+	static boolean[] isFace = 	new boolean[MAX_WRESTLERS];
+	
+
+	/** Main method / driver for the program
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		loadWrestlers();
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		char option;
+		
+		do {
+			System.out.print(MAIN_MENU);
+			System.out.print(MENU_PROMPT);
+			
+			// just look at the first character entered
+			option = keyboard.next().charAt(0);
+			keyboard.nextLine();
+			
+			switch (option) {
+				case '1':     // listing wrestlers
+					listWrestlers();
+					break;
+				case '2':     // searching for a wrestler
+					System.out.print("\nPlease enter wrestler's name: ");
+					String name = keyboard.nextLine();
+					searchForWrestler(name);
+					break;
+				case '3':     // recording a match
+					recordMatch(keyboard);
+					break;
+				case '4':     // exiting...
+					System.out.println("Saving wrestlers...");
+					saveWrestlers();
+					System.out.println("Saved. Exiting...");
+					break;
+				default:
+					System.out.println("Please choose a valid menu option");
+			}
+			
+		} while (option != '4');
+		
+	}
+	
+	/**
+	 * Find and display the details for a given wrestler's name
+	 * 
+	 * @param name
+	 */
+	private static void searchForWrestler(String name) {
+		
+		// Get the position of the entered wrestler in the parallel array
+		int index = findWrestlerIndex(name);
+		System.out.println();
+
+		if (index >= 0) {
+			// found the wrestler, so display
+			displayWrestler(index);
+		} else {
+			System.out.println("Wrestler was not found!");
+		}
+		
+	}
+
+	/**
+	 * Record and store match statistics
+	 * 
+	 * @param keyboard
+	 */
+	private static void recordMatch(Scanner keyboard) {
+		
+		System.out.print("Enter the name of wrestler 1: ");
+		String name1 = keyboard.nextLine();
+		int index1 = findWrestlerIndex(name1);
+		
+		if (index1 == -1) {
+			System.out.println("Wrestler not found!");
+			return;
+		}
+		
+		System.out.print("Enter the name of wrestler 2: ");
+		String name2 = keyboard.nextLine();
+		int index2 = findWrestlerIndex(name2);
+		
+		if (index2 == -1) {
+			System.out.println("Wrestler not found!");
+			return;
+		}
+		
+		if (!isValidMatchup(index1, index2)) {
+			System.out.println("Invalid match up. Rules are: " + MATCHUP_RULES);
+			return;
+		}
+		
+		char oneOrTwo;
+		do {
+			System.out.print("Who won the match (1 or 2)? ");
+			oneOrTwo = keyboard.next().charAt(0);
+		} while (!(oneOrTwo == '1' || oneOrTwo == '2'));
+		
+		totalMatches[index1]++;
+		totalMatches[index2]++;
+		
+		String winLoss;
+		if (oneOrTwo == '1') {
+			matchesWon[index1]++;
+			winLoss = " defeats ";
+		} else {
+			matchesWon[index2]++;
+			winLoss = " loses to ";
+		}
+		
+		DecimalFormat formatter = new DecimalFormat(PERCENTAGE_FORMAT);
+		System.out.println(inRingName[index1] + " (now " + formatter.format(calculateWinRatio(totalMatches[index1], matchesWon[index1])) + ")"
+				+ winLoss + " " + inRingName[index2] + " (now " + formatter.format(calculateWinRatio(totalMatches[index2], matchesWon[index2])) + ")");
+		
+	}
+
+	/**
+	 * Various rules must be observed when arranging matches
+	 * 
+	 * @param index1  position of first wrestler in the parallel arrays
+	 * @param index2  position of second wrestler in the parallel arrays
+	 * @return  whether matchup is valid
+	 */
+	private static boolean isValidMatchup(int index1, int index2) {
+		
+		// Cannot have face versus face or heel versus heel
+		if (isFace[index1] == isFace[index2]) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Save the details of all wrestlers
+	 */
+	private static void saveWrestlers() {
+		// declared outside the try-catch-finally blocks to make it accessible to
+		// all parts of the try-catch-finally blocks
+		BufferedWriter bufferedWriter = null;
+		
+		try {
+			File file = new File(FILE_PATH);
+			FileWriter fileWriter = new FileWriter(file);
+			bufferedWriter = new BufferedWriter(fileWriter);
+			
+			int index = 0;
+			
+			while (index < MAX_WRESTLERS && inRingName[index] != null) {
+				
+				StringBuilder builder = new StringBuilder();
+				
+				builder.append(inRingName[index]);
+				builder.append(DELIMITER);
+				builder.append(weight[index]);
+				builder.append(DELIMITER);
+				builder.append(totalMatches[index]);
+				builder.append(DELIMITER);
+				builder.append(matchesWon[index]);
+				builder.append(DELIMITER);
+				builder.append(isFace[index] ? FACE_VALUE : HEEL_VALUE);
+				
+				bufferedWriter.write(builder.toString());
+				bufferedWriter.newLine();
+				
+				index++;
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("File " + FILE_PATH + " was not found");
+		} catch (IOException e) {
+			System.out.println("Issue encountered accessing file " + FILE_PATH + " for writing");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			//Close the BufferedWriter
+            try {
+                if (bufferedWriter != null) {
+                	bufferedWriter.flush();
+                    bufferedWriter.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+		}
+		
+	}
+
+	/**
+	 * Read wrestler details from the wrestlers file and populate the internal data structure
+	 */
+	private static void loadWrestlers() {
+		
+		// declared outside the try-catch-finally blocks to make it accessible to
+		// all parts of the try-catch-finally blocks
+		BufferedReader bufferedReader = null;
+		
+		try {
+			File file = new File(FILE_PATH);
+			FileReader fileReader = new FileReader(file);
+			bufferedReader = new BufferedReader(fileReader);
+			
+			String record = null;
+			int index = 0;
+			
+			while ((record = bufferedReader.readLine()) != null) {
+				
+				// could also use String[] fields = record.split(DELIMITER);
+				StringTokenizer tokenizer = new StringTokenizer(record, DELIMITER);
+				
+				while (tokenizer.hasMoreElements()) {
+					inRingName[index] = (String)tokenizer.nextElement();
+					weight[index] = Integer.parseInt((String)tokenizer.nextElement());
+					totalMatches[index] = Integer.parseInt((String)tokenizer.nextElement());
+					matchesWon[index] = Integer.parseInt((String)tokenizer.nextElement());
+					isFace[index] = ((String)tokenizer.nextElement()).equals(FACE_VALUE) ? true : false;
+				}
+				
+				index++;
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("File " + FILE_PATH + " was not found");
+		} catch (IOException e) {
+			System.out.println("Issue encountered accessing file " + FILE_PATH + "for reading");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			//Close the BufferedReader
+            try {
+                if (bufferedReader != null) {
+                    bufferedReader.close();
+                }
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+		}
+		
+		
+	}
+
+	/**
+	 * List the wrestlers in a nicely formatted table
+	 * 
+	 */
+	public static void listWrestlers() {
+		
+		DecimalFormat formatter = new DecimalFormat(PERCENTAGE_FORMAT);
+		
+		// Table heading...
+		System.out.println("Name\t\tWeight(lbs)\tWin Ratio\tFace/Heel");
+		System.out.println("---------------------------------------------------------");
+		
+		// for-loop is appropriate because we know how many wrestlers and we are listing all of them
+		for (int i=0; i < inRingName.length; i++) {
+			if (inRingName[i] != null) {
+				System.out.println(inRingName[i] + "\t" + weight[i] + "\t\t" + 
+					formatter.format(calculateWinRatio(totalMatches[i], matchesWon[i])) + "\t\t" +
+					getWrestlerTypeAsString(isFace[i]));
+			} else {
+				System.out.println("  --- empty slot ---");
+			}
+			
+		}
+	}
+	
+	/**
+	 * Calculate the win percentage for a wrestler
+	 * 
+	 * @param totalMatches	the number of matches a wrestler has performed in
+	 * @param matchesWon	the number of matches a wrestler has won
+	 * @return	the wrestler's win percentage
+	 */
+	public static double calculateWinRatio(int totalMatches, int matchesWon) {
+		
+		return (double)matchesWon/totalMatches;
+	}
+	
+	/**
+	 * Turn a boolean into a string representation
+	 * 
+	 * @param isFace   whether a face or heel
+	 * @return  string representation of boolean
+	 */
+	public static String getWrestlerTypeAsString(boolean isFace) {
+		if (isFace) {
+			return "Face";
+		}
+		
+		return "Heel";
+	}
+	
+	/**
+	 * Find the position of a given wrestler in the wrestlers data structure
+	 * 
+	 * @return index of the wrestler in the names array; -1 if not found
+	 */
+	public static int findWrestlerIndex(String name) {
+		
+		int counter = 0;
+		
+		while (counter < inRingName.length) {
+			if (inRingName[counter] != null && inRingName[counter].equalsIgnoreCase(name)) {
+				return counter;   // found the wrestler, so return the position of the wrestler
+			}
+			counter++;
+		}
+		
+		return -1;   // wrestler was not found if we reach this line
+	}
+	
+	/**
+	 * Prints out the details, nicely formatted, of a wrestler.
+	 * 
+	 * @param index  the position of the wrestler in the parallel arrays
+	 */
+	public static void displayWrestler(int index) {
+		System.out.println(inRingName[index] + ", " + weight[index] + " lbs, " + getWrestlerTypeAsString(isFace[index]));
+		System.out.println("Total Matches: " + totalMatches[index]);
+		System.out.println("Total Wins:" + matchesWon[index]);
+		
+		DecimalFormat formatter = new DecimalFormat(PERCENTAGE_FORMAT);
+		
+		System.out.println("Win Percentage: " + formatter.format(calculateWinRatio(totalMatches[index], matchesWon[index])));
+	}
+	
+}

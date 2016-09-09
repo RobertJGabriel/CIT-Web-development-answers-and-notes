@@ -1,0 +1,317 @@
+import java.util.Arrays;
+import java.util.Scanner;
+import java.io.*;  
+import java.util.Vector; 
+public class FinshedTwo {
+
+
+	//Login Screen
+	public static void main(String[] args) {
+		String userName = "";
+		String password = "";
+		Scanner keyboard = new Scanner(System.in);
+		boolean flag = false;
+		do{
+			System.out.println("CIT MRS – LOGIN");
+			System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+			
+			System.out.println("UserID:");
+			userName = keyboard.nextLine();
+			System.out.println("Password:");
+			password  = keyboard.nextLine();
+
+			
+			
+			/*
+			 * loading textiles information
+			 */
+			Vector<String> lineArray=new Vector<String>(); Vector<String> lineArray2=new Vector<String>();
+			String lineContents=null;  
+			try{  
+				File f = new File("user.txt");
+				FileReader fr = new FileReader(f);
+				BufferedReader br = new BufferedReader(fr);
+				while((lineContents=br.readLine())!=null){  
+					String[] fields = lineContents.split("\\~");
+					lineArray.add(fields[0]);  
+					lineArray2.add(fields[1]);
+				}  
+			}  
+			catch(FileNotFoundException fne){  
+				fne.printStackTrace();  
+			}  
+			catch(IOException io){  
+				io.printStackTrace();  
+			}  
+
+
+			// change this to the string length of the file user.txt
+			int i= 0;
+			for (i=0;i <lineArray.size();i++){
+				if ( userName.equals(lineArray.get(i)) && password.equals(lineArray2.get(i))){
+					System.out.println("found");
+					menu(keyboard);
+					flag = true;
+				}
+			}
+			if (i==lineArray.size()){
+				System.out.println("Oh nyoo :( no user was found"); 
+			}
+
+		}while(flag == false);
+	}
+
+	public static void menu(Scanner keyboard)
+	{ 
+		String[] menuChoose = {"1 -", "2 - ", "3 -", "4 -", "5 -","6 -","7 -"};
+		String[] menuText = {" Add Students", " List Students", " Add Module", " List Modules", " Add Student Module"," Remove Studnet Choose"," Exit"};
+		while (true){
+			System.out.println("CIT MRS" /* Users name */ +"– Main Menu");
+			System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+			for (int icourse = 0; icourse < menuChoose.length; icourse++)
+			{
+				System.out.println(menuChoose[icourse] + "  " + menuText[icourse]);
+			}
+			
+			
+			int MenuPicked = 0;
+			do {
+				System.out.println("Choose option >>");
+				MenuPicked = keyboard.nextInt();
+			}while(MenuPicked>= 8 && MenuPicked <0); 
+			
+			
+			
+			/*
+			 * Switch Statement for menu options
+			 */
+			if ( MenuPicked == 1)
+			{
+				addingStudent();
+			}else if ( MenuPicked == 2)
+			{
+				listingStudent();
+			}else if ( MenuPicked == 3)
+			{
+				addingModule();
+			}else  if ( MenuPicked == 4)
+			{
+				listingModule();
+
+			}else  if ( MenuPicked == 5)
+			{
+				addStudentModule();
+			}else if ( MenuPicked == 6)
+			{
+				removeModule();
+			}else  if ( MenuPicked == 7)
+			{
+				exit();
+			}else
+			{
+				System.out.println("Invald Module please pick again");
+			}
+		}
+	}
+
+	public static void addingStudent()
+	{ 
+		System.out.println("CIT MRS" /* Users name */ +"– Add Student");
+		System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+
+		Scanner keyboard = new Scanner(System.in);		
+		String firstNameTemp;		   
+		String lastNameTemp;
+		String regTemp;
+		do{
+			System.out.print("Student ID: " );
+			regTemp = keyboard.next();
+		}
+		while (!regTemp.startsWith("R") );
+
+		do{
+			System.out.print("First Name : ");
+			firstNameTemp = keyboard.next();
+		}
+		while (firstNameTemp.isEmpty() );
+
+		do{
+			System.out.print("Last Name : " );
+			lastNameTemp = keyboard.next();
+		}
+		while (lastNameTemp.isEmpty());
+
+		addingStudents(regTemp,firstNameTemp,lastNameTemp);
+
+	}
+
+	public static void listingStudent()
+	{ 
+		System.out.println("CIT MRS" /* Users name */ +"- List all Students");
+		System.out.println("­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­");
+		try {
+			File f = new File("ModulesList.txt");
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);	
+			String record = null;
+			while ((record = br.readLine()) != null) {
+				String[] fields = record.split("~");
+				System.out.println("Student ID: " + fields[0]);
+				System.out.println("Name : " + fields[1] + " " + fields[2]);
+				System.out.println("Choice 1 : " + fields[3]);
+				System.out.println("Choice 2 : " + fields[4]);
+				System.out.println("++++++++++++++++++++++++++++");
+				System.out.println();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	public static void addingModule()
+	{ 
+		
+	}
+	public static void listingModule()
+	{ 
+		System.out.println("Listing Modules:");
+	}
+	public static void addStudentModule()
+	{ 
+		System.out.println("Adding Student Modules:");
+	}
+	public static void removeModule()
+	{ 
+		System.out.println("Removing a student choice:");
+	}
+	public static void exit()
+	{ 
+		System.out.println("Exit");
+	}
+
+
+	// Extra Methods - Adding users
+
+	
+	public static void lOGIN_valadation()
+	{ 
+		System.out.println("Exit");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void addingModuleList ()
+	{ 
+		
+		
+		boolean flag = false;
+	// Reading Information from Student Number that is bad ass.
+		Vector<String> lineArray=new Vector<String>(); Vector<String> lineArray2=new Vector<String>();
+		String lineContents=null;  
+		try{  
+			File f = new File("STUDENTS.txt");
+			FileReader fr = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);
+			while((lineContents=br.readLine())!=null){  
+				String[] fields = lineContents.split("\\~");
+				System.out.println(	lineArray.add(fields[1]));  
+				System.out.println(		lineArray2.add(fields[2]));
+			}  
+		}  
+		catch(FileNotFoundException fne){  
+			fne.printStackTrace();  
+		}  
+		catch(IOException io){  
+			io.printStackTrace();  
+		}  
+ String test = "imbatman";
+ String password = "wayne";
+		int i= 0;
+		for (i=0;i <lineArray.size();i++){
+			if (test.equals(lineArray.get(i)) && password.equals(lineArray2.get(i))){
+				System.out.println("found");
+				
+				flag = true;
+			}
+		}
+		if (i==lineArray.size()){
+			System.out.println("Oh nyoo :( no user was found"); 
+		}
+			
+			
+			
+	}
+	
+	
+	
+	public static void addingStudents(String regTemp, String firstNameTemp, String lastNameTemp)
+	{ 
+		final String FILE_PATH = "STUDENTS.txt";
+		final int MAX_SCORES = 1000;
+		final String DELIMITER = "~";
+
+		// declare this outside the try block so that we can reference it in the finally block
+		BufferedWriter bWriter = null; 
+		try {
+			// connect the program to the physical file 
+			File file = new File(FILE_PATH);
+			// we can check if the file is actually there and create it if not
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+
+			FileWriter fWriter = new FileWriter(file, true);
+			bWriter = new BufferedWriter(fWriter);
+
+			Scanner keyboard = new Scanner(System.in);
+
+			// parallel arrays to store the high scores table
+			String[] firstName = new String[MAX_SCORES];
+			String[] lastName = new String[MAX_SCORES];
+			String[] reg = new String[MAX_SCORES];
+
+			// Initialize the arrays
+			Arrays.fill(firstName, "");
+			Arrays.fill(lastName, "");
+			Arrays.fill(reg, "");
+
+			// read into the parallel arrays until the exit condition is typed, up to MAX_SCORES number of times
+			int counter = 0;
+			firstName[counter] = firstNameTemp;
+			lastName[counter] =lastNameTemp;
+			reg[counter] = regTemp;
+			counter++;
+			// write a record to the file for each row in the parallel arrays, stopping when an empty element is found
+			counter = 0;
+			while (counter < MAX_SCORES && !firstName[counter].isEmpty() && !lastName[counter].isEmpty() ) {
+				bWriter.write(reg[counter] +  DELIMITER +   firstName[counter] +  DELIMITER + lastName[counter]);
+				bWriter.newLine();
+				counter++;
+			}
+			System.out.println("Student with id " + firstNameTemp + " " +  lastNameTemp + "added successfully.");
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			//Close the BufferedWriter
+			try {
+				if (bWriter != null) {
+					bWriter.flush();
+					bWriter.close();
+				}
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
+}

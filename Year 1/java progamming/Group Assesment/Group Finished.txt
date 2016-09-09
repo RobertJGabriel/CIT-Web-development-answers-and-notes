@@ -1,0 +1,356 @@
+import java.util.Scanner;
+public class student {
+	public static void main(String[] args)
+	{  
+		//an array of courses available for registration
+		int[]arrays = {28,33, 108, 231, 73,23, 83, 84, 1000,823};
+
+		String[]numbers = {"\n01:","02:", "03:", "04:", "05:","06:", "07:", "08:", "09:","10:"};
+
+		String[]noOptions = {"List the even numbers:", 
+				"List the odd numbers:", "Show the sum of all the numbers", "Show the smallest number", "Show the Biggest number",
+				"Choose 2 numbers by index and show the largest", "Given a number, show whether the number is in the list", "Exit\n"};
+
+		//Title print
+		String title = "\nList of Integers"; 
+		// spacing 
+		String space = "-"; 
+
+		Menu(numbers,arrays,title,space);
+		Option(numbers,arrays,title,space, noOptions);
+
+	} 
+	/**
+	 * To display the course menu for the registration
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void Menu(String[] numbers,int[] arrays ,String title,String space)
+	{    
+		//prints title and list
+		System.out.println(title);
+		for(int print =0; print <= 16; print++ ){
+			System.out.print(space);
+		}
+		System.out.println("\n");
+		for(int print =0; print <= 9; print++ ){
+			System.out.println(numbers[print] + "\t"+ arrays[print]);
+		}
+	}
+	/**
+	 * To Display and ask you if they wish to change numbbers or not
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void Option(String[] numbers,int[] arrays ,String title,String space,String[]noOptions)
+	{    
+		Scanner studentInput = new Scanner(System.in);  
+		String yesNoInput = "y";
+		do {
+			System.out.print("\nWould you like to change one of these numbers(y/n)?");
+			yesNoInput = studentInput.nextLine();
+		}
+		while (!yesNoInput.equalsIgnoreCase("y") && !yesNoInput.equalsIgnoreCase("n"));
+
+		if (yesNoInput.equalsIgnoreCase("y")){
+			yes(numbers,arrays ,title,space,studentInput, noOptions);
+		}
+		if (yesNoInput.equalsIgnoreCase("n")){
+			no(numbers,arrays ,studentInput,noOptions );
+		}
+	}
+	/**
+	 * To edit and a change a number in the list
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void yes(String[] numbers,int[] arrays ,String title,String space, Scanner studentInput,String[]noOptions)
+	{    
+		int indexChange = 0;
+		int	replaceIndex = 0;
+
+		do {
+			System.out.print("\nPlease enter a replacement index" );
+			while(!studentInput.hasNextInt())
+			{
+				System.out.print("\nPlease enter a number " );
+				studentInput.next();
+			}
+			indexChange=studentInput.nextInt();
+		} while (indexChange<=0 || indexChange >= 10);
+
+
+
+		do {
+			System.out.print("\nPlease enter a replacement for the number " + arrays[indexChange-1] + " at postion " + indexChange + ":" );
+			while(!studentInput.hasNextInt())
+			{
+				System.out.print("\nPlease enter a number " );
+				studentInput.next();
+			}
+			replaceIndex=studentInput.nextInt();
+		} while (indexChange<=0 || indexChange >= 1000000);
+
+
+		arrays[indexChange-1] = replaceIndex ;
+		Menu(numbers,arrays,title,space);
+		Option(numbers,arrays,title,space, noOptions);
+	}
+	/**
+	 * Display a list of options and what numbers to piick from
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void no(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{    
+		for(int print =0; print <= 7; print++ ){
+			System.out.println(numbers[print] + noOptions[print]);
+		}
+		//Takes input for user
+		int	optionPick = studentInput.nextInt();
+		switch (optionPick) {
+		case 1:  
+			evenNumbers(numbers,arrays , studentInput, noOptions);
+			break;
+		case 2: 
+			oddNumbers(numbers,arrays , studentInput, noOptions);
+			break;
+		case 3:
+			sumNumbers(numbers,arrays , studentInput, noOptions);
+			break;
+		case 4: 
+			smallestNumber(numbers,arrays , studentInput, noOptions);
+			break;
+		case 5:
+			biggestNumber(numbers,arrays , studentInput, noOptions);
+			break;
+		case 6:
+			chooseTwoNumbers(numbers,arrays , studentInput, noOptions);
+			break;
+		case 7:
+			whereNumberIs(numbers,arrays , studentInput, noOptions);
+			break;
+		case 8:
+			exit(numbers,arrays ,studentInput, noOptions);
+			break;
+		default: 	System.out.println("Invald Numbers");no(numbers,arrays ,studentInput,noOptions );
+		break;
+		}
+
+	}
+
+	/**
+	 *  This selection displays the even numbers
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void evenNumbers(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Matthew Cooney This selection displays the even numbers
+		 * from the Arrays list
+		 */
+		for (int i = 0; i < arrays.length; i++) {
+			if (arrays[i] % 2 == 0)
+				System.out.println(arrays[i] + " is even number.");
+		}
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+
+	/**
+	 *  This selection displays the odd numbers
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+
+	public static void oddNumbers(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Matthew Cooney This selection displays the odd numbers
+		 * from the Arrays list
+		 */
+		for (int i = 0; i < arrays.length; i++) {
+			if (arrays[i] % 2 != 0)
+				System.out.println(arrays[i] + " is odd number.");
+		}
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	/**
+	 *  This selection displays the sum of numbers
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void sumNumbers(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Mark Hyland This selection displays the summ of all numbers
+		 * from the Arrays list
+		 */
+		int sum = 0;
+		for( int i : arrays) {
+			sum += i;
+		}
+		System.out.println(sum);
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	/**
+	 *  This selection displays the smallest numbers
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void smallestNumber(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Mark Hyland This selection displays the smallest number numbers
+		 * from the Arrays list
+		 */
+		int currentValue = arrays[0];
+
+		for (int j=1; j < arrays.length; j++) {
+			if (arrays[j] < currentValue)
+				currentValue = arrays[j];
+		}
+		System.out.println("The smallest index is: "+ currentValue);
+
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	/**
+	 *  This selection displays the biggest numbers
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void biggestNumber(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{
+		/*
+		 * Author Robert Gabriel This selection displays the largest number numbers
+		 * from the Arrays list
+		 */
+
+		int currentValue = arrays[0];
+		for (int i=1;i < arrays.length; i++) {
+			if (arrays[i] > currentValue)
+				currentValue = arrays[i];
+		}
+		System.out.println("The Largest index is: "+ currentValue);
+
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	/**
+	 *  This selection displays choose two numbers by index and show the largest of the two
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	public static void chooseTwoNumbers(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Robert Gabriel This selection displays the largest number numbers
+		 * from the Arrays list
+		 */
+		int index1 = 0;
+	
+		do {
+			System.out.print("\nPick index 1");
+			while(!studentInput.hasNextInt())
+			{
+				System.out.println("only numbers please");
+				studentInput.next();
+			}
+			index1=studentInput.nextInt();
+		} while (index1<=0 || index1 >= 10);
+
+		int index2 = 0;
+
+		do {
+			System.out.print("\nPick index 2");
+			while(!studentInput.hasNextInt())
+			{
+				System.out.println("only numbers please");
+				studentInput.next();
+			}
+			index2=studentInput.nextInt();
+		} while (index2<=0 || index2 >= 10);
+
+		biggerChecking(arrays,index1,index2);
+
+		if (biggerChecking(arrays,index1,index2)==true) {
+			System.out.print(arrays[index2-1] + " is Bigger\n");
+		}else  {
+			System.out.print(arrays[index1-1] + " is Bigger\n");
+		}
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	/**
+	 *  This selection displays choose two numbers by index and show the largest of the two
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	
+	public static void whereNumberIs(String[] numbers,int[] arrays , Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Sabastion with Robert Gabriel Find a number in an array
+		 * from the Arrays list
+		 */
+		int index1=0;	
+		do {
+			System.out.print("\nPlease Enter a Number to search for ");
+			while(!studentInput.hasNextInt())
+			{
+				System.out.println("only numbers please");
+				studentInput.next();
+			}
+			index1=studentInput.nextInt();
+		} while (index1<=0 || index1 >= 10000);
+
+
+		boolean found = false;
+		int index = 0;
+		while (!found && index < arrays.length){
+			if (arrays[index] ==index1)
+			{
+				found = true;
+			}
+			index++;
+		}
+
+		if (found){
+			System.out.print(index1 + " is in the list");
+		}else if (!found)
+		{
+			System.out.print(index1 + " is not in the list");
+		}
+		no(numbers,arrays ,studentInput, noOptions );
+	}
+	
+	/**
+	 *  This selection exits the progamm ......yeahh :D
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	
+	public static void exit(String[] numbers,int[] arrays ,Scanner studentInput,String[]noOptions)
+	{ 
+		/*
+		 * Author Sebastion exit the progamme
+		 * from the Arrays list
+		 */
+		System.exit(0);
+	}
+	/**
+	 *  This selection exits the progamm ......yeahh :D
+	 * @param codes the list of module codes
+	 * @param names the list of module names
+	 */
+	
+	public static boolean biggerChecking(int[] arrays,int index1,int index2)
+	{  
+		if (arrays[index2-1]>= arrays[index1-1])
+		{
+			return true;
+		}
+		return false;
+	}
+}
+
+
+
