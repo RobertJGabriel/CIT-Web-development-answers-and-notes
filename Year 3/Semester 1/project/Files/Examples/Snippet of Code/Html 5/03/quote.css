@@ -1,0 +1,4 @@
+/* HTML5 in easy steps:example 11.0 supplemental */
+
+p,blockquote 	{ border : 1px solid red;	}
+q 			{ background : yellow;		}

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Removing Elements</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var parent = $( "#box" ) , child = $( "#txt" ) ;
+
+  child.empty() ;
+  $( "#out1" ).text( parent.html() ) ;
+  child.remove() ;
+  $( "#out2" ).text( parent.html() ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="box">Division Text 
+<p id="txt">Paragraph Text<span>Span Text</span></p>
+</div>
+<p>Paragraph Emptied: <span id="out1"></span>
+<br>Paragraph Removed: <span id="out2"></span></p>
+</body>
+</html>

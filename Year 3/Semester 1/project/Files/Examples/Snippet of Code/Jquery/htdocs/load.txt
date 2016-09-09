@@ -1,0 +1,3 @@
+﻿<p style="background:aqua">
+<span id="content" style="background:yellow">Web Server content </span> supplied by AJAX Response</p>
+<img src="abyss.png">

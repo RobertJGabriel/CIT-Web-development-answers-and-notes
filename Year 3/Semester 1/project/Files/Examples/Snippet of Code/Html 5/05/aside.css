@@ -1,0 +1,5 @@
+/* HTML5 in easy steps:example 31.1 */
+
+aside { border:1px solid fuchsia; }
+
+article.sidebar > p,aside { display:table-cell; padding-right:20px; }

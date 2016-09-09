@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Enter Event</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var zone = $( "#zone" ).mouseenter( function() {
+    $( this ).text( "Enter" ).css( "background" ,"yellow" ) ; 
+  } ) ;
+
+  zone.mouseleave( function() {
+    $( this ).text( "Leave").css( "background" ,"aqua" ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+<style>
+#zone { width:200px; height:50px; border:2px dashed gray; } 
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="zone">Mouse Zone</div>
+</body>
+</html>

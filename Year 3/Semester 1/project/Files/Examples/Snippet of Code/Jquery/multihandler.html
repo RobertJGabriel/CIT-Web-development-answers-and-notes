@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Multiple Handlers</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  $( "#zone" ).on( 
+    {
+      mouseenter: function() { 
+        $( this ).css( "background" , "yellow" ) ;
+        $( "#out" ).text( "Mouse Entered" ) ; }
+      ,
+      mousedown: function() { 
+        $( this ).css( "background" , "lime" ) ;
+        $( "#out" ).text( "Mouse Button Down" ) ; }
+      ,
+      mouseup: function() { 
+        $( this ).css( "background" , "fuchsia" ) ;
+        $( "#out" ).text( "Mouse Button Up" ) ; }
+      ,
+      mouseleave: function() { 
+        $( this ).css( "background" , "aqua" ) ;
+        $( "#out" ).text( "Mouse Exited" ) ;
+      }
+    }
+  ) ;
+
+} ) ;
+
+</script>
+<style>
+#zone { border:2px dashed gray; width:200px; height:50px; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="zone">Click Zone</div>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

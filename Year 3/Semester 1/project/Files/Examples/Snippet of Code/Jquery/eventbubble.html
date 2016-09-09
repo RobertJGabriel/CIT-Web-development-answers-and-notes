@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Event Bubbling</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var en = 0 , ov = 0 ; // Counter variables.
+  $( "#d1" ).mouseenter( function() {
+    $( "#p1" ).text( ++en + " Entries" ) ; 
+  } ) ;
+
+  $( "#d2" ).mouseover( function() {
+    $( "#p2" ).text( ++ov + " Overs" ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+<style>
+div { background:aqua; width:100px; float:left; margin:0 10px; }
+p  { background:yellow; margin:10px; } 
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="d1"><p id="p1">0 Entries</p></div>
+<div id="d2"><p id="p2">0 Overs</p></div>
+</body>
+</html>

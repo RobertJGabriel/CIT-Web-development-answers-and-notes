@@ -1,0 +1,6 @@
+/* HTML5 in easy steps:example 83.3 supplemental */
+
+p#api		{ position:absolute; 	top:10px; 	left:10px; width:85px; height:85px; background:url(msg.png);	}
+p		{ position:absolute; 	top:0px; 	left:130px; }
+iframe	{ position:absolute;	top:50px; 	left:130px; }
+button	{ position:absolute; 	top:130px; 	left:10px; 	}

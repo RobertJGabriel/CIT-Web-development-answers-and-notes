@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Select Checkbox</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() { 
+
+  var chk3 = $( "input[type='checkbox']" ).eq( 2 ) ;
+  chk3.prop( "checked" , true ) ;
+  if( chk3.prop("checked") === true )
+  { $( "#out" ).text( chk3.val() + " Checked" ) ; }
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+ONE<input type="checkbox" name="box1" value="1">
+TWO<input type="checkbox" name="box2" value="2">
+THREE<input type="checkbox" name="box3" value="3">
+</form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

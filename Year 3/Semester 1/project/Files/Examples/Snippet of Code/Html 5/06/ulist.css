@@ -1,0 +1,55 @@
+/* HTML5 in easy steps:example 35.1 */
+
+ul.disc-bullets { list-style-type: disc; float:left; }
+ul.circle-bullets { list-style-type: circle; float:left; }
+ul.square-bullets { list-style-type: square; float:left; }
+ul.image-bullets { list-style-image: url(go.png); clear:both; }
+
+/* Rules for target pages... */
+
+#js-cover 
+{
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:406px;
+	height:248px;
+	clip: rect(0px,203px,248px,0px); 
+	overflow:hidden;
+}
+
+#css-cover 
+{
+	position:absolute;
+	top:20px;
+	left:-183px;
+	width:406px;
+	height:248px;
+	clip: rect(0px,406px,248px,203px); 
+	overflow:hidden;
+}
+
+#cp-cover 
+{
+	position:absolute;
+	top:20px;
+	left:-386px;
+	width:609px;
+	height:248px;
+	clip: rect(0px,609px,248px,406px); 
+	overflow:hidden;
+}
+
+#cover-bg {	background:#A9A9A9; }
+
+#summary 
+{	
+	position:absolute;
+	top:20px;
+	left:243px;
+	width:300px;
+	height:238px;
+	background:white;
+	padding:5px;
+	border:1px solid black;
+}

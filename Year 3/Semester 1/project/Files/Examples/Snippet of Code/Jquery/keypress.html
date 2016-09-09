@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery KeyPress Events</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#txt" ).keypress( function( e ) {
+    $( this ).val( null ) ;
+
+    var str = "Non-Alpha" ;		
+    if ( (e.which > 64)  && (e.which < 91) ) str = "Uppercase" ;
+    else
+    if ( (e.which > 96)  && (e.which < 123) ) str = "Lowercase" ;
+    $( "#out" ).text(  str + " Character Pressed" ) ; 
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form><input type="text" id="txt" maxlength="1"></form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

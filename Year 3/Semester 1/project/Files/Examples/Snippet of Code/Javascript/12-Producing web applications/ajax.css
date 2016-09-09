@@ -1,0 +1,19 @@
+h3	{ color:red; font-style:italic;	}
+
+table	{ text-align: center;		}
+
+td	{ width:50px; height:20px; 	}
+
+.col	{ background: #C9E5FC;		}
+
+.row	{ background:#C9F2BA; 		}
+
+.tot	{ background:#FF6600;color:white;	}
+
+.gto 	{ background:#FFBF23;		}
+
+#editbox{ width:360px; padding:5px; margin:auto; border: 1px solid red; color: red;}
+
+#databox{ width:360px; padding:5px; margin:auto }
+
+legend	{ background:red; color:white	}

@@ -1,0 +1,29 @@
+/* HTML5 in easy steps:example 38.1 */
+
+/* Simple table rules */ 
+table#data { width:580px; font-family:sans-serif; border:5px solid black; }
+table#data td,th { border:1px solid black; }
+
+/* Row spanning rules */
+table#data td[rowspan="2"] { background:yellow; }
+table#data td[rowspan="3"] { background:aqua; }
+
+/* Column spanning rules */
+table#data td[colspan="2"] { background:aqua; }
+table#data td[colspan="3"] { background:yellow; }
+
+/* Table section rules */
+table#data thead	{ background:aqua; }
+table#data th.next	{ background:yellow; }
+table#data tfoot	{ background:lime;  }
+
+
+/* Alignment rules */
+table#data tr.default td	{ height:30px; background:yellow; }
+table#data tr.center  td { text-align:center; height:30px; background:aqua; }
+table#data tr.right td { text-align:right; height:30px; background:lime; }
+table#data tr.bottom  	{ vertical-align:bottom; }
+
+/* Border removal rules */
+table#data.no-border { border-collapse:collapse; border:none; }
+table#data tr th.cut-border { border:0; }

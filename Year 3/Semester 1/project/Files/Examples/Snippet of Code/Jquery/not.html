@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Not</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  var nospan = $( "li" ).not( $( "li" ).has( "span" ) ) ;
+  nospan.text( "Item : Has No Span" ) ;
+
+  if( $( "li" ).parent().not( "ol" ) )
+  { $( "#out" ).text( "This Is An Unordered List" ) ; }
+
+} ) ;
+
+</script>
+
+</head>
+<body>
+<h1>jQuery</h1>
+<ul><li>Item<li><span>Item</span><li>Item</ul>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

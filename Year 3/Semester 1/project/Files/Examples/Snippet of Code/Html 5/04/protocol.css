@@ -1,0 +1,5 @@
+/* HTML5 in easy steps:example 23.1 */
+
+img#chart	{ visibility: hidden; height:0px; }
+
+p#links 		{ padding:5px; border:3px double green; width:200px; }

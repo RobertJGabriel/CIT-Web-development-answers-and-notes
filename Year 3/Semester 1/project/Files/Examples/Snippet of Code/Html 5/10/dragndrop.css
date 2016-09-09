@@ -1,0 +1,7 @@
+/* HTML5 in easy steps:example 80.2 supplemental */
+
+p#api		{ position:absolute; top:0px; left:10px; width:96px; height:85px; background:url(dragndrop.png); }
+
+p#drag		{ position:absolute; top:0px; left:120px; width:415px; height:150px; }
+
+fieldset		{ position:absolute; top:90px; left:120px; width:415px; }

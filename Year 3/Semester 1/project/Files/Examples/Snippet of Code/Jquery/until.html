@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Traverse Next Until</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var collection = $( "#item1" ).nextUntil( $( "#item5" ) ) ;
+  collection.text( "Generated Text" ) ;
+		
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<ol>
+<li id="item1">Item
+<li id="item2">Item
+<li id="item3">Item
+<li id="item4">Item
+<li id="item5">Item
+</ol>
+</body>
+</html>

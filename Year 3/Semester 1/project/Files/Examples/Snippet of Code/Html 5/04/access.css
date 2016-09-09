@@ -1,0 +1,7 @@
+/* HTML5 in easy steps:example 21.2 */
+
+a		{ text-decoration:none; color:black; }
+
+a:focus	{ background:red; color:white; }
+
+a		{ font-size:20pt; }

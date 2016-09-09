@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Text Input Example</title>
+
+<meta name="description" content="HTML5 in easy steps:example 53.0">
+<!-- Validated by the W3C Validation Service at validator.w3.org --> 
+
+</head>
+
+<body>
+
+<!-- Downtown Houston, ZIP 77010 -->
+
+<form  method="GET" action="http://localhost/echo.pl">
+<dl>
+<dt>User Name :</dt> 
+<dd><input type="text" name="Name"> </dd>
+<dt>Password :</dt>
+<dd><input type="password" name="Password"></dd>
+<dt>City :</dt>
+<dd><input type="text" name="City" value="Dallas"> </dd>
+<dt>Area :</dt>
+<dd><input type="text" name="Area" value="Downtown" disabled></dd>
+<dt>State :</dt>
+<dd><input type="text" name="State" value="Texas" readonly ></dd>
+<dt>Zip Code :</dt>
+<dd><input type="text" name="Zip Code" size="5" maxlength="5"></dd>
+</dl>
+
+<p><input type="submit" value="Submit Form"></p>
+ 
+</form>
+
+</body>
+
+</html>

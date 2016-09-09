@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<htmllang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Html Content</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "ul" ).html( function( i , html ) {
+    $( "#out" ).text( html ) ;
+    return "<li>Damson<li>Elderberry<li>Fig" ;
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<ul><li>Apple<li>Banana<li>Cherry</ul>
+<p>Output : <span id="out"></span></p>
+</body>
+</html>

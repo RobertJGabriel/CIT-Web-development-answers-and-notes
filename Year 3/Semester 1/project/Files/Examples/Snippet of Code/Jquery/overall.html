@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Overall Box Size</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var box = $( "#box" ) , str = "Including Padding - " ;
+  str += box.innerWidth() + "x" + box.innerHeight() ;
+  str += "<br>Including Padding & Margin- " ;
+  str += box.outerWidth() + "x" + box.outerHeight() ;
+  $( "#out" ).html( str ) ;
+
+} ) ; 
+
+</script>
+<style>
+#box	{ width:200px; height:50px; background:yellow; padding:5px; border:5px solid red; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="box">Box</div>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

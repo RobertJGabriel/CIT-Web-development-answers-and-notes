@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery HTTP Request</title>
+
+<!-- NOTE: This AJAX example must be run via HTTP. -->
+<!-- It must be located on a web server in \htdocs -->
+<!-- Alongside: getpost.php,getpost.js,getpost.txt --> 
+
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $.get( "getpost.txt" , function( msg ) { $( "#out" ).text( msg ) } ) ;
+
+  $.getScript( "getpost.js" ) ;
+
+  $( "#get-btn" ).on( "click" , function() {
+    $.getJSON( "getpost.php", { page:document.title } , report ) ;
+  } ) ;
+
+  $( "#post-btn" ).on( "click" , function() {
+    $.post( "getpost.php", { page:document.title } , report , "json" ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<p><button id="get-btn">GET</button>
+<button id="post-btn">POST</button></p>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Focus In & Out</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var frm = $( "form" ) , out = $( "#out" ) ;
+  frm.focusin( function() { out.text( "Form Active" ) ; } ) ;
+  frm.focusout( function() { out.text( "Form Inactive" ) ; } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+<input type="text" name="a" value="jQuery" >
+<input type="text" name="b" value="in easy steps" >
+</form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

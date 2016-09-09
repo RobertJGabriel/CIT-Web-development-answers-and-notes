@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Traverse Parents</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var i = 0, str = "", parents = $( "em" ).parents() ;
+
+  for( ; i < parents.length ; i++ )
+  { str += parents[i].tagName + " | " } ;
+  $( "#out" ).text( str + parents.length ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<div>
+<p>Paragraph containing <em>Emphatic Text</em></p>
+<p>Output: <span id="out"></span></p>
+</div>
+</body>
+</html>

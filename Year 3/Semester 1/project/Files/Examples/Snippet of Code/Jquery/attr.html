@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Attribute Content</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var img = $( "img[ alt = 'Firefox' ]" ) ;
+  img.attr( { "src":"tbird.png" , "alt":"Thunderbird" } ) ;
+  $( "#out" ).text( img.attr( "alt" ) ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<p><img src="ffox.png" alt="Firefox">
+<br>Output: <span id="out"></span></p>
+</body>
+</html>

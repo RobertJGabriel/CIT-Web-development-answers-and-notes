@@ -1,0 +1,46 @@
+/* HTML5 in easy steps:example 29.1 */
+
+nav	{ border: 1px solid fuchsia;	}
+
+/* Positioning... */
+#logo		{ float:left; }
+#horizontal	{ padding-left:100px; display:block;	}
+#vertical	{ float:left; padding:0px 30px 130px 30px; }
+
+
+/* Rules for hyperlink target pages... */
+#js-cover 
+{
+	position:absolute;
+	top:20px;
+	left:20px;
+	width:406px;
+	height:248px;
+	clip: rect(0px, 203px, 248px, 0px); 
+	overflow:hidden;
+}
+
+#css-cover 
+{
+	position:absolute;
+	top:20px;
+	left:-183px;
+	width:406px;
+	height:248px;
+	clip: rect(0px, 406px, 248px, 203px); 
+	overflow:hidden;
+}
+
+#cover-bg {	background:#A9A9A9; }
+
+#summary 
+{	
+	position:absolute;
+	top:20px;
+	left:243px;
+	width:300px;
+	height:238px;
+	background:white;
+	padding:5px;
+	border:1px solid black;
+}

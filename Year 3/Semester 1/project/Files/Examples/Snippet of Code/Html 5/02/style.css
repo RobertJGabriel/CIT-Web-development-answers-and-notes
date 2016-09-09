@@ -1,0 +1,10 @@
+/* HTML5 in easy steps:example 7.1 */
+
+h1	
+{
+	color : red ;
+	background : yellow ;
+	border : 10px dashed blue ;
+	padding : 5px ; 
+	width : 550px ;
+}

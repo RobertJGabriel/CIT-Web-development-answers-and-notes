@@ -1,0 +1,22 @@
+/* HTML5 in easy steps:example 52.1 */
+
+table
+{ width:550px; font-family:sans-serif; }
+
+caption
+{ text-align:left; padding-left:5px; height:25px; }
+
+col.no
+{ width:20%; }
+
+table thead tr th
+{ color:white; background:#FF6600; }
+
+table tfoot tr td	
+{ border-top:2px solid #FF6600; height:28px; vertical-align:bottom; }
+
+table tbody tr td
+{ text-align:center; }
+
+table tbody tr.stripe 
+{ background:#FEEDB7; }

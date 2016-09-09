@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mouse Move Events</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#zone" ).mousemove( function(e) {
+    var left = e.pageX ;
+    var top = e.pageY ;
+    $( this ).text( "X: " + left + " Y: " + top ) ; 
+    } ) ;
+
+} ) ;
+
+</script>
+<style>
+#zone { width:200px; height:50px; border:2px dashed gray; } 
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div id="zone">Mouse Zone</div>
+</body>
+</html>

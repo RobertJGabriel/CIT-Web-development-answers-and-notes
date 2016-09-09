@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html lang="en" manifest="currency.manifest">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Manifest Example</title>
+<script src="currency.js"></script>
+<link rel="stylesheet" href="currency.css">
+
+<meta name="description" content="HTML5 in easy steps:example 51.0">
+<!-- Validated by the W3C Validation Service at validator.w3c.org --> 
+
+</head>
+
+<body>
+
+<form name="currency">
+
+<table>
+<tr>
+<td rowspan="3"><img src="currency.png" alt="Cash Bag" width="60" height="82">
+<td colspan="3"><strong>Quick Converter</strong><br>Enter an amount in any currency below:<td id="status">
+</tr>
+<tr class="names">
+<td>US Dollars<td>Euros<td>UK Pounds<td>
+</tr>
+<tr class="inputs">
+<td><input id="c0" type="text" name="c0" value="" size="10" onkeyup="convert(0);">
+<td><input id="c1" type="text" name="c1" value="" size="10" onkeyup="convert(1);">
+<td><input id="c2" type="text" name="c2" value="" size="10" onkeyup="convert(2);">
+<td><input type="reset">
+</tr>
+</table>
+
+</form>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Queue Animations</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+	
+  var div = $( "div" ) ;
+
+  function count() {
+    $( "#out" ).text( "Queue Length " + div.queue().length ) ;
+    setTimeout( count, 100 ) ;
+  }
+ 
+  $( "#run-btn" ).on( "click" , function() {
+    div.animate( { left: "200" } , 2000 ) ;
+    div.slideUp( 2000 ).delay( 1000 ).slideDown( 2000 ) ;
+    div.animate( { left: "10" } , 2000 ) ;
+    count() ;
+  } ) ;
+ 
+  $( "#fin-btn" ).on( "click" , function() { div.finish() ; } ) ;
+
+} ) ;
+
+</script>
+<style type="text/css">
+div , p { position:absolute; left:10px; top:120px; }
+div	{ top:80px; padding:5px; width:200px; height:30px; background:aqua; border:2px dashed gray; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div>Buttons Control Queue</div>
+<p><button id="run-btn">Run</button>
+<button id="fin-btn">Finish</button>
+<br>Output: <span id="out"></span></p>
+</body>
+</html>

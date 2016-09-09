@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Audio Example</title>
+	
+<meta name="Description" content="HTML5 in easy steps:example 49.0">
+<!-- Validated by the W3C Validation Service at validator.w3.org -->
+
+</head>
+
+<body>
+  
+<!-- This would autoplay in IE, Google Chrome, & Safari - but not in Firefox or Opera -->
+<!-- <audio src="audio.mp3" autoplay>[ Fallback Message ]</audio> -->
+   
+<!-- This would autoplay in Firefox, Google Chrome, & Opera - but not in IE or Safari -->
+<!--<audio src="audio.ogg" autoplay>Fallback Message</audio>-->
+
+<audio controls>
+	
+<!-- AAC (Advanced Audio Coding) codec "mp4a.40.2" supported by: IE, Safari, and Google Chrome - but NOT FF or Opera -->
+<source src="audio.mp3" type="audio/mpeg" >
+
+<!-- Ogg audio codec "vorbis" supported by: Firefox, Opera, and again Google Chrome - but NOT IE9 or Safari -->
+<source src="audio.ogg" type="audio/ogg" >
+
+[ Fallback Message ] 
+</audio>
+
+</body>
+
+</html>
