@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery AJAX Error Handling</title>
+
+<!-- NOTE: This AJAX example must be run via HTTP. -->
+<!-- It must be located on a web server in \htdocs -->
+<!-- It must accompanied by file: successfail.php --> 
+
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "form" ).on( "submit" , function( event ) { 
+    event.preventDefault() ;
+    $.ajax( {
+      url: "successfail.php" ,
+      cache: false ,
+      data: $( this ).serialize() ,	
+      success: function( result , status , xhr ) { $( "span" ).text( result )  } ,
+      error: function( xhr , status , error ) { $( "span" ).text( error  )  }
+    } ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form><input type="text" name="num"><br><input type="submit">
+<br><span>Please Enter A Number 1 - 9</span></form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Data Objects</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var pic = $( "#pic" ).data( "fg" , "red" ) ; 
+
+  if( $.hasData( pic[0] ) ) {
+    $( "#out" ).text( pic[0] + 
+      " Has Data" ).css( "color" , pic.data( "fg" ) ) ; }
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<img id="pic" src="classic.png">
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

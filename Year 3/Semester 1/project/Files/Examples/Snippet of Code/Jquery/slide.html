@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Slide Effect</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#up-btn").on( "click" , function() {
+    $( "div" ).slideUp( "slow" , function() { 
+      $( "#out" ).text( "Content Hidden" ) ;
+    } ) ;
+  } ) ;
+
+  $( "#dn-btn" ).on( "click" , function() {
+    $( "div" ).slideDown( "slow" , function() { 
+      $( "#out" ).text( "Content Visible" ) ;
+    } ) ;
+  } ) ;
+
+  $( "#tog-btn" ).on( "click" , function() {
+    $( "div" ).slideToggle( "slow" , function() { 
+      if ( $( "div" ).css( "display" ) === "none" )
+      $( "#out" ).text( "Content Hidden" ) ; 
+      else $( "#out" ).text( "Content Visible" ) ;
+    } ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+<style>
+div { padding:5px; width:200px; height:30px; background:aqua; border:2px dashed gray; }
+p { position:absolute;top:120px; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<div>Buttons Slide Visibility</div>
+<p>
+<button id="up-btn">Up</button>
+<button id="dn-btn">Down</button>
+<button id="tog-btn">Toggle</button>
+<br>Output: <span id="out"></span>
+</p>
+</body>
+</html>

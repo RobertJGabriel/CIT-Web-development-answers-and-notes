@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<books>
+
+  <title>   
+    <topic>JavaScript</topic>
+    <series>in easy steps</series> 
+    <pic>js.gif</pic>
+  </title>
+
+  <title>
+    <topic>C++ Programming</topic>
+    <series>in easy steps</series>
+    <pic>c++.gif</pic>
+  </title>
+
+  <title>
+    <topic>HTML</topic>
+    <series>in easy steps</series>
+    <pic>html.gif</pic>
+  </title>
+
+  <title>
+    <topic>SQL</topic>
+    <series>in easy steps</series>
+    <pic>sql.gif</pic>
+  </title>
+  
+<title><topic>Linux</topic><series>in easy steps</series><pic>linux.gif</pic></title></books>

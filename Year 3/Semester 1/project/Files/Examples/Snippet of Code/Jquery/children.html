@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Traverse Children</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "ul" ).children().text( "Child" ) ;
+  $( "ol li:first-child" ).siblings().text( "Sibling" ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<ul><li>Son<li>Son<li>Son</ul>
+<ol><li>Daughter<li>Daughter<li>Daughter</ol>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* HTML5 in easy steps:example 43.1 */
+
+table#feb colgroup.weekday { background:aqua; }
+table#feb colgroup.weekend { background:yellow; }
+
+table#feb { width:580px; border-collapse:collapse; font-family:sans-serif; }
+table#feb  thead,tfoot { background:white; color:red; }
+table#feb tbody { text-align:center; }
+
+table#feb tbody tr td#birthday { border:2px solid red; }

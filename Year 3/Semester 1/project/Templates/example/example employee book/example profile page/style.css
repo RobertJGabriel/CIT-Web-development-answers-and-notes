@@ -1,0 +1,290 @@
+body{background:white; margin:0;}
+/*--------- Top line ----------*/
+#topLine
+{
+	width:100%;
+	height:35px;
+	background:#9f123a;
+	position:fixed;
+	z-index:1000;
+}
+
+#socialPicks
+{
+	width:33.33%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#socialPicks ul 
+{	
+	list-style: none;
+	margin: auto;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+}
+#socialPicks ul li
+{
+	display: inline-block;
+	position: relative;
+	height: 32px;
+	width: 32px;
+	margin-left: 5px;
+}
+#socialPicks ul li a
+{
+	display: block;
+	height: 32px;
+	width: 32px;
+}
+#socialPicks ul li:hover
+{
+	opacity:0.7;
+}
+#facebook
+{
+	background-image: url("images/facebook.png");
+}
+#twitter
+{
+	background-image: url("images/twitter.png");
+}
+
+#topLogo
+{
+	width:33.33%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#logo
+{
+	height:30px;
+	line-height:30px;
+	width:95px;
+	margin: auto;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+}
+
+#searchBox
+{
+	width:33.34%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#searchBox .profileButton
+{
+	height:29px;
+	line-height:29px;
+	width:100px;
+	border-radius:10px;
+	margin:auto;
+	text-align:center;
+	background:white;
+	color:#9f123a;
+	border:solid #9f123a;
+}
+#searchBox .profileButton:hover
+{
+	background:#9f123a;
+	color:white;
+	cursor: pointer;
+	border:solid white;
+}
+
+
+
+/*--------- Left profile ----------*/
+
+#leftProfile
+{
+	padding-top:25px;
+	width:250px;
+	height:100%;
+	position:fixed;
+	float:left;
+	background:#9f123a;
+	border-top:double 10px white;
+	border-right:double 10px white;
+	margin-top:35px;
+}
+#profilePic
+{
+	width:100px;
+	height:111px;
+	border-radius:100px;
+	margin:auto;
+	background-image: url("images/blankProfile.jpg");
+}
+
+#usersName
+{
+	height:30px;
+	line-height:30px;
+	width:200px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	color:white;
+}
+
+.profileButton
+{
+	height:30px;
+	line-height:30px;
+	width:200px;
+	border-radius:15px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	background:white;
+	color:#9f123a;
+	border:solid #9f123a;
+}
+.profileButton:hover
+{
+	background:#9f123a;
+	color:white;
+	cursor: pointer;
+	border:solid white;
+}
+
+
+/*--------- Right Body section ----------*/
+#rightBlock
+{
+	width: -moz-calc(100% - 270px);
+    width: -webkit-calc(100% - 270px);
+    width: calc(100% - 270px);
+	position:relative;
+	float:left;
+	margin-left:270px;
+	margin-top:35px;
+}
+.meetStaff
+{
+	color:#9f123a;
+}
+	/*--------- flip cards ----------*/
+.cardsList
+{
+	list-style: none;
+}
+.flip3d
+{
+	display: inline-table;
+	position: relative;
+	width: 200px;
+	height: 300px;
+	margin: 10px;
+}
+
+.flip3d > .front
+{
+	position: absolute;
+	-ms-transform: rotateY( 0deg );
+	-webkit-transform: rotateY( 0deg );
+	transform: rotateY( 0deg );
+	-webkit-perspective: 600px;
+	perspective: 600px;
+	width: 200px;
+	height: 300px;
+	border: 1px solid black;
+	background-color: #d8e3eb;
+	border-radius: 5px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d > .back
+{
+	position: absolute;
+	transform: rotateY( 180deg );
+	-ms-transform: rotateY( 180deg );
+	-webkit-transform: rotateY( 180deg );
+	-webkit-perspective: 600px;
+	perspective: 600px;
+	background-color: #d8e3eb;
+	width: 200px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 5px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d:hover > .front
+{
+	-ms-transform: rotateY( -180deg );
+	-webkit-transform: rotateY( -180deg );
+	transform: rotateY( -180deg );
+	-webkit-perspective: 600px;
+	perspective: 600px; 
+}
+
+.flip3d:hover > .back
+{
+	-ms-transform: rotateY( 0deg );
+	-webkit-transform: rotateY( 0deg );
+	transform: rotateY( 0deg );
+	-webkit-perspective: 600px;
+	perspective: 600px; 
+}
+
+img.trainerImg
+{
+	position: relative;
+	top: 9px;
+	left: 9px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.trainerInfo
+{
+	position: relative;
+	top: 9px;
+	left: 9px;
+	border: 1px solid black;
+	width: 170px;
+	height: 270px;
+	background-color: white;
+	text-align:center;
+	padding:5px;
+}
+
+.bookingButton
+{
+	position:absolute;
+	top:220px;
+	left:35px;
+	height:30px;
+	line-height:30px;
+	width:100px;
+	border-radius:15px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	background:white;
+	color:#99CCFF;
+	border:solid #99CCFF;
+}
+
+.bookingButton:hover
+{
+	background:#99CCFF;
+	color:white;
+	cursor: pointer;
+}
+

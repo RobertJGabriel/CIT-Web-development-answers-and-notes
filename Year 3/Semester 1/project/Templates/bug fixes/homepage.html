@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CIT Gym | Log in</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src = "jquery.js"></script>
+    
+</head>
+<body>
+
+    <div id="header">
+       <div id="logo">
+        <img src="logo.jpg" alt="Cit Logo">
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    <div id="wrapper">
+    
+        <div id="left">
+            
+             <form name="login" class="forms"id="logIn" action="demo_form_action.asp" method="post">
+                   <h2>Log In</h2>
+                    <input type="text" class="input" placeholder="Student Id"><br>
+                    <input type="password" class="input" placeholder="Password"><br>
+                    <input type="submit" value="Login">
+                    <p class="orRegister" onClick="switchBetween()">Or register</p>
+                </form>
+
+       
+                <form name="register" class="forms" id="register" action="demo_form_action.asp" method="post">
+                    <h2>Enter details</h2>
+                    <input type="text" name="fname" placeholder="First Name"><br>
+                    <input type="text" name="lname"placeholder="Last Name"><br>
+                    <input type="text"  name="id" placeholder="Student ID"><br>
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <input type="password" name="password" placeholder="Password"><br>
+                    <input type="password" name="rpassword" placeholder="Re-enter Password"><br>
+                    <input type="submit" value="Sign Up">
+                    <p class="orRegister" onClick="switchBack()">log in</p>
+                </form>
+      
+            
+        </div>
+        
+        <div id="right">
+                
+           <a class="twitter-timeline" width="399" height="399" data-link-color="#FAFAFA" data-border-color="#FAFAFA"  data-theme="light"
+			href="https://twitter.com/CIT_Gym" data-widget-id="520628858203025408"></a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+			if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Modal Dialog</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="jquery.modal-plugin.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  $( "#btn" ).on( "click" , function() { 
+    $( "#pop" ).modal( { msg: "That's All Folks!" } )
+      .css( "color" , "red" ) ; } ) ;
+
+  $( "#end" ).on( "click" , function() { 
+    $( "#pop" ).modal( { vis: false } ) ; } ) ;
+
+} ) ;
+
+</script>
+<style>
+#pop {
+  position:absolute; top:0px; left:0px; width:100%; height:100%;
+  background:rgba(0,0,0,0.3); display:none; z-index:1;
+}
+
+#dlg {
+  width:200px; margin:50px auto; padding:5px;
+  border:1px solid black; background:white; z-index:2;
+}
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+
+<p><button id="btn">Call Plugin</button></p>
+
+<div id="pop">
+  <div id="dlg">
+    <b>Dialog</b><p id="out">_</p>
+    <hr><button id="end">Close</button>
+  </div>
+</div>
+
+</body>
+</html>

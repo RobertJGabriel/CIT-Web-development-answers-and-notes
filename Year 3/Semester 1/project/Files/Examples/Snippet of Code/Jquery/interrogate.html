@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Interrogation</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  $( "li" ).has( "span" ).text( "Item : Has Span" ) ;
+  if( $( "li" ).parent().is( "ol" ) )
+  { $( "#out" ).text( "This Is An Ordered List" ) ; }
+
+} ) ;
+
+</script>
+
+</head>
+<body>
+<h1>jQuery</h1>
+<ol><li>Item<li><span>Item</span><li>Item</ol>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

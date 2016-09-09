@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Remove CSS Class</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "ul" ).removeClass( "grnBG" ).addClass( "yelBG" ) ;
+  $( "#out" ).text( $( "ul" ).hasClass( "yelBG" ) ) ;
+		
+} ) ;
+
+</script>
+<style type="text/css">
+.grnBG	{ background: green ; color: white ; width: 300px ;	}
+.yelBG	{ background : yellow ; color : blue ; width : 300px ;	}
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<ul class="grnBG"><li>Item<li>Item<li>Item</ul>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

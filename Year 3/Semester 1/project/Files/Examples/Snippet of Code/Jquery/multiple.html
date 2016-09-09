@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Select Multiple</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() { 
+
+  $( "#list1 li:eq(1) , #list2 li:eq(2)" ).text( "Generated Content" ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<ol id="list1"><li>List Item<li>List Item<li>List Item</ol>
+<ol id="list2"><li>List Item<li>List Item<li>List Item</ol>
+</body>
+</html>

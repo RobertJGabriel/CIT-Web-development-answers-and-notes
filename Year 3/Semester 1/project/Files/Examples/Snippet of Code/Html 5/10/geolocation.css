@@ -1,0 +1,5 @@
+/* HTML5 in easy steps:example 84.2 supplemental */
+
+ p#api	{ position:absolute; 	top:10px; 	left:10px; width:85px; height:85px; background:url(geolocation.png);	}
+ p#msg	{ position:absolute; top:0px; left:100px; width:450px; height:40px; 	}
+ p#map	{ position:absolute; top:40px; left:100px; width:450px; height:200px;  	}

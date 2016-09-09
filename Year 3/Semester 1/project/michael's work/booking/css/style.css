@@ -1,0 +1,363 @@
+body{background:white; margin:0; font-family: Helvetica, Arial, sans-serifs;}
+/*--------- Top line ----------*/
+#topLine
+{
+	width:100%;
+	height:35px;
+	background:#9f123a;
+	position: fixed;
+	z-index: 1;
+}
+
+#socialPicks
+{
+	width:33.33%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#socialPicks ul 
+{	
+	list-style: none;
+	margin: auto;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+}
+#socialPicks ul li
+{
+	display: inline-block;
+	position: relative;
+	height: 32px;
+	width: 32px;
+	margin-left: 5px;
+}
+#socialPicks ul li a
+{
+	display: block;
+	height: 32px;
+	width: 32px;
+}
+#socialPicks ul li:hover
+{
+	opacity:0.7;
+}
+#facebook
+{
+	background-image: url("images/facebook.png");
+}
+#twitter
+{
+	background-image: url("images/twitter.png");
+}
+
+#topLogo
+{
+	width:33.33%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#logo
+{
+	height:30px;
+	line-height:30px;
+	width:95px;
+	margin: auto;
+	position: absolute;
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+}
+
+#searchBox
+{
+	width:33.34%;
+	text-align:center;
+	height:35px;
+	float:left;
+	position:relative;
+}
+#searchBox .profileButton
+{
+	height:29px;
+	line-height:29px;
+	width:100px;
+	border-radius:10px;
+	margin:auto;
+	text-align:center;
+	background:white;
+	color:#9f123a;
+	border:solid #9f123a;
+}
+#searchBox .profileButton:hover
+{
+	background:#9f123a;
+	color:white;
+	cursor: pointer;
+	border:solid white;
+}
+
+
+
+/*--------- Left profile ----------*/
+#leftProfile
+{
+	padding-top:25px;
+	width:250px;
+	height:100%;
+	position:fixed;
+	top: 35px;
+	float:left;
+	background:#9f123a;
+	border-top:double 10px white;
+	border-right:double 10px white;
+}
+#profilePic
+{
+	width:100px;
+	height:111px;
+	border-radius:100px;
+	margin:auto;
+	background-image: url("images/blankProfile.jpg");
+}
+
+#usersName
+{
+	height:30px;
+	line-height:30px;
+	width:200px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	color:white;
+}
+
+.profileButton
+{
+	height:30px;
+	line-height:30px;
+	width:200px;
+	border-radius:15px;
+	margin:auto;
+	margin-top:10px;
+	text-align:center;
+	background:white;
+	color:#9f123a;
+	border:solid #9f123a;
+}
+.profileButton:hover
+{
+	background:#9f123a;
+	color:white;
+	cursor: pointer;
+	border:solid white;
+}
+
+
+
+#rightBlock
+{
+	float:left;
+	margin-left:250px;
+}
+
+.flip3d
+{
+width: 200px;
+height: 300px;
+margin: 10px;
+float: left;
+}
+
+.flip3d > .front
+{
+position: absolute;
+-ms-transform: rotateY( 0deg );
+-webkit-transform: rotateY( 0deg );
+transform: rotateY( 0deg );
+-webkit-perspective: 600px;
+perspective: 600px;
+width: 200px;
+height: 300px;
+border: 1px solid black;
+background-color: #FFFFCC;
+border-radius: 5px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+.flip3d > .back
+{
+position: absolute;
+transform: rotateY( 180deg );
+-ms-transform: rotateY( 180deg );
+-webkit-transform: rotateY( 180deg );
+-webkit-perspective: 600px;
+perspective: 600px;
+background-color: #FFFFCC;
+width: 200px;
+height: 300px;
+border: 1px solid black;
+border-radius: 5px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+.flip3d:hover > .front
+{
+-ms-transform: rotateY( -180deg );
+-webkit-transform: rotateY( -180deg );
+transform: rotateY( -180deg );
+-webkit-perspective: 600px;
+perspective: 600px; 
+}
+
+.flip3d:hover > .back
+{
+-ms-transform: rotateY( 0deg );
+-webkit-transform: rotateY( -180deg );
+transform: rotateY( -180deg );
+-webkit-perspective: 600px;
+perspective: 600px; 
+}
+
+img.trainerImg
+{
+position: relative;
+top: 9px;
+left: 9px;
+border: 1px solid black;
+border-radius: 5px;
+}
+
+.trainerInfo
+{
+position: relative;
+top: 9px;
+left: 9px;
+border: 1px solid black;
+width: 180px;
+height: 280px;
+background-color: white;
+}
+
+/*-----------Calendar------------*/
+#date
+{
+color: white;
+width: 150px;
+margin-top: 20px;
+margin-left: 10px;
+}
+
+#day_calendar
+{
+position: absolute;
+top: 50px;
+float: left;
+display: none;
+}
+
+#day_calendar li
+{
+list-style: none;
+height: 100px;
+width: 400px;
+border-top: 1px solid black;
+line-height: 100px;
+text-align: center;
+}
+
+	div.book_list
+	{
+	height: 100px;
+	width: 350px;
+	border-left: 1px solid black;
+	display: block;
+	float: right;
+	}
+
+		#block_test
+		{
+		position: relative;
+		float: left;
+		top: 10px;
+		margin-left: 10px;
+		display: block;
+		height: 80px;
+		width: 70px;
+		background-color: maroon;
+		cursor: pointer;
+		}
+		
+		#block_test_2
+		{
+		position: relative;
+		float: left;
+		top: 10px;
+		margin-left: 10px;
+		display: block;
+		height: 80px;
+		width: 70px;
+		background-color: maroon;
+		cursor: pointer;
+		}
+
+div.ui-datepicker{
+ font-size:13px;
+}
+		
+/*-------------CalendarWeek--------------*/
+#week_calendar
+{
+position: fixed;
+left: 500px;
+display: block;
+width: 350px;
+border: 1px solid black;
+float: left;
+padding-bottom: 10px;
+}
+
+	#week_calendar h2
+	{
+	margin-left: 10px;
+	}
+	
+	#week_calendar li
+	{
+	position: relative;
+	display: block;
+	list-style: none;
+	height: 40px;
+	width: 40px;
+	float: left;
+	margin-left: 0px;
+	margin-right: 10px;
+	margin-top: 10px;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	background-color: maroon;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

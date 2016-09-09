@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Bind Handler</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#btn" ).one( "mouseenter" , function() { 
+    $( "p" ).prepend( "Count " ) ; 
+  } ) ;
+
+  var num = 0 ;
+
+  $( "#btn" ).on( "click" , function() { 
+    num++ ; 
+    $( "#out" ).text( num ) ; 
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<button id="btn">Click Me</button>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Serialize Form</title>
+<script src="jquery-1.11.0.min.js"> </script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#btn" ).on( "click" , function() {
+    $( "#qry" ).text( $( "form" ).serialize() ) ;
+    $.each( $( "form" ).serializeArray() , function( i , n ) {
+      $( "#arr" ).append( i + "=" + n.name + ":" + n.value + " " ) ;
+    } ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+<input type="text" name="fname" value="Bugs">
+<input type="text" name="lname" value="Bunny">
+<input type="button" id="btn" value="Serialize">
+</form>
+<p>Array... <span id="arr"></span>
+<br>Query.. <span id="qry"></span></p>
+</body>
+</html>

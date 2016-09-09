@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Deferred Object</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  $( "#btn" ).on( "click" , function() {
+
+    var dfd = null , out = $( "#out" ) ;
+
+    dfd = $.Deferred() ;
+    out.text( dfd.state() ) ;
+
+    dfd.done( function( n ) { out.text( this.state() ) ; } ) ;
+    dfd.fail( function( n ) { out.text( this.state() ) ; } ) ;
+    dfd.always( function( n ) { out.append( "  " + n ) ; } ) ;
+
+    setTimeout( function() {
+      var n = Math.ceil( Math.random() * 100 ) ;
+      ( n % 2 !== 0 ) ? dfd.reject( n ) : dfd.resolve( n ) ; 
+    } , 1000 ) ;
+
+  } ) ;
+
+} ) ;
+
+</script>
+
+</head>
+<body>
+<h1>jQuery</h1>
+<button id="btn">Call</button>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

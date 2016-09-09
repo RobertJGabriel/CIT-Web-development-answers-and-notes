@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Get CSS Property</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#out" ).text( $( "ol" ).css( "color" ) ) ;
+		
+} ) ;
+
+</script>
+<style>
+ol { color:red; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<ol><li>Alpha<li>Bravo<li>Charlie</ol>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

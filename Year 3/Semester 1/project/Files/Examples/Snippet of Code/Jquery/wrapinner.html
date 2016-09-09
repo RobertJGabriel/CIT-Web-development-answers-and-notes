@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Wrapping Content</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#abc li" ).wrapAll( "<div></div>" ) ;
+  $( "#xyz li" ).wrapInner( "<div></div>" ) ;	
+
+} ) ;
+
+</script>
+<style>
+div { background: yellow; border: 3px solid red; width: 300px; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<ol id="abc"><li>Alpha<li>Bravo<li>Charlie</ol>
+<ol id="xyz"><li>Xray<li>Yankee<li>Zulu</ol>
+</body>
+</html>

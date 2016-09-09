@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery AJAX Global Events</title>
+
+<!-- NOTE: This AJAX example must be run via HTTP. -->
+<!-- It must be located on a web server in \htdocs -->
+<!-- It must accompanied by target file:index.html --> 
+
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var go = function( file ) { $( "ol" ).empty() ; $.ajax( file ) } ;
+
+  $( "#good" ).on( "click" , function() { go( "index.html") } ) ;
+  $( "#fail" ).on( "click" , function() { go( "ghost.html") } ) ;
+
+  var at = function( event ) {
+    var et = event.type ;
+    var ms = new Date().getMilliseconds() ;
+    $( "ol" ).append( "<li>" + et +" at "+ ms ) ;
+  } 
+
+  $(document).ajaxStart(at).ajaxSend(at).ajaxSuccess(at).ajaxError(at).ajaxComplete(at).ajaxStop(at) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<p><button id="good">Good AJAX Request</button>
+<button id="fail">Fail AJAX Request</button></p>
+<ol></ol>
+</body>
+</html>

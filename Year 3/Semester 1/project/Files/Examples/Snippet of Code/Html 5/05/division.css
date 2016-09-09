@@ -1,0 +1,15 @@
+/* HTML5 in easy steps:example 33.1 */
+
+/*
+div.header	{ border:1px solid fuchsia; }
+div.nav 	{ display:table-cell; padding-right:20px; border:1px solid lime;}
+div.section { display:table-cell; padding-right:20px; border:1px solid aqua;}
+div.footer	{ border:1px solid fuchsia; 	}
+*/
+
+header	{ border:1px solid fuchsia; display:block; }
+nav		{ display:table-cell; padding-right:20px; border:1px solid lime;	}
+section	{ display:table-cell; padding-right:20px; border:1px solid aqua;	}
+footer	{ border:1px solid fuchsia; display:block;	}
+
+span	{ border:2px solid yellow; }

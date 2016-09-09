@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Each Plugin</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="jquery.each-plugin.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#btn" ).on( "click" , function() {
+
+    $( "li" ).spotlight( "lime" ).css( "border" , "2px solid green" ) ;
+  } ) ;
+} ) ;
+
+</script>
+<style>
+ol { width:400px; border:2px dashed gray; }
+li { margin:3px; border:2px solid transparent; }
+</style>
+</head>
+<body>
+<h1>jQuery</h1>
+<ol><li>In<li>Easy<li>Steps</ol>
+<p><button id="btn">Call Plugin</button></p>
+</body>
+</html>

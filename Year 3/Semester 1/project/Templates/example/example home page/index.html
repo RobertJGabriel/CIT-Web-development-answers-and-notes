@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>CIT Gym | Log in</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src = "jquery.js"></script>
+	<script>
+		function switchBetween()
+		{
+			$("#logIn").slideUp('slow', function(){
+			$("#register").slideDown('slow');});
+		}
+		function switchBack()
+		{
+			$("#register").slideUp('slow', function(){
+			$("#logIn").slideDown('slow');});
+		}
+	</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="logo">
+		 <img src="logo.jpg" alt="Cit Logo">
+	</div>
+	<div id="mainContent">
+		<div id="container">
+			<div id="logIn">
+				<h2>Log In</h2>
+				<input type="text" class="input" placeholder="Student Id"><br>
+				<input type="password" class="input" placeholder="Password"><br>
+				<div class="button">Log in</div>
+				<p class="orRegister" onClick="switchBetween()">Or register</p>
+			</div>
+			<div id="register">
+			<h2>Enter details</h2>
+				<input type="text" class="input" placeholder="First Name"><br>
+				<input type="text" class="input" placeholder="Last Name"><br>
+				<input type="text" class="input" placeholder="Student ID"><br>
+				<input type="email" class="input" placeholder="Email"><br>
+				<input type="password" class="input" placeholder="Password"><br>
+				<input type="password" class="input" placeholder="Re-enter Password"><br>
+				<div class="button">Sign Up</div>
+				<p class="orRegister" onClick="switchBack()">log in</p>
+			</div>
+		</div>
+		
+		<div id="textBox">	
+			<a class="twitter-timeline" width="399" height="399" data-link-color="#9f123a" data-border-color="#9f123a"  data-theme="light"
+			href="https://twitter.com/CIT_Gym" data-widget-id="520628858203025408">Tweets by @CIT_Gym</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+			if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+</div>	
+
+<div id="footer">
+		
+</div>
+
+</body>
+
+</html>

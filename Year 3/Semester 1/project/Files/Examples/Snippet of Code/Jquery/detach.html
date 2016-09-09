@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Detaching Elements</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var fields = $( "input[type='text']" ) ;
+  fields.focus( function() { $( this ).css( "background" , "red" ) ; } ) ;
+  fields.blur( function() { $( this ).css( "background" , "white" ); } ) ;
+  fields.eq(0).remove().appendTo( "form" ) ;
+  fields.eq(1).detach().appendTo( "form" ) ;
+
+} ) ;
+								
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form><input type="text" value="Removed">
+<input type="text" value="Detached"></form>
+</body>
+</html>

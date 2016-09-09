@@ -1,0 +1,12 @@
+/* HTML5 in easy steps:example 44.1 */
+
+table#jfk { width:580px; border-collapse:collapse; font-family:sans-serif;  }
+table#jfk tbody th { background:blue; color:white; }
+table#jfk tbody td { padding:3px; text-align:center; }
+table#jfk tfoot { font-size: small; }
+
+table#jfk colgroup.sidebar col { width:70px; }
+table#jfk colgroup.info col { width:80px; }
+ 
+table#jfk colgroup.info { border-left: 2px solid white; }
+table#jfk colgroup col.stripe { background:aqua;}

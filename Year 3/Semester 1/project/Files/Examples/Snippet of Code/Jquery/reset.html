@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Select Reset & Submit</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() {
+
+  var btns = $( "input[type='reset'], input[type='submit']" ) ;
+  btns.css( "border" , "3px solid red" ) ;
+  $( "#out" ).text( btns.length + " Buttons Selected" ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+<input type="button" value="Regular Button">
+<input type="reset" value="Reset Button">
+<input type="submit" value="Submit Button">
+</form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

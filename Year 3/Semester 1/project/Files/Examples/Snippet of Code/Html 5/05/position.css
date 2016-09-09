@@ -1,0 +1,22 @@
+/* HTML5 in easy steps:example 34.1 */
+
+/* Remove default browser styles */
+* { padding:0; margin:0; border:0; } 
+
+/* Color the page overflow */
+body { background:#A9A9A9; }
+/* Color the heading blocks */
+h1	{ border:1px solid fuchsia; }
+
+/* Center the 800x1000 white page */
+div#wrapper { margin:auto; background:white; width:800px; height:1000px; }
+
+/* Set block size */
+.sized		{ width: 40%; border:1px solid lime; }
+/* Center sized block on the page */
+.center	{ margin:auto; }
+/* Center text within blocks */
+.center-text	{ text-align:center; border:1px solid aqua; }
+
+/* Supplemental to enlarge the para text */
+p { font-size:16pt; }

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Callbacks Object</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready(  function() {
+
+  var cb = $.Callbacks() ;
+  cb.add( function( str ) { $( "#out" ).text( str ) ; } ) ;
+  cb.add( function( str ) { alert( str ) ; } ) ;
+
+  $( "#btn" ).on( "click" , function() { 
+    cb.fire( "Hello from the Callbacks List!" ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+
+</head>
+<body>
+<h1>jQuery</h1>
+<button id="btn">Call</button>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

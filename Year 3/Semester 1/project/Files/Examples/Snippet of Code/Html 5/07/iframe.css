@@ -1,0 +1,8 @@
+/* HTML5 in easy steps:example 47.1 */
+
+p { font-family:sans-serif; }
+
+article.left220 { width:220px; float:left; margin-right:20px; }
+
+body.concept { width:1500px; }
+p.concept { width:300px; float:left; margin:0; }

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Change Event</title>
+<script src="jquery-1.11.0.min.js"></script>
+<script>
+
+$( document ).ready( function() { 
+
+  $( "select" ).change( function() {
+    var pick = $( "option" ).filter( ":selected" ) ;
+    $( "#out" ).text( pick.val() + " Selected" ) ;
+  } ) ;
+
+} );
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+<select>
+<option value="ONE">ONE
+<option value="TWO">TWO
+<option value="THREE">THREE
+</select>
+</form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>

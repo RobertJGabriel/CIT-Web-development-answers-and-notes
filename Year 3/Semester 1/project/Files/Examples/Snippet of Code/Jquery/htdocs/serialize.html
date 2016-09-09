@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery AJAX Serialize</title>
+
+<!-- NOTE: This AJAX example must be run via HTTP. -->
+<!-- It must be located on a web server in \htdocs -->
+<!-- It must accompanied by the file:serialize.php --> 
+
+<script src="jquery-1.11.0.min.js"> </script>
+<script>
+
+$( document ).ready( function() {
+
+  $( "#btn" ).on( "click" , function() {
+    $.ajax( {
+      url: "serialize.php" ,
+      cache: false ,
+      data: $( "form" ).serialize()   ,
+      success: function ( msg ) { $( "#out" ).text( msg ) }
+    } ) ;
+  } ) ;
+
+} ) ;
+
+</script>
+</head>
+<body>
+<h1>jQuery</h1>
+<form>
+<input type="text" name="fname" value="Elmer">
+<input type="text" name="lname" value="Fudd">
+<input type="button" id="btn" value="Send AJAX Request">
+</form>
+<p>Output: <span id="out"></span></p>
+</body>
+</html>
