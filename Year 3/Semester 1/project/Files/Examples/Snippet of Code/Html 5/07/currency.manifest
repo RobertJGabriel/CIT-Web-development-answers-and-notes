@@ -1,7 +1,0 @@
-CACHE MANIFEST
-currency.html
-currency.css
-currency.png
-
-FALLBACK:
-currency.js currency-fallback.js

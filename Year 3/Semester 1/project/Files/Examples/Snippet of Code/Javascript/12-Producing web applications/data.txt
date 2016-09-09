@@ -1,1 +1,0 @@
-This is simple text in the data.txt file.

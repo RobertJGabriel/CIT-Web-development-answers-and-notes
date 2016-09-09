@@ -1,1 +1,0 @@
-Source code for Model View Controller Tutorial in PHP: http://php-html.net/tutorials/model-view-controller-in-php/
