@@ -1,0 +1,775 @@
+
+
+ 
+ /* === SKY "MODERN" color palette =========================================== */
+
+a,
+.blockGroups .itemHead {
+    color: #4b5a79;
+    border-bottom-color: #4b5a79;
+}
+
+a:active {
+    border: none;
+    outline: none;
+}
+
+/* TOP FRAME TABS
+   ================================================== */
+
+/* Active tabs */
+
+.appTabs .active a .hideoff,
+.appTabs .active a:hover .hideoff,
+.appTabs .active a:focus .hideoff {
+    border-bottom-color: #B8E9FC;
+}
+
+#topTabActive,
+.appTabs .active a,
+.appTabs .active a:hover,
+.appTabs .active a:hover span,
+.topTabs-compact .appTabs .active a,
+.topTabs-compact .appTabs .active a:hover,
+.appTabs .active a:focus,
+.appTabs .active a:focus span,
+.topTabs-compact .appTabs .active a:focus {
+    /*background-color: #FFFFFF;*/
+    /*color: lime;*/
+    color: #FFFFFF;
+    /*text-shadow: none;*/
+}
+
+/* Idle Tabs */
+
+#topTab,
+.appTabs a,
+.topTabs-compact .appTabs a {
+    border-bottom: 0;
+    color: #d4dbe5;
+    text-shadow: none;
+}
+
+.appTabs a:hover,
+.appTabs a:hover span,
+.topTabs-compact .appTabs a:hover,
+.appTabs a:focus,
+.appTabs a:focus span,
+.topTabs-compact .appTabs a:focus {
+    /*background-color: #93FF24;;
+    border-bottom: 0;
+    color: #000000;
+    text-decoration: none;*/
+    color: #FFF;
+    border-bottom-color: #FFF;
+}
+
+#topFrame,
+.bgBanner {
+    background-color: #2D76B7;
+    color: #FFFFFF;
+}
+
+/* BODY
+   ================================================== */
+
+/* @branding -- do not remove */
+
+#contentFrame,
+#schemePreview,
+/* === */
+
+body {
+	background-color: #81D4FC;
+	
+}
+
+.breadcrumbs,
+body.wizardBody .containerWizard,
+.paneTabs {
+    background-color: #fff
+}
+
+.paneTabs .active a:before {
+    border-bottom-color: #43B9FC;
+}
+
+.paneTabs .active a:after {
+    border-bottom-color: #81D4FC;
+}
+
+.paneTabs ul li a,
+.paneTabs .external a,
+.paneTabs .personal a {
+    border-color: #43B9FC;
+}
+
+.breadcrumbs a {
+    /*color: #000*/ 
+}
+
+.breadcrumbs a:hover {
+   
+}
+
+.breadcrumbs,
+.paneTabs {
+    border-color: #43B9FC;
+    background-color: #B8E9FC;
+/*	background-color: rgba(255,255,255,.6);*/
+}
+
+/* BREADCRUMBS
+   ================================================== */
+.path .root, 
+.simplePath .root,
+.theme-switch {
+	border-right-color: #43B9FC;
+}
+
+
+.path .root a:before,
+.simplePath .root a:before {
+    color: #028AF2;
+}
+
+.breadcrumbs .placeholder {
+	color: 
+}
+
+.breadcrumbs .path a {
+	color: 
+}
+
+/* Line next to theme switcher */
+.path .root, 
+.simplePath .root,
+.theme-switch { 
+    border-right-color:
+}
+
+/* PANE TABS
+   ================================================== */
+
+/* Idle */
+
+
+
+
+/* CONTENT PANE
+   ================================================== */
+
+.contentBox,
+.portal .contentBox {
+    border-color: #43B9FC
+}
+
+/* @branding -- do not remove*/
+
+#contentArea,
+#schemePreviewBody {
+    background: #FFF;
+    border-color: #aaa;
+}
+
+.landingPageColumn .outcomesLanding li h3,
+.landingPageColumn p {
+    border-color: #C0CDB9;
+    color: #333;
+}
+
+.collapsible {
+    background-color: #FFF
+}
+
+/* PAGE HEADER
+   ================================================== */
+
+/* @branding -- do not remove*/
+
+#pageHeader,
+#schemePreviewHead {
+    background-color: #DEDEDE;
+}
+
+.pageTitle {
+
+}
+
+/* CONTROL ELEMENTS
+   ================================================== */
+
+/* Action Bars */
+
+.actionBar,
+.actionBarMicro,
+/*Side navigation single controls ("Unenroll" etc.)*/
+.singleControl,
+.navPalette .discover {
+    background-color: #B8E9FC;
+    border-color: #0487CC;
+}
+
+.mainButton a,
+.secondaryButton a,
+	/*Login page control links*/
+#loginHeader ul li a,
+#loginLang h2 a {
+    border-color:;
+   	border-color:;
+}
+
+.menuWrap {
+	background: #fff;
+	border-color: #43B9FC;
+}
+
+/* Action bar main and secondary button links */
+.mainButton > a,
+.secondaryButton > a,
+.mainButton h2 > a,
+.secondaryButton h2 > a  {
+    background: -moz-linear-gradient(center top , #6FC3F8 0%, #028AF2 100%) #028AF2;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#6FC3F8), to(#028AF2)) #028AF2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#6FC3F8, endColorstr=#028AF2";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6FC3F8, endColorstr=#028AF2);
+    border-color: #0487CC;
+	color: #fff;
+	text-shadow: 0 -1px 0 #222;
+}
+
+/* Hover and focus */
+
+/* Action bar links */
+
+.actionBarMicro .active > a:after,
+a.liveAreaTab:after,
+.nav .sub h2 a:hover:after,
+.nav .sub.mainButton:hover h2 a:after,
+#loginLang h2:hover:after,
+#loginLang:hover h2:after {
+    border-bottom-color: #f0f0f0
+}
+
+#quickEnrollLink,
+.mainButton > a:hover,
+.mainButton h2 > a:hover,
+li.mainButton:hover > a,
+li.mainButton:hover h2 > a,
+.secondaryButton a:hover,
+li.secondaryButton:hover a,
+.actionBarMicro .active a,
+.actionBarMicro .active a:hover,
+.actionBarMicro .active a:focus,
+	/*Side nav single controls*/
+.singleControl a:hover,
+.singleControl a:focus,
+.discover a:hover,
+.discover a:focus,
+	/*Links in an "open" state*/
+.liveAreaTab,
+a.liveAreaTab,
+a.liveAreaTab:hover,
+a.liveAreaTab:focus,
+.actionBar ul li a.liveAreaTab:focus,
+.actionBar ul li.mainButton a.liveAreaTab,
+.actionBar ul li.secondaryButton a.liveAreaTab,
+.panelTabs li.active a.edit,
+.panelTabs li.active a.edit:hover,
+.panelTabs li.active a.edit:focus
+	 {
+    background: -moz-linear-gradient(center top , #54B5F6 0%, #54B5F6 100%) #54B5F6;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#0C8FF3), to(#54B5F6)) #54B5F6;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#0C8FF3, endColorstr=#54B5F6";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0C8FF3, endColorstr=#54B5F6);
+    border-color:#0487CC;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 1);
+    box-shadow: none;
+}
+
+.nav .sub ul,
+.cmdiv ul,
+.menumini ul,
+.quickAddPal,
+.keyboardAccess,
+.nav .sub ul li a,
+.cmdiv a,
+.menumini a,
+.paneTabs .nav .sub a,
+	/* tagging */
+span.currentTags,
+	/*span that appears on discussion pages that indicates "Loading Thread..." */
+.loadingElipse,
+	/* Inline editing elements */
+.liveArea,
+.liveArea-slim,
+.liveAreaTab,
+	/* Button is turned into liveArea tab when .liveaArea is displayed. */
+a.liveAreaTab,
+a.liveAreaTab:hover,
+a.liveAreaTab:focus,
+.previewArea,
+	/* Preview area (read-only version of live area) */
+.jumptopage,
+.panelTabs li.active a.edit,
+.panelTabs li.active a.edit:hover,
+.panelTabs li.active a.edit:focus,
+	/*Multi-column flyout*/ 
+.bcContent .flyout,
+	/*Overrides for the file hierarchy three*/
+ul.tree li a + img + a:focus,
+ul.tree li img + img + a:focus,
+div.treeContainer ul.tree li a.itemActive,
+#learningUnitToc ul.tree li a.itemActive,
+ul.tree li a.itemActive,
+	/* Menu borders. */
+.nav .sub ul,
+.cmdiv ul,
+.menumini ul,
+.quickAddPal,
+.keyboardAccess,
+.cmdiv,
+	/* contextual menu for tagging */
+span.currentTags,
+	/* Paging preference element */
+.rumble ul li.jumptopage,
+.rumble ul li.inventory_page.jumptopage,
+.rumble_top ul li.jumptopage,
+.rumble_top ul li.inventory_page.jumptopage,
+.inventory_paging input,
+.inventory_paging .currentPage,
+.jumptopage,
+.jumptopage input,
+	/* Close menu link */
+.cmdiv li.contextmenubar_top a,
+span.currentTags a.closeCloud,
+.cmdiv li.contextmenubar_top a:focus,
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud:hover,
+.currentTags a.closeCloud:focus,
+ /*Login page language list*/
+#loginLang ul  {
+    background-color: #f0f0f0;
+    border-color: #888;
+}
+
+.cmdiv li.contextmenubar_top a:focus,
+.cmdiv li.contextmenubar_top a:hover,
+.currentTags a.closeCloud:hover,
+.currentTags a.closeCloud:focus {
+    background-color: #f0f0f0!important
+}
+
+/*Tab indicators*/
+.portlet .containerTabs .active a:after {
+    border-bottom-color: #EEEEEE
+}
+
+
+/* Course structure navigation item */
+.ineditmode div.listCm ul.courseMenu li, 
+.ineditmode div.listCm ul.courseMenu li:hover { 
+   border-color:  
+}
+
+/* BUTTONS
+   ================================================== */
+
+	/* @branding -- do not remove */
+#primaryButton,
+	/*===*/
+input[type="submit"].submit,
+.button-1,
+.button-1-img {
+
+    background: -moz-linear-gradient(center top , #7FCBF9 0%, #3079B9 100%) #3079B9;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#7FCBF9), to(#3079B9)) #3079B9;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FCBF9, endColorstr=#3079B9";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FCBF9, endColorstr=#3079B9);
+    color: #F0F0F0;
+    border-color: #2D76B7;
+    background-clip: padding-box;
+}
+
+input[type="submit"].submit:hover,
+.button-1:hover,
+.button-1:focus,
+.button-1-img:hover,
+.button-1-img:focus {
+    background: -moz-linear-gradient(center top , #519BD4 0%, #2D76B7 100%) #2D76B7;
+    background: -webkit-gradient(linear, 0% 0%, 0% 90%, from(#519BD4), to(#2D76B7)) #2D76B7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#519BD4, endColorstr=#2D76B7";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#519BD4, endColorstr=#2D76B7);
+    color: #FFFFFF;
+    border-color: #2D76B7;
+	text-shadow:;
+}
+
+
+/* PORTAL MODULES
+   ================================================== */
+
+	/* @branding -- do not remove */
+#moduleBorder,
+#moduleBody,
+	/*===*/
+.portlet {
+    border-color:;
+    background-color: #fff;
+}
+
+.portlet div.scroll_div {
+    background-color: #EEE;
+    border-color: #CCC;
+}
+
+/* Portlet on hover */
+.reorderableModule:hover { 
+    border-color:#888; 
+}
+
+/* Portlet Title */
+
+	/* @branding -- do not remove */
+#moduleTitle,
+	/*===*/
+.portlet h2 {
+    background-color: #B8E9FC;
+    color: #666;
+    text-shadow:;
+}
+
+/*  Portlet Title on hover */
+.portlet h2.dragHandle:hover {
+    color: #000000
+}
+
+
+/* RECEIPTS and ERRORS
+   ================================================== */
+
+.bad {
+    background-color: #A52818
+}
+
+.good {
+    background-color: #a5b6ca
+}
+
+.stepcontent .fieldError,
+.fieldError {
+    background-color: #FFF6B3
+}
+
+
+/* LOGIN PAGE
+   ================================================== */
+
+#loginHeader ul li,
+#loginLang h2 {
+}
+
+#loginBox li label,
+.portlet #loginBoxFull li label {
+    color: #666
+}
+
+div.loginBack b {
+    background-color: #fff
+}
+
+#loginBox li input[type="text"],
+#loginBox li input[type="password"] {
+    border-color: #888
+}
+
+#loginBox li input[type="text"]:hover,
+#loginBox li input[type="password"]:hover,
+#loginBox li input[type="text"]:focus,
+#loginBox li input[type="password"]:focus {
+    border-color: #a5b6ca;
+    color: #000;
+    background: #FFF;
+}
+
+#loginOptions ul li a,
+#loginOptions ul li.subOption a,
+.forgot a {
+    border-bottom-color: #a5b6ca
+}
+
+
+/*Login page top controls links */
+#loginHeader ul li a:hover,
+#loginHeader ul li a:focus,
+#loginLang h2:hover {
+	
+}
+
+#loginHeader ul li:hover,
+#loginLang h2:hover {
+}
+
+
+/* INVENTORY TABLES
+   ================================================== */
+
+/* Color for zebra stripes */
+table.inventory tbody tr.gray td,
+table.inventory tbody tr.gray th {
+    background-color: #f0f0f0
+}
+
+
+/* REORDER HANDLES
+   ================================================== */
+
+.reorder,
+.item .reorder {
+    background-color: #ededed
+}
+
+
+/* DATA COLLECTION PAGES
+   ================================================== */
+
+.steptitle,
+.submittitle {
+    color: #000000
+}
+
+
+/* READ/EDIT MODE SWITCH
+   ================================================== */
+
+.modeSwitch {
+	background-color:;
+}
+
+.read-on {
+	background-color: ;
+}
+
+.read-on:before,
+.read-on span {
+	color: ;
+}
+
+.read-off {
+	color: ; 
+}
+
+/* === /SKY "MODERN" color palette =========================================== *//*Content Frame background color / text color / background image*/
+#contentFrame,
+#schemePreview, 
+body, 
+.ineditmode, 
+.topFrame,
+.breadcrumbs,
+.paneTabs,
+.paneTabs ul li.active, 
+.paneTabs ul li,
+.wizardBody .containerWizard {
+    background: url(https://citbb.blackboard.com/branding/_1_1/background-2.png) repeat 0 0;
+    background-color:#81D4FC;
+    color:#000000;
+}
+
+/* active top tab caret in 2012 theme */
+.appTabs .active .hideoff,
+.appTabs .active a:hover .hideoff,
+.appTabs .active a:focus .hideoff,
+.toppTabs-compact .appTabs .active .hideoff, 
+.toppTabs-compact .appTabs .active a:hover .hideoff,
+.toppTabs-compact .appTabs .active a:focus .hideoff,
+.paneTabs .active a:after {
+  border-bottom-color: #81D4FC;
+}
+
+/*Content area background color / text color / background image */
+#contentArea,
+#schemePreviewBody,
+.container {        
+    background-color:#FFFFFF;
+    color:#444444;
+}
+
+/*Data Collection Primary button background / text color*/
+#primaryButton, 
+input[type="submit"].submit,
+.mainButton a, .mainButton a:hover, .mainButton a:focus,
+.mainButton a, .actionBarMicro .mainButton a:hover, .actionBarMicro .mainButton a:focus,
+.rumble .mainButton > a, .rumble_top .mainButton > a:focus, 
+.rumble .mainButton > a:hover, .rumble_top .mainButton > a:focus, 
+.rumble .mainButton > a:hover, .rumble_top .mainButton > a:focus,
+.button-1, .button-1-img, .button-1:hover, .button-1-img:hover, .button-1:focus, .button-1-img:focus,
+input.submit[type="submit"]:hover, input.submit[type="submit"]:focus {
+  background:#D31145;
+	border-color:#D31145;
+  color:#F0F0F0;
+}
+
+/*Data Collection Secondary button background / text color*/
+#secondaryButton, 
+.button-2, .button-2-img, .button-2:hover, .button-2-img:focus, .button-2:hover, .button-2-img:focus {
+  background:#EFEFEF;
+	border-color:#EFEFEF;
+  color:#000000;
+}
+
+/*Page Header background color / text color / background image */
+#pageHeader, 
+#schemePreviewHead,
+div.pageTitle,
+div.pageTitle h1, 
+div.pageTitleError h1,
+div#lightboxContent h2 {
+  background:#DEDEDE ;
+	border-color:#DEDEDE;
+  color:#000000;
+  text-shadow: none;
+}
+
+.pageTitle p,
+.pageTitle p.helptext,
+.version {
+  color:#000000;
+  opacity:.8;
+  filter: Alpha(Opacity=80);
+}
+
+/*Action bar background / text color*/
+#actionBarBrand,
+.actionBar, 
+.contentPaneWide .actionBar,
+div.actionBar ul, 
+div.localViewToggle,
+.actionBarMicro {
+  /*background-color:transparent;*/
+  background:transparent ;
+  border-color:transparent;
+}
+
+/*Action bar primary button background / text color*/
+#primaryActionBrand, 
+.mainButton > a, 
+.mainButton > a:hover, 
+.mainButton > a:focus,
+.mainButton h2 > a,
+.mainButton h2 > a:hover, 
+.mainButton h2 > a:focus, 
+li.mainButton > a,
+li.mainButton:hover > a,
+li.mainButton:focus > a,
+li.mainButton:hover h2 > a,
+li.mainButton:focus h2 > a,
+.actionBarMicro .mainButton > a, 
+.actionBarMicro .mainButton > a:hover, 
+.actionBarMicro .mainButton > a:focus {
+  background:transparent;
+	border-color:transparent;
+  color:#000000;
+}
+
+/*Action bar Secondary button background / text color*/
+#secondaryActionBrand, 
+.secondaryButton > a, 
+.secondaryButton > a:hover,
+.secondaryButton > a:focus, 
+.secondaryButton h2 > a,
+.secondaryButton h2 > a:hover, 
+.secondaryButton h2 > a:focus
+ {
+  background:transparent;
+	border-color:transparent;
+  color:#000000;
+}
+
+/*Top Frame Text Color */
+#topFrame, 
+.topGlobalLinks ul li,
+.topGlobalLinks a,
+.topGlobalLinks a:hover,
+.topGlobalLinks a:focus,
+.hotItems,
+.hotSpots a,
+.hotSpots li:after,
+.hotSpots a:hover  {
+    color:#FFFFFF;
+}
+
+
+/*Top Frame Background Color / Background Image*/
+#topFrame, 
+.bgBanner {
+    background-image: url(https://citbb.blackboard.com/branding/_1_1/new-banner.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-color:#CC0033;
+	border-color:transparent;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+div.topTabs-compact {
+    background:#CC0033;
+	border-color:transparent;
+}
+
+/*Top Tab Color/Background Color*/
+#topTab, 
+table.appTabs tbody tr td a, 
+div.topTabs-compact table.appTabs tr td a,
+table.appTabs tbody tr td a:hover, 
+div.topTabs-compact table.appTabs tr td a:hover,
+table.appTabs tbody tr td a:focus, 
+div.topTabs-compact table.appTabs tr td a:focus {   
+  color:#D4DBE5;
+  background-color:transparent;
+	border-color:transparent;
+
+}
+
+/*Top Tab Active Tab Color/Background Color*/
+#topTabActive, 
+table.appTabs tbody tr td.active a, 
+table.appTabs tbody tr td.active a:hover, 
+table.appTabs tbody tr td.active a:focus,
+div.topTabs-compact table.appTabs tr td.active a, 
+div.topTabs-compact table.appTabs tr td.active a:hover, 
+div.topTabs-compact table.appTabs tr td.active a:focus {
+    color:#FFFFFF;
+    background-color:transparent;  
+	border-color:transparent;
+	text-shadow: none;             
+}
+
+/*Global Nav links*/
+/**/
+.nav-link, .nav-link:hover, .nav-link:focus {
+	background: #666;
+}
+
+/*Module colors*/
+#moduleTitle, 
+.portlet h2, .portlet h2 span.reorder
+{
+    background-color:#CC0033;
+    color:#FFFFFF;
+}
+.portlet h2 a
+{
+    background-color: transparent;
+    color:#FFFFFF;
+}
+#moduleBorder, #moduleBody, 
+.portlet
+{
+    border-top-color: #CCCCCC;
+    border-left-color: #CCCCCC;
+    border-bottom-color: #CCCCCC;
+    border-right-color: #CCCCCC;
+    background-color:#FFFFFF;
+    color:#444444;    
+}
