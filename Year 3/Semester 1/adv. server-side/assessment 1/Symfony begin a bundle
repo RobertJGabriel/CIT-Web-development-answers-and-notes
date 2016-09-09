@@ -1,0 +1,21 @@
+Open Netbeans
+Download the lastestverson symfony
+Place the ziped file unzipped in the htdocs of xammp
+OPEN up netbeans
+create new project 
+select phpnext
+pick a name and so on (install to the htdocs)
+slect symfony 2 php web framework
+click settings
+point symfony to the zip folder
+point php to php.exe in the xammp
+click finish
+
+
+all done
+
+
+right click the main folder and press run command
+click generate bundle
+enter name  always finish with Bundle
+
