@@ -1,0 +1,130 @@
+            // Color variables (appears count calculates by raw css)
+            @color0: #ffffff; // Appears 2 times
+            @color1: #999999; // Appears 2 times
+            // Width variables (appears count calculates by raw css)
+            @width0: 480px; // Appears 2 times
+            @width1: 250px; // Appears 3 times
+            @width4: 0; // Appears 2 times
+            // Height variables (appears count calculates by raw css)
+            @smartphones : ~"only screen and (max-width: 760px)";
+            .area {
+                display: none;
+                margin-top: 50px;
+            }
+            .nobottom {
+                margin-bottom: -0px;
+            }
+            .fatButtons {
+                background-color: black;
+                float: left;
+                height: 40px;
+                margin-left: 1%;
+                margin-right: 1%;
+                margin-top: 10px;
+                width: 30%;
+            }
+            #wrapper {
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                min-height: @height3;
+                padding-left: 0;
+                transition: all 0.5s ease;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+                padding-left: 250px;
+                #sidebar-wrapper {
+                    width: 250px;
+                    position: absolute;
+                    width: 0px;
+                }
+                #page-content-wrapper {
+                    margin-right: -250px;
+                    margin-right: 0;
+                    position: absolute;
+                    position: relative;
+                }
+            }
+            #sidebar-wrapper {
+                -moz-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                -webkit-transition: all 0.5s ease;
+                background: #000000;
+                height: @height3;
+                left: 250px;
+                margin-left: -250px;
+                overflow-y: auto;
+                position: fixed;
+                transition: all 0.5s ease;
+                z-index: 1000;
+            }
+            #page-content-wrapper {
+                padding: 15px;
+                padding: 20px;
+                position: absolute;
+                position: relative;
+                width: 100%;
+            }
+            .sidebar-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                width: 250px;
+                li {
+                    line-height: 40px;
+                    text-indent: 20px;
+                    a {
+                        color: @color1;
+                        display: block;
+                        text-decoration: none;
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.2);
+                            color: @color0;
+                            text-decoration: none;
+                        }
+                        &:active {
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .sidebar-nav>.sidebar-brand {
+                font-size: 18px;
+                height: 65px;
+                line-height: 60px;
+                a {
+                    color: @color1;
+                    &:hover {
+                        background: none;
+                        color: @color0;
+                    }
+                }
+            }
+            .footer {
+                display: none;
+            }
+            @media @smartphones {
+                .footer {
+                    display: block;
+                    background-color: black;
+                    clear: both;
+                    height: 60px;
+                    margin-top: -60px;
+                    position: relative;
+                }
+            }
+            .quickAdd {
+                float: right;
+                margin-top: -19px;
+            }
+            @media @smartphones {
+                #wrapper {
+                    padding-left: 250px;
+                }
+            }

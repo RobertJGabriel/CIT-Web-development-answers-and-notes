@@ -1,0 +1,38 @@
+{
+    "name": "notes-tracking-app",
+    "version": "1.0.1",
+    "description": "Notes Tracking frontend framework",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "bootstrap": "^3.3.4",
+        "bootstrap-material": "^0.1.5",
+        "concat": "^1.0.0",
+        "gulp": "^3.8.11",
+        "gulp-clean": "^0.3.1",
+        "gulp-concat": "^2.5.2",
+        "gulp-directory-map": "^0.1.1",
+        "gulp-folders": "^1.1.0",
+        "gulp-less": "*",
+        "gulp-minify-css": "*",
+        "gulp-requirejs": "^0.1.3",
+        "gulp-requirejs-optimize": "^0.1.3",
+        "gulp-util": "*",
+        "jquery": "^2.1.4",
+        "nw-builder": "^2.0.2",
+        "requirejs": "^2.1.18",
+        "say.js": "git://github.com/4ver/say.js.git#master"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RobertJGabriel/Note-Tracking-app-design-.git"
+    },
+    "author": "Robert Gabriel",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RobertJGabriel/Note-Tracking-app-design-/issues"
+    },
+    "homepage": "https://github.com/RobertJGabriel/Note-Tracking-app-design-#readme"
+}

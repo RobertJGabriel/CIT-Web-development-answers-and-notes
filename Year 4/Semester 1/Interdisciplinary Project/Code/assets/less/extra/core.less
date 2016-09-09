@@ -1,0 +1,241 @@
+// Color variables (appears count calculates by raw css)
+@color0: #ffffff; // Appears 4 times
+@color1: #000000; // Appears 3 times
+@color2: #999999; // Appears 2 times
+// Width variables (appears count calculates by raw css)
+@width2: 250px; // Appears 3 times
+@width6: 0; // Appears 2 times
+// Height variables (appears count calculates by raw css)
+@height5: 100%; // Appears 2 times
+@mobile: ~"only screen and (max-width : 768px)";
+@mobile2: ~"only screen and (min-width:460px)";
+@height3: 100%; // Appears 4 times
+#frmLogin {
+    display: block;
+    height: 400px;
+    margin-top: 200px;
+}
+html {
+    height: @height3;
+}
+h3 {
+    color: black !important;
+}
+body {
+    height: @height3;
+}
+.centers {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+.fatButtons {
+    float: left;
+    height: 40px;
+    margin-left: 1%;
+    margin-top: 10px;
+    width: 31%;
+}
+.sex {
+    width: 15em;
+    height: 15em;
+    border-radius: 15em;
+    margin-left: -2.3em;
+    position: relative;
+    background-color: white;
+    margin-top: -17.3em;
+}
+#wrapper {
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background-image: url(../img/starsBackground.png);
+    background-position: center;
+    background-size: cover;
+    min-height: @height5;
+    padding-left: 0;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled {
+    padding-left: 0;
+    #sidebar-wrapper {
+        width: @width2;
+        width: @width6;
+    }
+    #page-content-wrapper {
+        margin-right: -250px;
+        margin-right: 0;
+        position: absolute;
+        position: relative;
+    }
+}
+#sidebar-wrapper {
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    background: @color1;
+    height: @height5;
+    left: 250px;
+    margin-left: -250px;
+    overflow-y: auto;
+    position: absolute;
+    position: fixed;
+    transition: all 0.5s ease;
+    width: @width2;
+    width: @width6;
+    z-index: 1000;
+}
+#page-content-wrapper {
+    padding: 15px;
+    padding: 20px;
+    position: absolute;
+    position: relative;
+    width: 100%;
+}
+.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: @width2;
+    li {
+        line-height: 40px;
+        text-indent: 20px;
+        a {
+            color: @color2;
+            display: block;
+            text-decoration: none;
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+                color: @color0;
+                text-decoration: none;
+            }
+            &:active {
+                text-decoration: none;
+            }
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.sidebar-nav>.sidebar-brand {
+    font-size: 18px;
+    height: 65px;
+    line-height: 60px;
+    a {
+        color: @color2;
+        &:hover {
+            background: none;
+            color: @color0;
+        }
+    }
+}
+.footer {
+    display: none;
+}
+@media @mobile {
+    .footer {
+        display: block;
+        background-color: @color1;
+        clear: both;
+        height: 60px;
+        margin-top: -60px;
+        position: relative;
+    }
+}
+.quickAdd {
+    float: right;
+    margin-top: -19px;
+}
+@media @mobile2 {
+    .white {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+    #wrapper {}
+    #wrapper.toggled {
+        padding-left: 0;
+        #sidebar-wrapper {
+            width: 0;
+        }
+        #page-content-wrapper {
+            margin-right: 0;
+            position: relative;
+        }
+    }
+    #sidebar-wrapper {
+        position: absolute;
+        width: 250px;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+}
+.responsive-calendar {
+    .controls {
+        text-align: center;
+        a {
+            cursor: pointer;
+        }
+        h4 {
+            display: inline;
+        }
+    }
+    .day-headers {
+        font-size: 0;
+    }
+    .days {
+        font-size: 0;
+    }
+    .day {
+        display: inline-block;
+        font-size: 14px;
+        position: relative;
+        text-align: center;
+        width: 14.285714285714286%;
+        a {
+            color: @color1;
+            cursor: pointer;
+            display: block;
+            padding: 20% 0 20% 0;
+            &:hover {
+                background-color: #eeeeee;
+                text-decoration: none;
+            }
+        }
+        .badge {
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            z-index: 1;
+        }
+    }
+    .day.header {
+        border-bottom: 1px gray solid;
+    }
+    .day.active {
+        a {
+            background-color: #1d86c8;
+            color: @color0;
+            &:hover {
+                background-color: #36a0e2;
+            }
+        }
+        .not-current {
+            background-color: #8fcaef;
+            color: @color0;
+            &:hover {
+                background-color: #bcdff5;
+            }
+        }
+    }
+    .day.not-current {
+        a {
+            color: #dddddd;
+        }
+    }
+}

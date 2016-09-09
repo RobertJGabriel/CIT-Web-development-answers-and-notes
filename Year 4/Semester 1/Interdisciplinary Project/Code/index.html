@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Planote</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/dist/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="overview">
+        <nav class="navbar navbar-material-light-blue" style="margin-bottom: 0px;background-color:transparent !important;">
+            <div class="navbar-header">
+                <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+                    <li class="mdi-navigation-menu" style="font-size: 31px;color: white;"></li>
+                </a>
+            </div>
+        </nav>
+
+        <!-- ALERT BOX -->
+        <div id="alert" class="alert alert-dismissible alert-warning" style="margin-bottom:0px;">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+            <h4 id="alert-title">You are not logged in</h4>
+            <p id="alert-detail"></p>
+        </div>
+        <!-- / ALERT BOX -->
+
+        <div id="wrapper" class="toggled">
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="nobottom">
+                <ul class="sidebar-nav">
+                    <li> <a href="#/dashboard">Dashboard</a>
+                    </li>
+                    <li><a href="#/profile">Profile</a>
+                    </li>
+                    <li><a href="#/calendar">Calendar</a>
+                    </li>
+                    <li id="loginButton"> <a href="#/">Login</a>
+                    </li>
+                    <li id="logoutButton"> <a href="#/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-3">
+
+                    </div>
+
+                    <!-- LOGIN -->
+                    <form role="form" class="col-md-6 area" id="frmLogin">
+                        <img src="assets/img/icons/logo.png" class="img-responsive centers" alt="logo">
+                        <a href="#" class="btn  btn-info bt-social width " data-provider="twitter"><img src="https://cdn0.iconfinder.com/data/icons/social-media-2049/512/twitter-128.png" width="30" height="30" style="margin-right:20px" alt="logo"> Login</a>
+                    </form>
+                    <!-- / LOGIN -->
+
+                    <!-- LOGOUT -->
+                    <form role="form" class="col-md-6 area " id="frmLogout">
+
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">You Logged out :)</h3>
+                            </div>
+                            <div class="panel-body">
+                                <a href="#/" class="btn btn-raised btn-info">Login</a>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <!-- / LOGOUT -->
+
+                    <!-- Notes -->
+                    <form role="form" class="col-md-6 area white" id="frmNotes">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="form-group">
+                                    <input class="form-control floating-label" id="subjectInput" name="subjectInput" type="text" placeholder="Title" data-hint="You should really write the class and date here">
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group">
+
+                                    <div class="col-lg-10">
+                                        <textarea class="form-control" rows="14" name="textArea" id="textArea" placeholder="Focus to show the hint" data-hint="You should really write something here"></textarea>
+
+                                    </div>
+
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- / Notes -->
+
+                    <!-- Dashboard -->
+                    <div class="responsive-calendar col-md-6 area" id="frmdashboard">
+                        <div id="dashboard">
+
+                            <div id="circle">
+                                <ul>
+                                    <li>
+                                        <ul class="circle">
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="sex"><a href="#/notes"><h3>B</h3></a>
+                                            <p>fyghjkl</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <ul class="circle">
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="sex"></div>
+                                    </li>
+                                    <li>
+                                        <ul class="circle">
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="sex"></div>
+                                    </li>
+                                    <li>
+                                        <ul class="circle">
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="sex"></div>
+                                    </li>
+                                    <li>
+                                        <ul class="circle">
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                            <li>
+                                                <div class="text"></div>
+                                            </li>
+                                        </ul>
+                                        <div class="sex"> <a href="#/notes"><h3>t</h3></a></div>
+
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Dashboard -->
+
+                    <!-- calendar -->
+
+                    <div class="responsive-calendar col-md-6 area white" id="frmcalendar">
+                        <div class="controls">
+                            <a class="pull-left" data-go="prev">
+                                <div class="btn btn-primary">Prev</div>
+                            </a>
+                            <h4><span data-head-year></span> <span data-head-month></span></h4>
+                            <a class="pull-right" data-go="next">
+                                <div class="btn btn-primary">Next</div>
+                            </a>
+                        </div>
+                        <hr/>
+                        <div class="day-headers">
+                            <div class="day header">Mon</div>
+                            <div class="day header">Tue</div>
+                            <div class="day header">Wed</div>
+                            <div class="day header">Thu</div>
+                            <div class="day header">Fri</div>
+                            <div class="day header">Sat</div>
+                            <div class="day header">Sun</div>
+                        </div>
+                        <div class="days" data-group="days">
+
+                        </div>
+                    </div>
+                    <!-- Responsive calendar - END -->
+
+                    <!-- / calendar -->
+
+                    <!-- PROFILE -->
+                    <form role="form" class="col-md-6 area white" id="frmProfile">
+                        <h2>Profile</h2>
+
+                        <div class="form-group">
+                            <label for="txtName">Name</label>
+                            <input type="text" class="form-control" id="txtName" placeholder="Name" name="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ddlDino">Favorite Dinosaur</label>
+                            <select id="ddlDino" name="favoriteDinosaur" class="form-control">
+                                <option>None</option>
+                                <option>Pteranodon</option>
+                                <option>Lambeosaurus</option>
+                                <option>Stegosaurus</option>
+                                <option>Daspletosaurus</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                    <!-- / PROFILE -->
+
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="fatButtons">
+                        <a href="">
+                            <li style="text-align:center;width:100%;font-size:40px;" class="mdi-action-home mdi-material-red "></li>
+                        </a>
+                    </div>
+                    <div class="fatButtons">
+                        <a href="/">
+                            <li style="text-align:center;width:100%;font-size:40px;" class="mdi-action-search mdi-material-red "></li>
+                        </a>
+                    </div>
+                    <div class="fatButtons">
+                        <a href="/notes">
+                            <li style="text-align:center;width:100%;font-size:40px;" class="mdi-action-label mdi-material-red "></li>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type='text/javascript' src="assets/js/app/L.js"></script>
+    <script type='text/javascript' src="assets/js/app/main.js"></script>
+
+</body>
+
+</html>

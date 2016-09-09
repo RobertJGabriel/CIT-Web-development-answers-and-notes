@@ -1,0 +1,171 @@
+// Width variables (appears count calculates by raw css)
+@width3: 100%; // Appears 2 times
+// Height variables (appears count calculates by raw css)
+@height1: 200px; // Appears 2 times
+@height3: 100%; // Appears 2 times
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+a,
+font {
+    color: #ffffff;
+}
+#dashboard {
+    height: @height3;
+}
+#overview {
+    background-color: black;
+    height: @height3;
+    width: @width3;
+}
+#circle {
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    overflow-x: hidden;
+    width: 350px;
+}
+#circle>ul {
+    height: @height1;
+    list-style: none;
+    padding: 0;
+}
+#circle>ul>li {
+    /* background-color: #fff; */
+    /* border-radius: 300px; */
+    /* border: 20px solid #ec407a; */
+    height: 180px;
+    width: 180px;
+    /* margin: 20px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 130px;
+}
+.sex>a>h3 {
+    color: #939599;
+    font-size: 5.2em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: inherit;
+    line-height: 2;
+}
+.sex > p {
+    color: black;
+    font-size: x-large;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -10px;
+}
+.width {
+    width: @width3;
+}
+.circle {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 20em;
+    list-style: none;
+    margin-left: -5em;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 20em;
+}
+.circle > li {
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 0% 100%;
+    width: 50%;
+    &:first-child {
+        transform: rotate(0deg) skewY(-60deg);
+        .text {
+            background: #EC5454;
+        }
+    }
+    &:nth-child(2) {
+        transform: rotate(30deg) skewY(-60deg);
+        .text {
+            background: #EC5454;
+        }
+    }
+    &:nth-child(3) {
+        transform: rotate(60deg) skewY(-60deg);
+        .text {
+            background: #EC5454;
+        }
+    }
+    &:nth-child(4) {
+        transform: rotate(90deg) skewY(-60deg);
+        .text {
+            background: #147ABE;
+        }
+    }
+    &:nth-child(5) {
+        transform: rotate(120deg) skewY(-60deg);
+        .text {
+            background: #147ABE;
+        }
+    }
+    &:nth-child(6) {
+        transform: rotate(150deg) skewY(-60deg);
+        .text {
+            background: #147ABE;
+        }
+    }
+    &:nth-child(7) {
+        transform: rotate(180deg) skewY(-60deg);
+        .text {
+            background: #147ABE;
+        }
+    }
+    &:nth-child(8) {
+        transform: rotate(210deg) skewY(-60deg);
+        .text {
+            background: #147ABE;
+        }
+    }
+    &:nth-child(9) {
+        transform: rotate(240deg) skewY(-60deg);
+        .text {
+            background: #7E5BBF;
+        }
+    }
+    &:nth-child(10) {
+        transform: rotate(270deg) skewY(-60deg);
+        .text {
+            background: #7E5BBF;
+        }
+    }
+    &:nth-child(11) {
+        transform: rotate(300deg) skewY(-60deg);
+        .text {
+            background: #7E5BBF;
+        }
+    }
+    &:nth-child(12) {
+        transform: rotate(330deg) skewY(-60deg);
+        .text {
+            background: #878952;
+        }
+    }
+}
+.text {
+    height: 200%;
+    left: -100%;
+    padding-top: 20px;
+    position: absolute;
+    text-align: center;
+    transform: skewY(60deg) rotate(15deg);
+    width: 200%;
+}
