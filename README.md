@@ -48,7 +48,6 @@ Included is all slides, notes, handouts , assessiments and exam answers.
 - COMP7011	Internet & Network Services
 - COMP8017	Database Systems 3
 - OS1
-- 
 
 ### Semester 2
 - 	Work Placement (Teamwork.com)
