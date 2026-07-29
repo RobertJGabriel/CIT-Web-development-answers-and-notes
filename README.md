@@ -1,9 +1,21 @@
-![alt text](http://computing.cit.ie/contentFiles/homepageImages/microsite-springboard.jpg "Logo Title Text 1")
+# CIT-Web-development-answers-and-notes
 
-# Computer Science (Web Stream) Notes and Answers
+![CIT Computing](http://computing.cit.ie/contentFiles/homepageImages/microsite-springboard.jpg "CIT Computing")
 
-Included is all slides, notes, handouts , assessiments and exam answers.
+> Notes and answers for the Computer Science (Web Stream) course at CIT, Cork.
 
+Every slide deck, set of notes, handout, assessment and exam answer from four
+years of the Computer Science (Web Stream) degree at Cork Institute of Technology,
+organised by year and semester.
+
+## How to use this
+
+Browse to the year and semester you want below, then into the module folder. Module
+codes match the official CIT course listing, so searching for a code (for example
+`SOFT6007`) is the quickest way in.
+
+Treat exam answers as study material rather than a model to copy — module content
+and marking change year to year.
 
 ## Year One
 ### Semester 1
@@ -72,3 +84,7 @@ Included is all slides, notes, handouts , assessiments and exam answers.
 - Copys and other random stuff that was used.
 
 - Final GPA : 89%
+
+## License
+
+No licence file. All rights reserved unless stated otherwise.
